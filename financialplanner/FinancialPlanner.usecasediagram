@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0e2d2f7a-c867-4bb3-895a-aba8ea3d546f" name="UseCase" linkedPackageId="b9c003e2-0c84-48a7-ad17-e6dac1396e0b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6b83ff93-bfcf-43f2-a217-8100d61e0bd5" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3d78041a-9b5c-4829-84fa-5972607052aa" />
+        <targetEnds>
+          <association Id="02c7ef2f-d9eb-4f3d-959c-4b9e9ae0b8b5" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add an income" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="05ab0b76-46da-45e5-b129-058da69a0f76" LastKnownName="Add an income" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6e78cca-cd2e-41d3-a9f3-8c189f757e48" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ccd7bdc0-22f3-42cc-8e73-f5871452263e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fc3a05c6-a66d-487f-8f0b-7d37950b7691" name="Add an income" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7721702f-87aa-48ff-99da-d280c417c23a" name="Lower" value="*">
+                      <elementDefinition Id="0d6a895b-3c0c-4c34-aa88-60b3167e3fd9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="5c9d8160-64e9-4e6c-b11f-20c0dfab6ff4" name="Upper" value="*">
+                      <elementDefinition Id="7a75f3ac-f70d-46bf-94ab-cebc4649457b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="17f314af-5eff-467a-8f90-723574971643" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9512d498-2ffa-485a-b1e0-b4324afae9ec" />
+          </association>
+          <association Id="cc937d5c-b2e4-410e-85f4-a8801d1fe7c3" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add an expense" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ffc6ee3b-6f1c-43f1-a362-435cc7fda20f" LastKnownName="Add an expense" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="54ef7655-2b61-42fd-97a6-302f996d349e" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c1a47cd8-5c0b-4e52-ac19-d19e12f5a8bd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6175b7b0-2f67-4620-adfc-89b2dd3c4a80" name="Add an expense" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="a1496b6f-46b4-4a25-9d2f-2298f2549f91" name="Lower" value="*">
+                      <elementDefinition Id="f5427e1c-a082-4368-8521-11e09e7377a2" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="6a59194d-9a2c-4895-b1dd-18d9cec15697" name="Upper" value="*">
+                      <elementDefinition Id="d25d5de9-ed7e-44ca-af00-a533f8673411" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7fb28630-0fe4-48ae-9c01-15070efd8aa3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e0128ad7-6713-44db-8a3d-82a978b71d9f" />
+          </association>
+          <association Id="cff9758c-92c6-474e-a27d-077783929002" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Log in" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3299b14c-8824-4e2b-b39a-8a4ed44924b6" LastKnownName="Log in" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3454fa4d-a89e-4dae-9611-e6d664c53d04" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c61d2a00-40a8-40e0-8fde-178cf3ed61f8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6fcd97c0-31f8-4f28-9f39-72feddd42f64" name="Log in" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="066576a6-853d-45fe-9a3b-afbd27b94108" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fd6b9ac1-df58-499d-b9ab-8faa5b1ae7b0" />
+          </association>
+          <association Id="1bfc2870-cd8c-4342-a9db-43faf93b0689" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Get the report of months expenses" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7f8119ab-e6a0-46c4-a43d-a4f1948b2dbd" LastKnownName="Get the report of months expenses" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b1c1e90-4d3f-4881-8ea9-92dc6952eaa9" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4e7fc94d-43ef-47a2-aa3d-95ae4add9545" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="133e3359-ec3e-423a-9eea-67eea37f2099" name="Get the report of months expenses" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="da13ec10-3343-4f3d-8dad-92ce869e2516" name="Lower" value="*">
+                      <elementDefinition Id="701b5252-95ca-4fc0-a49a-2de9fb3a133a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="76265b36-57e9-4ef5-b92d-eedd6adb7c88" name="Upper" value="*">
+                      <elementDefinition Id="c36894e9-14df-4e1d-a0f6-7b1cdad485bf" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="f12c4018-a247-421d-a16c-a64400aa7b60" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="da8f5194-dd28-4b25-b3e4-9018f9ad1ef9" />
+          </association>
+          <association Id="cbd40314-cd99-45df-89e4-829a0f7211fa" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add savings" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="78f8b57d-7217-4ca4-99aa-7cf6c527c937" LastKnownName="Add a saving" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="27412fb8-b67b-4034-af1f-529dad4e9254" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3cb0fb62-506d-4967-a0f1-1e7a267c7b3a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d84d072f-98d1-4423-b396-c8b2c9f29670" name="Add savings" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="0192ba78-ae34-4eef-a044-ccdc1cdf8dbd" name="Lower" value="*">
+                      <elementDefinition Id="73332992-1744-472b-8857-12279c69ee58" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c94823e8-9542-40c0-bbf7-98d8b7995fc9" name="Upper" value="*">
+                      <elementDefinition Id="e82bb657-4439-4a34-a0c2-4f2a5a9db857" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="4ea7c5ea-8dc3-4f71-8a3c-1de6b8139f54" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e60a1b9e-0782-44c5-ae04-75a87a48d790" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="05ab0b76-46da-45e5-b129-058da69a0f76" name="Add an income" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d2c4b7a4-4258-4037-b5e5-df900320904a" />
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="360e2162-c640-47f9-a885-55a7a90e1db2" name="Add a fixed expense" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="04eddb07-81e1-4568-a892-7bdbddf96810" />
+        <generalsInternal>
+          <generalization Id="c789b540-b8a5-4650-bd8e-8a83eaf7fe6d" isSubstitutable="false">
+            <useCaseMoniker Id="ffc6ee3b-6f1c-43f1-a362-435cc7fda20f" LastKnownName="Add an expense" />
+            <elementDefinition Id="d08d975d-6999-4b2b-8129-0806b8bcf4a4" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eb907ad5-41a2-4244-a716-9c6237e08cae" name="Get the amount of expenses" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="730643ea-9fed-4090-aef7-6872e3c63409" />
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9eb18f75-7daa-43c7-a414-b2cb88e600bc" name="Add a daily expense " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="66b264a7-5c85-4cac-b851-2a591b9129bd" />
+        <generalsInternal>
+          <generalization Id="d2ce3b36-7032-437d-82ce-db3490be64a6" isSubstitutable="false">
+            <useCaseMoniker Id="ffc6ee3b-6f1c-43f1-a362-435cc7fda20f" LastKnownName="Add an expense" />
+            <elementDefinition Id="a5a62f6d-eb23-4df4-9be9-a22e1fbae9b4" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7f8119ab-e6a0-46c4-a43d-a4f1948b2dbd" name="Get the report of months expenses" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9f9b1324-c215-417e-aa0e-5b947a5b976e" />
+        <additions>
+          <include Id="e7e8a906-3853-4c3e-a256-fa1d6d64488c">
+            <useCaseMoniker Id="eb907ad5-41a2-4244-a716-9c6237e08cae" LastKnownName="Get the amount of expenses" />
+            <elementDefinition Id="83f7b807-9fbb-42cc-821d-e63d9cdc516e" />
+          </include>
+          <include Id="9ba3cc1a-78db-41ba-875e-2fd303848611">
+            <useCaseMoniker Id="1b86f77c-f3a4-488d-96d9-e5ac2cdd46e0" LastKnownName="Get the diagram of categorised months expenses" />
+            <elementDefinition Id="3d9e3c38-8796-4aea-95cb-34616f4bc3d7" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ffc6ee3b-6f1c-43f1-a362-435cc7fda20f" name="Add an expense" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="43178bad-84c7-4d53-8658-c0551dfb34cb" />
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="78f8b57d-7217-4ca4-99aa-7cf6c527c937" name="Add a saving" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="88f248c7-a379-48ed-9377-4783614f26c4" />
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" name="Financial planning" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="45ea3fb7-4f01-4e37-96b3-98899086a594">
+            <elementDefinition Id="57758e76-b790-4687-8755-3e36907a8447" />
+            <body>Condition: The absence of appropriate category
+The point of extention: Category
+</body>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="196e87bd-fd1c-46fc-a210-88e929890f55" />
+        <suppliersInternal>
+          <dependency Id="9493ee35-6a9d-40c4-829f-a4da80e9afc9">
+            <subsystemMoniker Id="32aab7c0-2872-4840-8042-aa7163b72944" LastKnownName="Entering system" />
+            <elementDefinition Id="06476d07-1b4e-4eeb-a6b5-0e19fc2ea24a" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="1b86f77c-f3a4-488d-96d9-e5ac2cdd46e0" name="Get the diagram of categorised months expenses" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5d2e330b-0da5-43e5-b68c-71ac013fcfda" />
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="32aab7c0-2872-4840-8042-aa7163b72944" name="Entering system" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="46745f89-cb2f-41a1-a93c-c82aec2c1a44">
+            <elementDefinition Id="79f01a98-0048-49e6-8032-3be4d44b8ac8" />
+            <body>Condition: Forgetting current password
+The point of extention: Password</body>
+          </comment>
+          <comment Id="a8a74cff-6b94-478a-8c84-0de1b589f0a7">
+            <elementDefinition Id="3f4d29f9-5108-4b91-bfbf-adb6a468640e" />
+            <body>Condition: The absence of account
+The point of extention: Account
+</body>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="1cdb40c1-0e94-4a43-a278-2c1b4763a1e5" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3299b14c-8824-4e2b-b39a-8a4ed44924b6" name="Log in" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9223603d-2818-4f49-b282-d23d42dbe45a" />
+        <subjects>
+          <subsystemMoniker Id="32aab7c0-2872-4840-8042-aa7163b72944" LastKnownName="Entering system" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="650c974d-f09b-46d2-bc5e-e7d45f0abc62" name="Register" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bfb7cf9b-ba71-4909-ad45-a70050a34789" />
+        <extendedCases>
+          <extend Id="1d5cd095-5daf-4e5b-b787-a26af3b5e5c5">
+            <useCaseMoniker Id="3299b14c-8824-4e2b-b39a-8a4ed44924b6" LastKnownName="Log in" />
+            <elementDefinition Id="55aeafab-1a3d-40f3-9e8e-5e8db79a5f08" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="32aab7c0-2872-4840-8042-aa7163b72944" LastKnownName="Entering system" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="86a6ac0e-c482-488a-940b-6b7f0f67497b" name="Reset password" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f1cbc5c9-87eb-4e58-85c4-ad3f2a230f44" />
+        <targetEnds>
+          <association Id="ebb3aeab-84c0-4877-b5c0-2c980adfb583" isDerived="false" sourceEndRoleName="Reset password" targetEndRoleName="E-mail" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="e6db003c-687e-49ad-b106-37efbaa9624f" LastKnownName="E-mail" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac6ab605-1a39-4428-9069-e24fce3bfdd0" name="Reset password" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9811fc0d-ef3a-4bd1-9111-bd52daf9622b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e1eb6ce-7d3d-441f-a67d-9f350114c0ce" name="E-mail" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aa12483b-83d3-4931-8017-a7cd27964314" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="29391b5f-7787-4467-806c-213ea5219f2a" />
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend Id="2aea0b75-16f5-4c4e-9404-bc7f023f58e0">
+            <useCaseMoniker Id="3299b14c-8824-4e2b-b39a-8a4ed44924b6" LastKnownName="Log in" />
+            <elementDefinition Id="55dd7f57-5769-4f73-b6cb-8c61eee0ea85" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="32aab7c0-2872-4840-8042-aa7163b72944" LastKnownName="Entering system" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="e6db003c-687e-49ad-b106-37efbaa9624f" name="E-mail" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="06eb41d7-3634-490a-8db3-4f3103709499" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="a7b4951d-bcf4-4f8e-8bd9-928c71d0f725" name="Add a category of a daily expense" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cf3bb349-f0dd-4ca3-9412-c66bf45a8efe" />
+        <extendedCases>
+          <extend Id="c364a72c-8c55-4738-aeab-bab498ba8c49">
+            <useCaseMoniker Id="9eb18f75-7daa-43c7-a414-b2cb88e600bc" LastKnownName="Add a daily expense " />
+            <elementDefinition Id="79c93165-23e1-49b4-a644-0f78bdacc4d9" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="a0c3a37b-51a3-4ea5-858f-239cfa1e959c" LastKnownName="Financial planning" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="b9c003e2-0c84-48a7-ad17-e6dac1396e0b" name="financialplanner">
+    <elementDefinition Id="aa3e8e3e-4616-4fc5-9d00-41a8e337cf81" />
+    <profileInstances>
+      <packageHasProfileInstances Id="fa39f90c-3254-4683-b3f3-f070c1e33a80">
+        <profileInstance Id="474c5ea2-e7db-4463-898d-f337c3d4f6ec" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="16e409c3-d827-4713-ac58-8c85b6ef8e4b">
+        <profileInstance Id="ce156089-cfb6-4fed-972f-03d782c00b42" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
