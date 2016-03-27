@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.875, 8.5" name="GettingReports">
+  <useCaseModelRootMoniker Id="718d6f13-4e94-425a-8c4b-3a9d43f5003b" />
+  <nestedChildShapes>
+    <actorShape Id="bd1606d1-2dd2-4510-91b8-108b19beea51" absoluteBounds="3.125, 3, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="7686bbab-7f88-49ad-b5ce-8cb2b4319b42" LastKnownName="User" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="f1298dfe-e842-4cbe-8b32-64f567336f0d" absoluteBounds="2.375, 4.5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="5bb31e01-636b-4c39-9298-d457faab471d" LastKnownName="Registred user" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseGeneralizationConnector edgePoints="[(2.75 : 4.5); (3.25 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="71d7d62e-1b9b-4ccc-ac3b-6161744f841b" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="f1298dfe-e842-4cbe-8b32-64f567336f0d" />
+        <actorShapeMoniker Id="bd1606d1-2dd2-4510-91b8-108b19beea51" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <actorShape Id="f2ae3ab0-78e7-4546-855f-aeac2e10f771" absoluteBounds="3.625, 4.5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="cdade261-cc90-4e63-ad83-709c72142f0a" LastKnownName="Unregistered  user" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseGeneralizationConnector edgePoints="[(3.79166666666667 : 4.5); (3.45833333333333 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="0258cba3-a708-4e1c-abed-4d3cacdc0a0c" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="f2ae3ab0-78e7-4546-855f-aeac2e10f771" />
+        <actorShapeMoniker Id="bd1606d1-2dd2-4510-91b8-108b19beea51" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <SubsystemShape Id="b3b93d87-7ec4-4086-a049-37fa566a0b8a" absoluteBounds="5.125, 1.125, 6.5, 4.375" customColor="White">
+      <subsystemMoniker Id="67861f06-fec0-43f1-a69a-fb6a8494e4db" LastKnownName="Getting reports" />
+      <nestedChildShapes>
+        <useCaseShape Id="26bfdff5-7199-42f3-8167-fe3624f75ddc" absoluteBounds="5.5, 2.875, 1.125, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="3cbcdb4a-74c5-4f4b-8542-b6878d5da20c" LastKnownName="Get the report of operations" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="a6cc5e39-44ed-4557-a093-c82bd34db8cc" absoluteBounds="7.625, 2.875, 1.125, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="0905a0b1-83de-48a3-953a-9aefd01c76c9" LastKnownName="Get the total  of expenses" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="b5fc936e-ab4a-4b84-b0c1-ac246ecf51d6" absoluteBounds="7.625, 1.625, 1.125, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="a9f0a14e-1c7c-44f7-b52f-51876b892427" LastKnownName="Get the total of incomes" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="42ac6086-da93-49cd-a903-1f8fac194a3e" absoluteBounds="9.75, 2.875, 1.25, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="054e447c-5e7d-43ff-9166-e5324f73a32f" LastKnownName="Get the diagram of categorized expenses" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="b5cc30b7-ebd6-48dc-9161-48f1829716d9" absoluteBounds="7.625, 4.125, 1.25, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="d258c02d-b2ba-4465-b9bd-23d3f61405fe" LastKnownName="Get the available amount" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="6930143a-bf49-40ef-a82d-74099d5dce5b" absoluteBounds="9.75, 1.625, 1.25, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="0d270c7f-e5bb-4d87-b8bd-402cfeca36d4" LastKnownName="Get the diagram of categorized incomes" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(3.625 : 3.24418604651163); (5.50049218721452 : 3.20056994913455)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="2a44a212-f23c-47b7-8f86-8119d2ebfd79" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="bd1606d1-2dd2-4510-91b8-108b19beea51" />
+        <useCaseShapeMoniker Id="26bfdff5-7199-42f3-8167-fe3624f75ddc" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <includeConnector edgePoints="[(6.44872573729209 : 2.96030838982818); (7.80127426270791 : 2.16469161017182)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="12cbbf12-1213-4bdd-b6d9-914d40168247" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="26bfdff5-7199-42f3-8167-fe3624f75ddc" />
+        <useCaseShapeMoniker Id="b5fc936e-ab4a-4b84-b0c1-ac246ecf51d6" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(6.625 : 3.1875); (7.625 : 3.1875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="866e4ec8-9612-46b8-ad06-3d9d8a00cf8e" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="26bfdff5-7199-42f3-8167-fe3624f75ddc" />
+        <useCaseShapeMoniker Id="a6cc5e39-44ed-4557-a093-c82bd34db8cc" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(6.45460659622664 : 3.41156091212951); (7.83843462008218 : 4.2023197829041)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="e5d0cf93-9d0f-4096-a60b-dd9ad000eb5d" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="26bfdff5-7199-42f3-8167-fe3624f75ddc" />
+        <useCaseShapeMoniker Id="b5cc30b7-ebd6-48dc-9161-48f1829716d9" />
+      </nodes>
+    </includeConnector>
+    <extendConnector edgePoints="[(9.75 : 3.1875); (8.75 : 3.1875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="aeaf8588-88b8-4248-98d3-ba97605184de" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="42ac6086-da93-49cd-a903-1f8fac194a3e" />
+        <useCaseShapeMoniker Id="a6cc5e39-44ed-4557-a093-c82bd34db8cc" />
+      </nodes>
+    </extendConnector>
+    <extendConnector edgePoints="[(9.75 : 1.9375); (8.75 : 1.9375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="d3a7b377-ad2f-46c8-842c-bb17e24caca6" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6930143a-bf49-40ef-a82d-74099d5dce5b" />
+        <useCaseShapeMoniker Id="b5fc936e-ab4a-4b84-b0c1-ac246ecf51d6" />
+      </nodes>
+    </extendConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

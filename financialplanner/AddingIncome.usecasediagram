@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="48a02581-bf3a-4183-855c-290447150992" name="AddingIncome" linkedPackageId="c4257bfb-f2db-4d49-997e-fc6fe399526d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="604e6713-3b17-4df5-aba1-84fe38568cbe" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a407756b-381e-4999-af05-5445a9f62bbd" />
+        <targetEnds>
+          <association Id="fab74d1c-e4ea-4c58-9afa-d40977b2b126" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add an income" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8579987d-df28-4aff-a489-dea30b70cb77" LastKnownName="Add an income" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="53c85ea7-6908-4d1d-a594-40f989415336" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="86f64a7e-f289-4d70-b18e-c4e88d6273c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28f69528-2340-4595-8f87-3f96a611e554" name="Add an income" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="c2440426-e14a-4dfb-9074-2f09c78aa01b" name="Lower" value="*">
+                      <elementDefinition Id="8cf6f127-9c10-4ba7-be75-a66274be242f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="7b96c54a-f824-4fe8-bf13-4c50066faf10" name="Upper" value="*">
+                      <elementDefinition Id="7c86da62-fc6e-4a5d-932d-c7c7960acbb1" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d43894ad-a3a2-4554-bcd6-8bbe5132876c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="445ffb8a-e3ca-4901-af7c-7e2bac15e8fb" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8579987d-df28-4aff-a489-dea30b70cb77" name="Add an income" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8519e162-ecd2-481e-ac8b-8538e17272bb" />
+        <additions>
+          <include Id="97dc9bcf-38a4-4a90-8580-b9d024ee0792">
+            <useCaseMoniker Id="fdfafa15-66c5-4631-8347-8a415e24788e" LastKnownName="Add a sum" />
+            <elementDefinition Id="29af7656-8f53-43bb-94e1-a331faba6b15" />
+          </include>
+          <include Id="432156bb-f54a-493c-963b-bb4c460ee769">
+            <useCaseMoniker Id="fbfad124-cd8a-4348-b612-6dd5f38f10a3" LastKnownName="Choose a category" />
+            <elementDefinition Id="1ee89e8d-4c4a-4567-95a0-b31703f4a5eb" />
+          </include>
+          <include Id="e468c6bc-a638-4617-8057-13d305c0f58b">
+            <useCaseMoniker Id="e62ac669-e5ae-440c-b3b5-2b49fb8d489d" LastKnownName="Add a note" />
+            <elementDefinition Id="6922256f-5cbf-4063-b52d-02e9e0230fc0" />
+          </include>
+          <include Id="dcee5acf-afee-4d8e-afca-4f73c3fe1dae">
+            <useCaseMoniker Id="8581443c-513b-4fcd-b517-02dd55f7afa3" LastKnownName="Add a date" />
+            <elementDefinition Id="24565131-e00f-4f2d-b86b-b28c8bd734ae" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="4a669fff-dfe0-471f-a380-77ca9444957c" LastKnownName="Adding income" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="9f194844-fe3d-4324-b8da-6edea27bf1d8" name="Registered user" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6a535576-3478-46b5-899e-78a196c1d1e6" />
+        <generalsInternal>
+          <generalization Id="c3a656e6-15b0-4a1a-aee3-9f309445bdaf" isSubstitutable="false">
+            <actorMoniker Id="604e6713-3b17-4df5-aba1-84fe38568cbe" LastKnownName="User" />
+            <elementDefinition Id="fe96440f-ec8f-4dcc-8300-7ddb2bd0782b" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3964c313-b827-4c32-9532-56f8d6971c96" name="Unregistered user" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="768d07b2-9598-4899-8d5e-bdee453d9a50" />
+        <generalsInternal>
+          <generalization Id="ca300539-5364-4307-8996-23768ca92184" isSubstitutable="false">
+            <actorMoniker Id="604e6713-3b17-4df5-aba1-84fe38568cbe" LastKnownName="User" />
+            <elementDefinition Id="791cdd9f-b406-46f2-8aec-9f8d92356373" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="4a669fff-dfe0-471f-a380-77ca9444957c" name="Adding income" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="59d4afe5-afcb-42e9-8f52-e5dcc41740e0">
+            <elementDefinition Id="589e8f27-6c45-4e3e-b7c9-6ed6e1389ff8" />
+            <body>Condition: The absence of appropriate category
+The point of extention: Category
+</body>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="fbfad124-cd8a-4348-b612-6dd5f38f10a3" name="Choose a category" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="330c6775-7bf0-4ca1-93f1-e03be014842e" />
+        <subjects>
+          <subsystemMoniker Id="4a669fff-dfe0-471f-a380-77ca9444957c" LastKnownName="Adding income" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="fdfafa15-66c5-4631-8347-8a415e24788e" name="Add a sum" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a1e814b3-b521-4808-8c15-cb074a2af048" />
+        <additions>
+          <include Id="a56250a4-75cc-468b-b054-1f2b1dc6b415">
+            <useCaseMoniker Id="1f9a7b15-2ee2-4539-beac-6cf801819a73" LastKnownName="Enter amount" />
+            <elementDefinition Id="e0ecbbee-35de-4068-bf01-bd04ba379ec3" />
+          </include>
+          <include Id="174b6cf1-6fb9-441e-876e-028ab7c677d3">
+            <useCaseMoniker Id="83f66b0c-3938-41fc-a9c6-6b1759efa169" LastKnownName="Choose currency" />
+            <elementDefinition Id="ed92d584-503d-47b4-8d1b-6f3e5fd29a97" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="4a669fff-dfe0-471f-a380-77ca9444957c" LastKnownName="Adding income" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e62ac669-e5ae-440c-b3b5-2b49fb8d489d" name="Add a note" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="839f5f37-e8e8-415a-aac1-9f168d7fedcd" />
+        <subjects>
+          <subsystemMoniker Id="4a669fff-dfe0-471f-a380-77ca9444957c" LastKnownName="Adding income" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2fa35e1e-22f5-4850-9bed-bfedc3b2ff06" name="Add a  new category" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b2883847-800e-4c27-a491-24e302334266" />
+        <extendedCases>
+          <extend Id="b122f1a2-bf91-46b9-979a-728b960f973f">
+            <useCaseMoniker Id="fbfad124-cd8a-4348-b612-6dd5f38f10a3" LastKnownName="Choose a category" />
+            <elementDefinition Id="3ef7ffd1-1dee-469d-8c86-8e19f8000ac9" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="4a669fff-dfe0-471f-a380-77ca9444957c" LastKnownName="Adding income" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="83f66b0c-3938-41fc-a9c6-6b1759efa169" name="Choose currency" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="463aacc9-9d7d-40b4-8155-044d0718f1d4" />
+        <subjects>
+          <subsystemMoniker Id="4a669fff-dfe0-471f-a380-77ca9444957c" LastKnownName="Adding income" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1f9a7b15-2ee2-4539-beac-6cf801819a73" name="Enter amount" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1f66c302-f192-49a6-81d0-246e2c689c10" />
+        <subjects>
+          <subsystemMoniker Id="4a669fff-dfe0-471f-a380-77ca9444957c" LastKnownName="Adding income" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="8581443c-513b-4fcd-b517-02dd55f7afa3" name="Add a date" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ad74ee45-70ed-497c-a195-9026837ed652" />
+        <subjects>
+          <subsystemMoniker Id="4a669fff-dfe0-471f-a380-77ca9444957c" LastKnownName="Adding income" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c4257bfb-f2db-4d49-997e-fc6fe399526d" name="financialplanner">
+    <elementDefinition Id="aa3e8e3e-4616-4fc5-9d00-41a8e337cf81" />
+    <profileInstances>
+      <packageHasProfileInstances Id="4fe8cc69-a14c-41dc-acb8-c40a8703821b">
+        <profileInstance Id="a030fd13-de26-4cd8-9ca6-cfa34d920a41" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c05094ef-afe8-433f-8b8a-a40263ee2e6a">
+        <profileInstance Id="5c0d1e0e-bc95-4086-8fb3-a8af08d2428e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
