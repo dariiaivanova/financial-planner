@@ -72,17 +72,6 @@
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <actor Id="3964c313-b827-4c32-9532-56f8d6971c96" name="Unregistered user" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="768d07b2-9598-4899-8d5e-bdee453d9a50" />
-        <generalsInternal>
-          <generalization Id="ca300539-5364-4307-8996-23768ca92184" isSubstitutable="false">
-            <actorMoniker Id="604e6713-3b17-4df5-aba1-84fe38568cbe" LastKnownName="User" />
-            <elementDefinition Id="791cdd9f-b406-46f2-8aec-9f8d92356373" />
-          </generalization>
-        </generalsInternal>
-      </actor>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
       <subsystem Id="4a669fff-dfe0-471f-a380-77ca9444957c" name="Adding income" isAbstract="false" isLeaf="false" isActiveClass="false">
         <ownedCommentsInternal>
           <comment Id="59d4afe5-afcb-42e9-8f52-e5dcc41740e0">

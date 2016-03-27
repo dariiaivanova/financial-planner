@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="82a1a606-c7b9-4346-b567-5c0865a191af" name="AddExpense" linkedPackageId="7076d5f2-ec88-4021-9160-992bb8bb45d9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="842d3457-cabb-4cde-b882-2c79835f92c2">
-      <profileInstance Id="6888835f-70ad-4a17-9065-67f3d02905fd" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="c7db4691-5120-4795-bccf-1d50126768d1">
-      <profileInstance Id="4a021f3c-ab1c-46a4-8266-a5ac66e2a9e3" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <useCase Id="7e9d2e99-8184-4f6d-81d7-7a9dfb4b482a" name="Add a daily expense" isAbstract="false" isLeaf="false">
@@ -114,17 +100,6 @@ The point of extention: Category
         </generalsInternal>
       </actor>
     </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <actor Id="784875aa-aa20-4b84-aebc-ee8b8ff6202b" name="Unregistered  user" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="22065c6d-f1d8-4c6b-8304-1cc0b2521d17" />
-        <generalsInternal>
-          <generalization Id="4cc85ed2-8ba3-4d78-be07-be0e969d51d7" isSubstitutable="false">
-            <actorMoniker Id="b4256691-f41c-49e9-9161-04e596a9ab41" LastKnownName="User" />
-            <elementDefinition Id="ca37dea6-6cf4-4e68-bd99-70ad7b40418f" />
-          </generalization>
-        </generalsInternal>
-      </actor>
-    </useCaseModelRootHasTypes>
     <packageHasNamedElement>
       <useCase Id="ab9cb02d-3e5f-4651-953f-8133801bc929" name="Add a note" isAbstract="false" isLeaf="false">
         <elementDefinition Id="df0a9b50-9535-4a18-b85c-029c795cb746" />
@@ -208,5 +183,19 @@ The point of extention: Category
   </packagedElements>
   <package Id="7076d5f2-ec88-4021-9160-992bb8bb45d9" name="financialplanner">
     <elementDefinition Id="aa3e8e3e-4616-4fc5-9d00-41a8e337cf81" />
+    <profileInstances>
+      <packageHasProfileInstances Id="842d3457-cabb-4cde-b882-2c79835f92c2">
+        <profileInstance Id="6888835f-70ad-4a17-9065-67f3d02905fd" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c7db4691-5120-4795-bccf-1d50126768d1">
+        <profileInstance Id="4a021f3c-ab1c-46a4-8266-a5ac66e2a9e3" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

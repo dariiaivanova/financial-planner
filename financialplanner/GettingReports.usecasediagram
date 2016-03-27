@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="718d6f13-4e94-425a-8c4b-3a9d43f5003b" name="GettingReports" linkedPackageId="01f37fe7-172d-434d-a38a-5459bffeba9c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="7248c9d3-fef3-419a-b484-b0bba967901b">
-      <profileInstance Id="73e65115-3624-4b13-856e-e48e45ad6649" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="820cbadc-e25c-4b4e-9fa1-d6d6e8b23608">
-      <profileInstance Id="ee783ba8-6240-4fe8-8ed3-48423f257c62" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="7686bbab-7f88-49ad-b5ce-8cb2b4319b42" name="User" isAbstract="false" isLeaf="false">
@@ -45,17 +31,6 @@
           <generalization Id="71d7d62e-1b9b-4ccc-ac3b-6161744f841b" isSubstitutable="false">
             <actorMoniker Id="7686bbab-7f88-49ad-b5ce-8cb2b4319b42" LastKnownName="User" />
             <elementDefinition Id="1ec4731e-0977-4fd0-aa58-2062dffef049" />
-          </generalization>
-        </generalsInternal>
-      </actor>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <actor Id="cdade261-cc90-4e63-ad83-709c72142f0a" name="Unregistered  user" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="fb183330-ce79-42a3-986c-5aa852dc9a18" />
-        <generalsInternal>
-          <generalization Id="0258cba3-a708-4e1c-abed-4d3cacdc0a0c" isSubstitutable="false">
-            <actorMoniker Id="7686bbab-7f88-49ad-b5ce-8cb2b4319b42" LastKnownName="User" />
-            <elementDefinition Id="29a88c44-1b79-4186-9db1-e49743f6fc8e" />
           </generalization>
         </generalsInternal>
       </actor>
@@ -142,5 +117,19 @@
   </packagedElements>
   <package Id="01f37fe7-172d-434d-a38a-5459bffeba9c" name="financialplanner">
     <elementDefinition Id="aa3e8e3e-4616-4fc5-9d00-41a8e337cf81" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7248c9d3-fef3-419a-b484-b0bba967901b">
+        <profileInstance Id="73e65115-3624-4b13-856e-e48e45ad6649" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="820cbadc-e25c-4b4e-9fa1-d6d6e8b23608">
+        <profileInstance Id="ee783ba8-6240-4fe8-8ed3-48423f257c62" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
