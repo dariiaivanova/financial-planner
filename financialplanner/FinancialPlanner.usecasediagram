@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e9f4e28e-79f8-4404-b2aa-b02c37a630d9" name="FinancialPlanner" linkedPackageId="b16cf0a1-5cd5-4846-873b-18e4a2243204" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="202e3362-6f1e-4b0c-9264-c86b41535d7c">
+      <profileInstance Id="8685ee63-a879-4f17-bd11-1df18d0b4840" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="074acdee-a786-4eec-9439-11a24594faf7">
+      <profileInstance Id="ad1e3dc0-730a-4baa-8b5e-ca81ccc98be9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="02ec3896-9dda-44a9-9ca3-0d8a169f5e83" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e6e9f8f6-1adf-4972-b81a-e146c387904a" />
+        <targetEnds>
+          <association Id="1a1e603a-15e1-41a9-81d5-b58f706d98e3" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add a purse" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9adf4881-f67d-4c09-8c6e-1e153c0854f9" LastKnownName="Add a purse" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d61aede-3ed5-4ed4-a6e3-63f7fbd1060d" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3cac167d-cfef-4378-99af-2eb655b97af8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0ca5b4a1-9891-4e25-aa78-9a2cf5207967" name="Add a purse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="00cb9eea-fd2c-49d8-8e1d-19bb60e084e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="91bae27c-0b26-47df-924c-b1df764e5a86" />
+          </association>
+          <association Id="7a576041-ba21-4f88-8fab-79ea12fbe460" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add an income" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9ea40906-e457-4bc9-b932-630172398b29" LastKnownName="Add an income" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="52f527e4-2792-41a7-b8de-08564856dea5" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ae216fb8-2ac8-4cf3-a883-04d291d98817" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dccb7fc7-15ef-4167-982d-8e85c6acf8a6" name="Add an income" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c7a01d0c-c5e0-4143-81ba-0392dcd0ab31" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4b035d18-f3e4-42a0-bd76-96ad8f85d6f4" />
+          </association>
+          <association Id="93596b07-e21c-4a3e-9b1b-a02f031c6cbb" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add an expense" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="12a2406b-84e7-43e6-a008-e91d837c2182" LastKnownName="Add an expense" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb9974c0-89ba-4a7e-b640-2f3fc0691ca8" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2c761b8d-bb24-4bc7-8e1b-b7b6ec2d6f38" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f45658d-9f31-4d1b-967b-90092237cdc2" name="Add an expense" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="34d45f4c-c974-4b8e-9c8e-2a61be532c9e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a15569d0-42e9-4535-8e42-2f86cdffcd22" />
+          </association>
+          <association Id="fc6be68e-0004-4e20-950b-a93b551b2119" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add a new income category" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="44662c14-c626-4ac8-a889-b0d3100fbb4f" LastKnownName="Add a new income category" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fdf54e58-3a0b-454d-9308-572506b73218" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ccc724b8-5297-4002-b889-73e300c77709" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2ce38228-4eb2-414c-ae4a-6291c4590b52" name="Add a new income category" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5ffe637f-8ad7-4fce-9da1-2885fc46b994" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7b4b5bc9-cd33-4100-a2ae-580b67e0b76d" />
+          </association>
+          <association Id="5d0c7aac-03fc-4a51-9e02-5abc17ff4121" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Transact money" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e72d5224-5839-43db-ad6e-9c823caff31f" LastKnownName="Transact money" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="46526b1c-b5d5-4b1d-8616-99d5b7aef1c9" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="318be23f-b2ec-41f8-a812-a59445140850" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ead40a2-e41d-4fe4-9101-c520cd6f7644" name="Transact money" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ee8130da-3fa7-4f94-9858-1dd8dcf972ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cf3d4be0-896d-4670-a23d-07fee701099f" />
+          </association>
+          <association Id="c0e9112a-4719-4cc0-883c-d88e5f1d3ff7" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Edit an income" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bf30673c-5e9e-49fb-aa6e-17102c57d359" LastKnownName="Edit an income" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3bcd5df3-3619-4a2f-9e2e-5ead7b1105f8" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="550fdf77-c1ec-47fd-a807-f0ec68c16b63" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="699474d2-dff0-4a1d-94e3-864e478b5fe9" name="Edit an income" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e3a53ae8-1341-4d87-aeb7-49c1bec0ce2c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5ad0b873-3be2-4ec3-ab67-c50716253a5f" />
+          </association>
+          <association Id="592e04c4-99e8-4be8-bda9-856127f217e4" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Confirm a regular income" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9a07ea2e-ce9d-4e56-8467-cfd11a53ecba" LastKnownName="Confirm a regular income" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4cd2c6b0-a4d2-495f-81fc-23acc47a4d82" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c3592a90-97c2-4a0f-b63c-186bfc5aca6f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4997391b-9c4e-4995-9058-b4e214e90d07" name="Confirm a regular income" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="15862bfb-7eb1-496c-a00c-c71d2135aa91" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fa6d5491-fd23-43df-ab74-5fcff38450ac" />
+          </association>
+          <association Id="109b37d4-d32e-4101-b622-63844e31eb25" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Confirm a regular transaction" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ae902c8c-da86-4e17-8a3b-2313bcd16478" LastKnownName="Confirm a regular transaction" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f0338b55-f240-4f68-833f-06ac4d5f084d" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="42270ec9-c2d4-442e-996b-a57836e92682" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="18c4afa0-253f-4aa8-8f8e-b509ab7d3748" name="Confirm a regular transaction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2a00cf10-f704-4239-90e6-c7b2d34d45a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ce29eec4-7683-4d28-9623-94abefdec3dc" />
+          </association>
+          <association Id="e6ada59c-0999-4927-9c42-b1bbc70c67d6" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Confirm a regular expense" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="db42f825-a103-4ff5-b9e6-54edfdb18562" LastKnownName="Confirm a regular expense" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9dfd3270-1013-4a91-8b4e-3cd35546a297" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="89e05558-2e84-4098-af84-f314c07d2073" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="198c74b3-4fb4-4fb7-bca5-e32aaea3a2bd" name="Confirm a regular expense" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="18784030-af3f-44ec-890a-dc6bdcf9fe50" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e246858c-4038-4cb6-b4c4-20be2f844a1b" />
+          </association>
+          <association Id="db98f6a5-7501-4fc5-aaf0-d038f5746b6d" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add a new expense category" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6d0df566-d09d-4bf0-aa9c-c7d212ad0d27" LastKnownName="Add a new expense category" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="53b77854-aba8-451a-983f-ecd6a007debf" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="90768e6d-c7f3-4c4e-9a3f-22e8a00b8c09" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c7c13c25-0412-4e1a-81d7-8c439bfbf7e0" name="Add a new expense category" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9c8eb182-e113-4803-b1b3-f0c1894897c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="33e99d0a-8a93-4eea-bebc-7ff946c7921d" />
+          </association>
+          <association Id="4ae9d279-44de-4ae1-96d6-9ab21c643fc1" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Edit an exoense" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f8d0fc84-1c05-4276-a5c2-80771db95609" LastKnownName="Edit an exoense" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6bd6a578-d31f-4d04-928e-28e7bad919c9" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3e222569-04ca-4769-9405-51d1b5a4c21d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2ece2045-a422-48b5-95ec-cc03b9459302" name="Edit an exoense" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8e84dc7e-79fe-4e11-af82-2c670baebe9e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2d57fad8-d59a-4639-9daa-144cf1a7b234" />
+          </association>
+          <association Id="4a4b0b19-392d-40db-b40f-fee4aff6968c" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Get a report of operations" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8f99eec4-bc92-413d-929b-f4dc4cbe72a3" LastKnownName="Get a report of operations" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5187c5d6-03db-44cb-8219-1f59929185b3" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="78f885b0-5926-44c1-aed8-152d4bf97f64" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d85d685f-8e48-4b9f-a2bb-62949c161c23" name="Get a report of operations" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="15b94d00-6d1b-4957-8b5e-5841dba934fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7471957b-7ed4-4ad0-9eb1-dad7a9a130e2" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="1f1e29cb-37e6-4f7b-9501-bc444e406f17" name="Incomes" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="08409db6-3cdb-4ddb-aaf3-8db98c80eceb" />
+        <suppliersInternal>
+          <dependency Id="d8afa015-845d-4174-ac18-18709a48a6f9">
+            <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+            <elementDefinition Id="9f2a4fe4-610c-4f3b-95f2-e66fa5a72946" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" name="Expenses" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031" />
+        <suppliersInternal>
+          <dependency Id="a6d9184f-0e95-44a7-9ae7-14c55425c1f3">
+            <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+            <elementDefinition Id="7b6d364e-0a14-4721-8d05-9c7aae98e50b" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" name="Purses" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="9adf4881-f67d-4c09-8c6e-1e153c0854f9" name="Add a purse" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="671238b0-45bc-4f62-95a9-f9a6e07d75cb" />
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9ea40906-e457-4bc9-b932-630172398b29" name="Add an income" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a9262be2-ea85-4d77-890c-85b32173a6a7" />
+        <subjects>
+          <subsystemMoniker Id="1f1e29cb-37e6-4f7b-9501-bc444e406f17" LastKnownName="Incomes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="12a2406b-84e7-43e6-a008-e91d837c2182" name="Add an expense" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ba083329-c615-4118-b167-87beff0b22fb" />
+        <subjects>
+          <subsystemMoniker Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" LastKnownName="Expenses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="44662c14-c626-4ac8-a889-b0d3100fbb4f" name="Add a new income category" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1fb019b1-8102-462c-8e78-b7b5d7908830" />
+        <subjects>
+          <subsystemMoniker Id="1f1e29cb-37e6-4f7b-9501-bc444e406f17" LastKnownName="Incomes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="bf30673c-5e9e-49fb-aa6e-17102c57d359" name="Edit an income" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="33e5a5bb-eaaa-49bb-9fbb-3589d9fb3e57" />
+        <subjects>
+          <subsystemMoniker Id="1f1e29cb-37e6-4f7b-9501-bc444e406f17" LastKnownName="Incomes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e72d5224-5839-43db-ad6e-9c823caff31f" name="Transact money" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d1f47d83-e5fc-4eb0-8a4c-ff52f6e70905" />
+        <suppliersInternal>
+          <dependency Id="ec1727fb-3167-4e95-a6bc-9e0670c1eb71">
+            <useCaseMoniker Id="9adf4881-f67d-4c09-8c6e-1e153c0854f9" LastKnownName="Add a purse" />
+            <elementDefinition Id="14760151-462b-4b47-913e-369f6d8185f6" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="001a7951-0a69-474d-a511-d94ae8b4f692" name="Delete an income" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e941c65f-78f5-4d70-9bd3-a4b73848e297" />
+        <extendedCases>
+          <extend Id="0d389e6d-0fdb-4776-b174-28172334162f">
+            <useCaseMoniker Id="bf30673c-5e9e-49fb-aa6e-17102c57d359" LastKnownName="Edit an income" />
+            <elementDefinition Id="2077c20f-757b-4e0f-8c03-8c60f4712a51" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="1f1e29cb-37e6-4f7b-9501-bc444e406f17" LastKnownName="Incomes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="5880e80d-ba25-497a-bd3b-b85fb9c8180f" name="Add a regular income" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7d75261a-beec-4266-b82b-14849cfe1e88" />
+        <extendedCases>
+          <extend Id="8f57eaeb-6903-460b-a385-f161bfcdbd8f">
+            <useCaseMoniker Id="9ea40906-e457-4bc9-b932-630172398b29" LastKnownName="Add an income" />
+            <elementDefinition Id="2eb86e34-83dd-466c-8f9c-aefeff18f0b3" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="1f1e29cb-37e6-4f7b-9501-bc444e406f17" LastKnownName="Incomes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9a07ea2e-ce9d-4e56-8467-cfd11a53ecba" name="Confirm a regular income" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a67d25db-9d78-4ed9-8371-6a42ea34c118" />
+        <suppliersInternal>
+          <dependency Id="215eb80a-6e1e-4fd1-af70-4ab9833bd7b2">
+            <useCaseMoniker Id="5880e80d-ba25-497a-bd3b-b85fb9c8180f" LastKnownName="Add a regular income" />
+            <elementDefinition Id="9591dbb1-c42f-436e-8a93-d313ba370ed6" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="1f1e29cb-37e6-4f7b-9501-bc444e406f17" LastKnownName="Incomes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a4b8b628-2351-42f4-895a-ded930b336ac" name="Add a cash purse" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4c7adca-9a40-46f5-90cd-4e95e8765d19" />
+        <generalsInternal>
+          <generalization Id="87da3e1f-67e3-48da-8006-c576120ed942" isSubstitutable="false">
+            <useCaseMoniker Id="9adf4881-f67d-4c09-8c6e-1e153c0854f9" LastKnownName="Add a purse" />
+            <elementDefinition Id="f4b57c7f-fd72-4bb2-b860-e2b39a21ba57" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="714d4a26-fe63-48ac-8d67-e54e9f85399d" name="Add a card" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f0fa612a-6aaf-434d-8d76-d568ac1489c2" />
+        <generalsInternal>
+          <generalization Id="a1460fec-a4cc-41a7-a18d-d50cfd04ff37" isSubstitutable="false">
+            <useCaseMoniker Id="9adf4881-f67d-4c09-8c6e-1e153c0854f9" LastKnownName="Add a purse" />
+            <elementDefinition Id="485efbe3-c1a6-4470-8741-08a45091a7e2" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="26ae020a-0e48-451e-bc15-7f094e202eca" name="Banking system" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="37781f77-ced7-4e4b-931a-f1962b6c7849" />
+        <targetEnds>
+          <association Id="c6cffec0-838f-44af-976c-29f5004572a5" isDerived="false" sourceEndRoleName="Banking system" targetEndRoleName="Add a card" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="714d4a26-fe63-48ac-8d67-e54e9f85399d" LastKnownName="Add a card" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1ca12aab-f9c9-4543-932f-cdedad2dfd95" name="Banking system" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b0a5e53e-3b48-448c-a8cd-f26459253632" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0436dcd0-0295-4e45-9fe9-260e5ee4db6a" name="Add a card" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3f91f248-614c-4aca-9666-0956c5b3e07c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dc6c08a1-91a4-4e9f-a0d0-5a8a1be4266c" />
+          </association>
+          <association Id="75ae39de-7f65-46c5-bc98-344836a8cbd5" isDerived="false" sourceEndRoleName="Banking system" targetEndRoleName="Get a card report" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="20cd4773-49bd-4849-b36e-fb05272d317c" LastKnownName="Get a card report" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0c5bcaff-8fb6-4390-aaa0-3e6ac3eed7f1" name="Banking system" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e8d2a00f-54ec-44fe-b13f-e88aa4a95f6e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d08aeef6-8a3d-4cd4-ad0d-9e1465498243" name="Get a card report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="56ed991b-2ba4-44ad-914f-2aee3da997ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2976777d-eed0-4f6a-82e0-6fe4b136a2ba" />
+          </association>
+          <association Id="803b2694-f153-4cd4-8129-be6804a6f03a" isDerived="false" sourceEndRoleName="Banking system" targetEndRoleName="Transact money" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e72d5224-5839-43db-ad6e-9c823caff31f" LastKnownName="Transact money" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="06bdfd33-d278-4975-87f8-16dd439d5210" name="Banking system" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5b5bbc95-6a26-4275-918a-ff1dd5724afd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dc09f7c7-67e0-44fa-9d44-91e882fbda62" name="Transact money" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0a068b99-cd35-4928-8531-435cca941c6b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="54729392-046f-4d68-8953-ea8d4ad9afec" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="ae902c8c-da86-4e17-8a3b-2313bcd16478" name="Confirm a regular transaction" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="50730628-62bf-49d4-973a-fa43e27f62ef" />
+        <suppliersInternal>
+          <dependency Id="4388bbe5-f153-4325-bd21-8c27346014d9">
+            <useCaseMoniker Id="e619ab13-8c48-408b-96d6-5b73c6019a68" LastKnownName="Add a regular  transaction" />
+            <elementDefinition Id="912449c6-7dfd-4439-a558-de41d9bfa02c" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e619ab13-8c48-408b-96d6-5b73c6019a68" name="Add a regular  transaction" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d15747a2-b282-4a24-be76-a964bd791767" />
+        <extendedCases>
+          <extend Id="7ea6aac5-0f7f-4c91-8a3e-9a2777a32966">
+            <useCaseMoniker Id="e72d5224-5839-43db-ad6e-9c823caff31f" LastKnownName="Transact money" />
+            <elementDefinition Id="63e39da6-b4ba-4f8e-9d33-a9f8b5045b62" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="fda0d3f3-aa42-4c6d-a460-ef15f579e492" name="Add a regular expense" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7c93e398-49a0-49ae-8129-529b8bf91550" />
+        <extendedCases>
+          <extend Id="d70db30e-f60a-4650-a7d1-fc41fd1bda48">
+            <useCaseMoniker Id="12a2406b-84e7-43e6-a008-e91d837c2182" LastKnownName="Add an expense" />
+            <elementDefinition Id="c2f625d3-70da-4eb8-8933-4f3f03b6cda6" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" LastKnownName="Expenses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="db42f825-a103-4ff5-b9e6-54edfdb18562" name="Confirm a regular expense" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d9be255c-a4d4-4a66-8a0e-0a2c458a80aa" />
+        <suppliersInternal>
+          <dependency Id="4dcc6457-b91d-4fc6-967b-00b6a1ca5b51">
+            <useCaseMoniker Id="fda0d3f3-aa42-4c6d-a460-ef15f579e492" LastKnownName="Add a regular expense" />
+            <elementDefinition Id="5a0afb6d-2ab5-4bca-8c42-0318217ef1f6" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" LastKnownName="Expenses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f8d0fc84-1c05-4276-a5c2-80771db95609" name="Edit an exoense" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="33120ead-15b7-40ea-8c3b-01d6537bb0e6" />
+        <subjects>
+          <subsystemMoniker Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" LastKnownName="Expenses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6d0df566-d09d-4bf0-aa9c-c7d212ad0d27" name="Add a new expense category" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bcd43768-867b-445d-a72f-391ae7b08b8e" />
+        <subjects>
+          <subsystemMoniker Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" LastKnownName="Expenses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e50138c7-6f59-41e0-897a-82b54617e6b8" name="Delete an expense" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7fb40860-7178-4b4d-93da-93306f83a085" />
+        <extendedCases>
+          <extend Id="f5ef7f4b-cb20-4752-b4cb-ef890e5f77cc">
+            <useCaseMoniker Id="f8d0fc84-1c05-4276-a5c2-80771db95609" LastKnownName="Edit an exoense" />
+            <elementDefinition Id="d1c30371-8912-41e0-a3ca-0b7208272d34" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" LastKnownName="Expenses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f7571545-232b-4c39-a71b-edfffba1d072" name="Add a check report" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="981a1aa6-9c43-4e62-8c82-04a77d9a1c2e" />
+        <extendedCases>
+          <extend Id="e93775f6-dbcb-45b7-a8cc-c1abac2fe4fd">
+            <useCaseMoniker Id="12a2406b-84e7-43e6-a008-e91d837c2182" LastKnownName="Add an expense" />
+            <elementDefinition Id="33431e37-98ce-437a-a66d-99a6cc83a242" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" LastKnownName="Expenses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="074252de-ffc5-4b13-9a87-df9b3a245bb1" name="Check processing system" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fbc5544f-11e2-4b54-b7aa-a25f142bcf41" />
+        <targetEnds>
+          <association Id="be9977e8-c0d3-4740-9193-1aab3994d07d" isDerived="false" sourceEndRoleName="Check processing system" targetEndRoleName="Add a check report" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f7571545-232b-4c39-a71b-edfffba1d072" LastKnownName="Add a check report" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="64f273ac-7b3f-4e7f-870d-b77af25fb88e" name="Check processing system" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d7ece350-b07e-4413-9158-3852a8be9302" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a20560d-4ece-4688-9c10-289bbdbd13ab" name="Add a check report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7f55d859-2566-44e6-aa56-581e178fc997" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="556a7f9d-4d07-45c3-b758-04bddb77782f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="8f99eec4-bc92-413d-929b-f4dc4cbe72a3" name="Get a report of operations" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c4a3f59a-b41a-4d87-819c-9977a22a8711" />
+        <suppliersInternal>
+          <dependency Id="9bc5b483-dc88-4d07-a115-38d8abcc8aa2">
+            <useCaseMoniker Id="9adf4881-f67d-4c09-8c6e-1e153c0854f9" LastKnownName="Add a purse" />
+            <elementDefinition Id="f14a6262-89f5-48b7-8830-1fcb403701f6" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="20cd4773-49bd-4849-b36e-fb05272d317c" name="Get a card report" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f9914a30-2d0b-4129-ad24-0fdd5ea86e43" />
+        <generalsInternal>
+          <generalization Id="fa1545e0-7dcc-4a38-b88f-1921cf589a4c" isSubstitutable="false">
+            <useCaseMoniker Id="8f99eec4-bc92-413d-929b-f4dc4cbe72a3" LastKnownName="Get a report of operations" />
+            <elementDefinition Id="77546059-3a81-4a36-b73e-2ca1f2324275" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c30c6812-d6ea-47e0-a821-bb888159453d" name="Get a cash report" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cd40674e-4810-4586-8541-aacdac5bacfd" />
+        <generalsInternal>
+          <generalization Id="eb9dd528-dd56-4061-aac0-b379e3af4f53" isSubstitutable="false">
+            <useCaseMoniker Id="8f99eec4-bc92-413d-929b-f4dc4cbe72a3" LastKnownName="Get a report of operations" />
+            <elementDefinition Id="72076b2b-90bc-4eac-afb1-73ee6ef57bee" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="43ea7495-c4b5-478f-8e40-a2935b47a0eb" LastKnownName="Purses" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="b16cf0a1-5cd5-4846-873b-18e4a2243204" name="financialplanner">
+    <elementDefinition Id="aa3e8e3e-4616-4fc5-9d00-41a8e337cf81" />
+  </package>
+</useCaseModelRoot>

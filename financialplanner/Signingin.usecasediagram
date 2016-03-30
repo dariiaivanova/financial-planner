@@ -1,41 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="aab75bcb-bd7e-4d10-b1c3-94ea4659e53f" name="Signingin" linkedPackageId="89961ace-3984-4e59-b8e9-95867ef06c76" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="be2ae0a0-acac-48d2-982c-b6e2ef07b7ac">
-      <profileInstance Id="bdfa0966-bbcc-4261-943c-9c9770169fe0" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="f16e6de5-1cf8-4a64-a3e7-235102ff4730">
-      <profileInstance Id="fc884945-a7d7-4ad8-8bdf-11761b7f6d12" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <subsystem Id="d05c135d-9ce0-4862-bb25-c0296fdba5b1" name="Entering system" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <ownedCommentsInternal>
-          <comment Id="383e45d5-718d-4f89-97c9-cd2a9496ebaa">
-            <elementDefinition Id="e0475866-76ef-4038-945c-b3679b9ceed7" />
-            <body>Condition: Forgetting current password
-The point of extention: Password</body>
-          </comment>
-          <comment Id="8ce041b3-4bc4-4458-89e5-a65a098c1de4">
-            <elementDefinition Id="74cd3b87-0780-4b8f-93e5-421629668009" />
-            <body>Condition: The absence of account
-The point of extention: Account
-</body>
-          </comment>
-        </ownedCommentsInternal>
         <elementDefinition Id="a9578886-3b3a-44cf-929f-1f0f7a4c6307" />
       </subsystem>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="bb8961c6-1542-4876-806c-5535df7b60fa" name="Log in" isAbstract="false" isLeaf="false">
         <elementDefinition Id="bc6fc07f-d9d3-42ee-ab9e-a11614cd4351" />
+        <suppliersInternal>
+          <dependency Id="452d42a1-e578-4e5e-b1cd-df5c9c1657c7">
+            <useCaseMoniker Id="f85837bd-5713-4e4f-9da4-eed760d7e306" LastKnownName="Register" />
+            <elementDefinition Id="fdb02035-123f-4834-8dcb-ef8b41b4bc9d" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="ea707ece-fb59-4e59-91cc-65b4264be4ed" isSubstitutable="false">
+            <useCaseMoniker Id="6a735756-b436-4471-909e-d9de3bf23b56" LastKnownName="Log in without registration" />
+            <elementDefinition Id="fdd6ff82-d309-427d-8e90-714ed0b16f53" />
+          </generalization>
+        </generalsInternal>
         <subjects>
           <subsystemMoniker Id="d05c135d-9ce0-4862-bb25-c0296fdba5b1" LastKnownName="Entering system" />
         </subjects>
@@ -44,12 +29,6 @@ The point of extention: Account
     <useCaseModelRootHasTypes>
       <useCase Id="f85837bd-5713-4e4f-9da4-eed760d7e306" name="Register" isAbstract="false" isLeaf="false">
         <elementDefinition Id="ea47fd32-9d97-4592-b303-be8a0360b09b" />
-        <extendedCases>
-          <extend Id="6217a3f8-16f0-4447-ae3a-cfd7e10fa6ff">
-            <useCaseMoniker Id="bb8961c6-1542-4876-806c-5535df7b60fa" LastKnownName="Log in" />
-            <elementDefinition Id="b3bded7f-0962-4bb7-9962-0443c3036549" />
-          </extend>
-        </extendedCases>
         <subjects>
           <subsystemMoniker Id="d05c135d-9ce0-4862-bb25-c0296fdba5b1" LastKnownName="Entering system" />
         </subjects>
@@ -58,6 +37,12 @@ The point of extention: Account
     <useCaseModelRootHasTypes>
       <useCase Id="ffecf171-d2c8-4369-a673-354b897ff1c1" name="Reset password" isAbstract="false" isLeaf="false">
         <elementDefinition Id="2b3ba4f5-f601-4fd4-83a7-a46db8212270" />
+        <suppliersInternal>
+          <dependency Id="48775e13-51c1-432c-8b53-55d21b8cbd2a">
+            <useCaseMoniker Id="f85837bd-5713-4e4f-9da4-eed760d7e306" LastKnownName="Register" />
+            <elementDefinition Id="1f641a93-a2fc-4576-96d0-5476db006678" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association Id="ff4068f9-7463-4966-8e57-090b676a38c3" isDerived="false" sourceEndRoleName="Reset password" targetEndRoleName="E-mail" isLeaf="false" isAbstract="false">
             <actorMoniker Id="1db932eb-78d2-4155-bfb9-3cb0feffa9f7" LastKnownName="E-mailing system" />
@@ -76,12 +61,6 @@ The point of extention: Account
             <elementDefinition Id="e80c9276-2922-4a02-80dc-3304f9689166" />
           </association>
         </targetEnds>
-        <extendedCases>
-          <extend Id="79ce13bb-f1b9-4a6d-a072-e5b09bb33699">
-            <useCaseMoniker Id="bb8961c6-1542-4876-806c-5535df7b60fa" LastKnownName="Log in" />
-            <elementDefinition Id="fafba7da-57c0-4550-a92c-244f846fb949" />
-          </extend>
-        </extendedCases>
         <subjects>
           <subsystemMoniker Id="d05c135d-9ce0-4862-bb25-c0296fdba5b1" LastKnownName="Entering system" />
         </subjects>
@@ -91,21 +70,69 @@ The point of extention: Account
       <actor Id="c95a4656-a8d6-4be3-891b-23cfb44ac139" name="User" isAbstract="false" isLeaf="false">
         <elementDefinition Id="adfc3d1b-4835-483f-97e6-6da6326ae09c" />
         <targetEnds>
-          <association Id="6a5836f0-ca0f-4de0-87f7-24a68fd3d7fe" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Log in" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="bb8961c6-1542-4876-806c-5535df7b60fa" LastKnownName="Log in" />
+          <association Id="c3819f19-2bd6-46cd-92c4-7b3f6d4d1bdb" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Reset password" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ffecf171-d2c8-4369-a673-354b897ff1c1" LastKnownName="Reset password" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="814787e9-8587-4a08-9951-d9823e512a74" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="7019f031-55b9-4658-8c91-709c8dbbf826" />
+                <memberEnd Id="50f45aa4-f6aa-4eac-82aa-60ff146bdabb" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="81236471-0151-481c-9595-683ac4120ed7" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="ed8f9539-e606-4cef-bf04-5ceaa2ae17f4" name="Log in" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e814b9e2-67ac-4b30-bc2d-3b01d834dc27" />
+                <memberEnd Id="445e0f38-2716-4364-ae1e-655aabe0e1b9" name="Reset password" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="744ae6ea-9729-4548-bf4d-d51056470644" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="245c3f6b-2bbf-460f-857f-dce08bce1702" />
+            <elementDefinition Id="ea3cf3f4-6f7b-4a87-908c-493e91c36da0" />
+          </association>
+          <association Id="08dfdfdf-1ab0-41f3-8297-404a4c3ebdce" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Change password" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="096c8da5-a702-4f0f-a4c0-1178a5c9550d" LastKnownName="Change password" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cd209bdb-daa9-4169-ba75-e1d954ccb5e0" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cecc1d29-f436-40d3-92f8-86c3582753ed" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a4d19608-439d-4c65-ab2b-be4c100dcf90" name="Change password" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b808b36b-abda-4a38-8760-259b607fc160" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6a4aa296-e002-4d0f-b954-e7b321396a04" />
+          </association>
+          <association Id="2c42531f-1793-49a6-99bf-4080a4b7e4e8" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Register" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f85837bd-5713-4e4f-9da4-eed760d7e306" LastKnownName="Register" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0cccab52-ef71-4699-bd9a-92a24022384f" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="25889ec7-cdd8-4a23-abcd-abaf59298e21" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ffa27a63-a36f-46f5-b220-e94b4502bd04" name="Register" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1d504203-7bd3-4336-be90-a7433300b927" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="20b65a55-6d7e-4335-acff-3488d476d1f6" />
+          </association>
+          <association Id="9b335433-66e2-4a31-b43f-fbdb01bcb079" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Log in without registration" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6a735756-b436-4471-909e-d9de3bf23b56" LastKnownName="Log in without registration" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9af489df-dcc4-4ccb-befc-16019dd4f77d" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1b6560ce-ab14-435d-bbfb-64662a594ac5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc2d3b99-65fe-476a-ac4b-f6d61ba0f3e2" name="Log in without registration" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cda57c06-4587-4180-b048-0ca1bfbc77e0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8fedd1af-83b1-4341-b9b6-e319bb2f5bac" />
           </association>
         </targetEnds>
       </actor>
@@ -113,32 +140,64 @@ The point of extention: Account
     <useCaseModelRootHasTypes>
       <actor Id="1db932eb-78d2-4155-bfb9-3cb0feffa9f7" name="E-mailing system" isAbstract="false" isLeaf="false">
         <elementDefinition Id="e69b80c6-4ad9-434a-921d-6fbf36c0865b" />
+        <targetEnds>
+          <association Id="5d25e690-cc34-4a2e-a848-8895c66a708b" isDerived="false" sourceEndRoleName="E-mailing system" targetEndRoleName="Change password" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="096c8da5-a702-4f0f-a4c0-1178a5c9550d" LastKnownName="Change password" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f364cda1-4f3a-41c8-b2a5-89249c793bb4" name="E-mailing system" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cb6f406d-0733-46b3-bd8f-9a9894dace34" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="11c007ca-a6c4-4c31-98e2-91ccc7cf3c8d" name="Change password" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d46c4a50-2a12-4dd3-a6ef-877308f3abab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="67b6cd2f-cc27-4465-b530-ff619fa0a58c" />
+          </association>
+        </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <actor Id="e1401b55-f514-4d09-87f5-35a32adcbcf7" name="Registered user" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="5785c0a1-16e9-4a40-a057-fa34dac23053" />
-        <generalsInternal>
-          <generalization Id="30d4a5fa-302d-4b70-b0b1-1c366806263d" isSubstitutable="false">
-            <actorMoniker Id="c95a4656-a8d6-4be3-891b-23cfb44ac139" LastKnownName="User" />
-            <elementDefinition Id="f69e7ea2-3112-492c-b72c-dee728f05b6a" />
-          </generalization>
-        </generalsInternal>
-      </actor>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <actor Id="e2aaa195-b1b2-4c14-8d3c-38e8cc9d1ace" name="Unregistered user" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="99f436cc-0dc2-47cf-9664-182738bd96a0" />
-        <generalsInternal>
-          <generalization Id="eb44b171-9bd9-4b33-b125-d88c2a31f7c3" isSubstitutable="false">
-            <actorMoniker Id="c95a4656-a8d6-4be3-891b-23cfb44ac139" LastKnownName="User" />
-            <elementDefinition Id="5ab8a260-f5bd-4771-82f6-8de41c0a7d83" />
-          </generalization>
-        </generalsInternal>
-      </actor>
-    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="096c8da5-a702-4f0f-a4c0-1178a5c9550d" name="Change password" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c58bb68a-6a93-4ac2-87cb-5b699936d8d4" />
+        <suppliersInternal>
+          <dependency Id="a9c1fe17-a6d1-4ace-82d4-52b4844ae529">
+            <useCaseMoniker Id="ffecf171-d2c8-4369-a673-354b897ff1c1" LastKnownName="Reset password" />
+            <elementDefinition Id="e8c2fa43-fd01-45ee-99a4-ea63666e9406" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="d05c135d-9ce0-4862-bb25-c0296fdba5b1" LastKnownName="Entering system" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6a735756-b436-4471-909e-d9de3bf23b56" name="Log in without registration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="97fc96fe-9dc5-442d-92d9-a5c075e52ac9" />
+        <subjects>
+          <subsystemMoniker Id="d05c135d-9ce0-4862-bb25-c0296fdba5b1" LastKnownName="Entering system" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="89961ace-3984-4e59-b8e9-95867ef06c76" name="financialplanner">
     <elementDefinition Id="aa3e8e3e-4616-4fc5-9d00-41a8e337cf81" />
+    <profileInstances>
+      <packageHasProfileInstances Id="be2ae0a0-acac-48d2-982c-b6e2ef07b7ac">
+        <profileInstance Id="bdfa0966-bbcc-4261-943c-9c9770169fe0" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f16e6de5-1cf8-4a64-a3e7-235102ff4730">
+        <profileInstance Id="fc884945-a7d7-4ad8-8bdf-11761b7f6d12" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

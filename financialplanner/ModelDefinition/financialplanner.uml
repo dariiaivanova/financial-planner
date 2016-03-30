@@ -21,30 +21,6 @@ The point of extention: Account
 The point of extention: Category
 </body>
     </comment>
-    <comment
-      Id="589e8f27-6c45-4e3e-b7c9-6ed6e1389ff8">
-      <body>Condition: The absence of appropriate category
-The point of extention: Category
-</body>
-    </comment>
-    <comment
-      Id="4b099b01-c276-4ae2-8753-19af6461dd74">
-      <body>Condition: The absence of appropriate category
-The point of extention: Category
-</body>
-    </comment>
-    <comment
-      Id="1b531c47-5dbc-4204-af94-ab673431e2fa">
-      <body>Condition: The need of repeating
- of the expense
-The point of extention: Repeating.</body>
-    </comment>
-    <comment
-      Id="b849217e-519c-4c54-a010-e51287e9b688">
-      <body>Condition: The absence of appropriate category
-The point of extention: Category
-</body>
-    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -1297,21 +1273,7 @@ The point of extention: Category
         name="Entering system"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false">
-        <ownedCommentsInternal>
-          <comment
-            Id="e0475866-76ef-4038-945c-b3679b9ceed7">
-            <body>Condition: Forgetting current password
-The point of extention: Password</body>
-          </comment>
-          <comment
-            Id="74cd3b87-0780-4b8f-93e5-421629668009">
-            <body>Condition: The absence of account
-The point of extention: Account
-</body>
-          </comment>
-        </ownedCommentsInternal>
-      </subsystem>
+        isActiveClass="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1319,6 +1281,32 @@ The point of extention: Account
         name="Log in"
         isAbstract="false"
         isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="e61dde0b-dd0e-4444-943f-d8e3d221ee9b">
+            <useCaseMoniker
+              Id="c06fb157-6216-42dc-a885-a77c7a9f9ac2"
+              LastKnownName="Enter the system"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+          <dependency
+            Id="fdb02035-123f-4834-8dcb-ef8b41b4bc9d">
+            <useCaseMoniker
+              Id="ea47fd32-9d97-4592-b303-be8a0360b09b"
+              LastKnownName="Register"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="fdd6ff82-d309-427d-8e90-714ed0b16f53"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="97fc96fe-9dc5-442d-92d9-a5c075e52ac9"
+              LastKnownName="Log in without registration"
+              LastKnownLocation="financialplanner.uml" />
+          </generalization>
+        </generalsInternal>
         <subjects>
           <subsystemMoniker
             Id="a9578886-3b3a-44cf-929f-1f0f7a4c6307"
@@ -1333,15 +1321,6 @@ The point of extention: Account
         name="Register"
         isAbstract="false"
         isLeaf="false">
-        <extendedCases>
-          <extend
-            Id="b3bded7f-0962-4bb7-9962-0443c3036549">
-            <useCaseMoniker
-              Id="bc6fc07f-d9d3-42ee-ab9e-a11614cd4351"
-              LastKnownName="Log in"
-              LastKnownLocation="financialplanner.uml" />
-          </extend>
-        </extendedCases>
         <subjects>
           <subsystemMoniker
             Id="a9578886-3b3a-44cf-929f-1f0f7a4c6307"
@@ -1356,6 +1335,15 @@ The point of extention: Account
         name="Reset password"
         isAbstract="false"
         isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="1f641a93-a2fc-4576-96d0-5476db006678">
+            <useCaseMoniker
+              Id="ea47fd32-9d97-4592-b303-be8a0360b09b"
+              LastKnownName="Register"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="e80c9276-2922-4a02-80dc-3304f9689166"
@@ -1398,15 +1386,6 @@ The point of extention: Account
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-        <extendedCases>
-          <extend
-            Id="fafba7da-57c0-4550-a92c-244f846fb949">
-            <useCaseMoniker
-              Id="bc6fc07f-d9d3-42ee-ab9e-a11614cd4351"
-              LastKnownName="Log in"
-              LastKnownLocation="financialplanner.uml" />
-          </extend>
-        </extendedCases>
         <subjects>
           <subsystemMoniker
             Id="a9578886-3b3a-44cf-929f-1f0f7a4c6307"
@@ -1423,20 +1402,20 @@ The point of extention: Account
         isLeaf="false">
         <targetEnds>
           <association
-            Id="245c3f6b-2bbf-460f-857f-dce08bce1702"
+            Id="ea3cf3f4-6f7b-4a87-908c-493e91c36da0"
             isDerived="false"
             sourceEndRoleName="User"
-            targetEndRoleName="Log in"
+            targetEndRoleName="Reset password"
             isLeaf="false"
             isAbstract="false">
             <useCaseMoniker
-              Id="bc6fc07f-d9d3-42ee-ab9e-a11614cd4351"
-              LastKnownName="Log in"
+              Id="2b3ba4f5-f601-4fd4-83a7-a46db8212270"
+              LastKnownName="Reset password"
               LastKnownLocation="financialplanner.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="7019f031-55b9-4658-8c91-709c8dbbf826"
+                  Id="81236471-0151-481c-9595-683ac4120ed7"
                   name="User"
                   isLeaf="false"
                   isStatic="false"
@@ -1449,8 +1428,125 @@ The point of extention: Account
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="e814b9e2-67ac-4b30-bc2d-3b01d834dc27"
-                  name="Log in"
+                  Id="744ae6ea-9729-4548-bf4d-d51056470644"
+                  name="Reset password"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6a4aa296-e002-4d0f-b954-e7b321396a04"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Change password"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c58bb68a-6a93-4ac2-87cb-5b699936d8d4"
+              LastKnownName="Change password"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cecc1d29-f436-40d3-92f8-86c3582753ed"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b808b36b-abda-4a38-8760-259b607fc160"
+                  name="Change password"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="20b65a55-6d7e-4335-acff-3488d476d1f6"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Register"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ea47fd32-9d97-4592-b303-be8a0360b09b"
+              LastKnownName="Register"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25889ec7-cdd8-4a23-abcd-abaf59298e21"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1d504203-7bd3-4336-be90-a7433300b927"
+                  name="Register"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8fedd1af-83b1-4341-b9b6-e319bb2f5bac"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Log in without registration"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="97fc96fe-9dc5-442d-92d9-a5c075e52ac9"
+              LastKnownName="Log in without registration"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1b6560ce-ab14-435d-bbfb-64662a594ac5"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cda57c06-4587-4180-b048-0ca1bfbc77e0"
+                  name="Log in without registration"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1469,7 +1565,49 @@ The point of extention: Account
         Id="e69b80c6-4ad9-434a-921d-6fbf36c0865b"
         name="E-mailing system"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="67b6cd2f-cc27-4465-b530-ff619fa0a58c"
+            isDerived="false"
+            sourceEndRoleName="E-mailing system"
+            targetEndRoleName="Change password"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c58bb68a-6a93-4ac2-87cb-5b699936d8d4"
+              LastKnownName="Change password"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb6f406d-0733-46b3-bd8f-9a9894dace34"
+                  name="E-mailing system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d46c4a50-2a12-4dd3-a6ef-877308f3abab"
+                  name="Change password"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <actor
@@ -1495,16 +1633,125 @@ The point of extention: Account
         name="Unregistered user"
         isAbstract="false"
         isLeaf="false">
-        <generalsInternal>
-          <generalization
-            Id="5ab8a260-f5bd-4771-82f6-8de41c0a7d83"
-            isSubstitutable="false">
-            <actorMoniker
-              Id="adfc3d1b-4835-483f-97e6-6da6326ae09c"
-              LastKnownName="User"
+        <targetEnds>
+          <association
+            Id="fded5e2a-36c4-46e9-ac0b-6ade9c91c378"
+            isDerived="false"
+            sourceEndRoleName="Unregistered user"
+            targetEndRoleName="Register"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ea47fd32-9d97-4592-b303-be8a0360b09b"
+              LastKnownName="Register"
               LastKnownLocation="financialplanner.uml" />
-          </generalization>
-        </generalsInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d967f66b-4be2-455a-a2f1-a8171d88d14e"
+                  name="Unregistered user"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bc47d3db-c8a6-42d4-ac6d-c1dbcb23a118"
+                  name="Register"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6972c129-50ea-4ab8-86ac-3596e44c85a4"
+            isDerived="false"
+            sourceEndRoleName="Unregistered user"
+            targetEndRoleName="Enter the system"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c06fb157-6216-42dc-a885-a77c7a9f9ac2"
+              LastKnownName="Enter the system"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90d1909e-41f1-4fcd-bb97-6d6168236e31"
+                  name="Unregistered user"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f61bbc50-2690-4c9e-ad16-49911604d899"
+                  name="Enter the system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1f5f9bcf-06c2-4a1b-a836-95d9c4df6fa6"
+            isDerived="false"
+            sourceEndRoleName="Unregistered user"
+            targetEndRoleName="Log in without registration"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="97fc96fe-9dc5-442d-92d9-a5c075e52ac9"
+              LastKnownName="Log in without registration"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="15a1ec35-800d-4fe9-bc75-d4c11a5e5cae"
+                  name="Unregistered user"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="376999f7-6000-414e-a8d9-181489daf4f5"
+                  name="Log in without registration"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </actor>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1563,6 +1810,162 @@ The point of extention: Account
                       value="*" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ff24fb48-27fd-4351-b1be-6b2d12277f26"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Edit an income"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="81a7c385-07fa-42de-9872-03275d223510"
+              LastKnownName="Edit an income"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e92e6b2f-b830-43de-92dd-7fc5954ef2f5"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="090b9697-9a79-484f-b217-2209433110f7"
+                  name="Edit an income"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="308c3b6e-a6a7-4678-a274-122a1bf0d16a"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add a new income category"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7771388b-a297-4edf-a3e2-3ea7e18338b0"
+              LastKnownName="Add a new income category"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5d733fd3-5921-4ed7-b677-8fb4f1d9d27f"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7cd989f-2099-498f-bcb4-da52ef56058f"
+                  name="Add a new income category"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="99e96d94-78b1-45c8-84fa-8a72a0f35f0b"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Confirm a regular income"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c6228833-064b-4874-83be-288824a022d0"
+              LastKnownName="Confirm a regular income"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c28a0d40-7681-46d0-b0c9-086ca507be7c"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b635b230-ae04-40f7-a5b7-f7cb55665991"
+                  name="Confirm a regular income"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="10776f18-c2eb-48b3-a97a-5245541e02ab"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Confirm a regular transaction1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="51126c32-44a4-4cd9-863f-2c3b27cd4d6c"
+              LastKnownName="Confirm a regular transaction from money-box"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4dc0d77b-ddba-48c0-9060-c618b31e1ba9"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fba6ba8b-147a-4fbd-8d4c-aedd8b0df672"
+                  name="Confirm a regular transaction1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1662,14 +2065,7 @@ The point of extention: Account
         Id="330c6775-7bf0-4ca1-93f1-e03be014842e"
         name="Choose a category"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
-            LastKnownName="Adding income"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1693,12 +2089,6 @@ The point of extention: Account
               LastKnownLocation="financialplanner.uml" />
           </include>
         </additions>
-        <subjects>
-          <subsystemMoniker
-            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
-            LastKnownName="Adding income"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1706,14 +2096,7 @@ The point of extention: Account
         Id="839f5f37-e8e8-415a-aac1-9f168d7fedcd"
         name="Add a note"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
-            LastKnownName="Adding income"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1730,12 +2113,6 @@ The point of extention: Account
               LastKnownLocation="financialplanner.uml" />
           </extend>
         </extendedCases>
-        <subjects>
-          <subsystemMoniker
-            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
-            LastKnownName="Adding income"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1743,28 +2120,14 @@ The point of extention: Account
         Id="463aacc9-9d7d-40b4-8155-044d0718f1d4"
         name="Choose currency"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
-            LastKnownName="Adding income"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="1f66c302-f192-49a6-81d0-246e2c689c10"
         name="Enter amount"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
-            LastKnownName="Adding income"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <actor
@@ -1802,6 +2165,123 @@ The point of extention: Account
                 <memberEnd
                   Id="a3014c5d-f6e3-450b-8d4c-d3c9e49829cd"
                   name="Add a saving"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e624148b-612b-49e9-a923-8921cdcbc1d9"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Edit a saving"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d7874e25-d182-4898-a9ab-996eb4b82aeb"
+              LastKnownName="Edit a saving"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ddd8a838-755c-4e4b-88a5-4f3e00cdb5f9"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="34adbc56-b5ec-4cf9-aa90-a1b436e73e8d"
+                  name="Edit a saving"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c0c480e5-6000-443b-8193-f72cc384ae81"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add a new category of saving"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3a482f6e-e0f3-44d3-a75d-a6de4fc5c5d9"
+              LastKnownName="Add a new category of saving"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b13330c-4dc2-4fdd-a9c0-3bd9721b5801"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="67be904e-6999-4488-adb5-d4ff81dfd286"
+                  name="Add a new category of saving"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d02a0ea8-446b-4416-9162-8ef5fe262e0c"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Confirm a regular saving"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="781a77dd-66cf-4bee-b180-9353dd30515e"
+              LastKnownName="Confirm a regular saving"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d56f8605-3d48-4eb1-8e39-69f6112cb674"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3d989af4-4b7f-4828-b239-952eb2b1d983"
+                  name="Confirm a regular saving"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1922,56 +2402,28 @@ The point of extention: Account
         Id="9c860d2e-5725-451f-a964-47616c908f45"
         name="Add a category "
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="c953f436-41f4-4972-84af-1f6f63bced57"
-            LastKnownName="Money-box"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="69b39c28-b765-4045-bcc8-7669c5f9ffb4"
         name="Add a note"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="c953f436-41f4-4972-84af-1f6f63bced57"
-            LastKnownName="Money-box"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="5272835a-1558-4c65-9d43-63bfea632700"
         name="Enter amount"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="c953f436-41f4-4972-84af-1f6f63bced57"
-            LastKnownName="Money-box"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="f7255395-3f55-47b4-b4dc-2fc9d3a07366"
         name="Choose currency"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="c953f436-41f4-4972-84af-1f6f63bced57"
-            LastKnownName="Money-box"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1995,12 +2447,6 @@ The point of extention: Account
               LastKnownLocation="financialplanner.uml" />
           </include>
         </additions>
-        <subjects>
-          <subsystemMoniker
-            Id="c953f436-41f4-4972-84af-1f6f63bced57"
-            LastKnownName="Money-box"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2008,33 +2454,19 @@ The point of extention: Account
         Id="ad74ee45-70ed-497c-a195-9026837ed652"
         name="Add a date"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
-            LastKnownName="Adding income"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="b3f06d54-0f84-4e64-b262-34e1a0144607"
         name="Add a date"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="c953f436-41f4-4972-84af-1f6f63bced57"
-            LastKnownName="Money-box"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="3a482f6e-e0f3-44d3-a75d-a6de4fc5c5d9"
-        name="Add a new category"
+        name="Add a new category of saving"
         isAbstract="false"
         isLeaf="false">
         <extendedCases>
@@ -2057,7 +2489,7 @@ The point of extention: Account
     <packageHasNamedElement>
       <useCase
         Id="abb01e56-e880-41c6-8485-e58a44a34d44"
-        name="Add a daily expense"
+        name="Add a expense"
         isAbstract="false"
         isLeaf="false">
         <additions>
@@ -2101,7 +2533,7 @@ The point of extention: Account
     <packageHasNamedElement>
       <useCase
         Id="98cdc23a-769c-4e82-86bb-a14aef12efce"
-        name="Add a fixed expense"
+        name="Add a regular expense"
         isAbstract="false"
         isLeaf="false">
         <extendedCases>
@@ -2116,7 +2548,7 @@ The point of extention: Account
             Id="b5ceb273-e688-4f20-9b3c-9d5c61b2ffa0">
             <useCaseMoniker
               Id="abb01e56-e880-41c6-8485-e58a44a34d44"
-              LastKnownName="Add a daily expense"
+              LastKnownName="Add a expense"
               LastKnownLocation="financialplanner.uml" />
           </extend>
         </extendedCases>
@@ -2149,7 +2581,7 @@ The point of extention: Account
             isSubstitutable="false">
             <useCaseMoniker
               Id="abb01e56-e880-41c6-8485-e58a44a34d44"
-              LastKnownName="Add a daily expense"
+              LastKnownName="Add a expense"
               LastKnownLocation="financialplanner.uml" />
           </generalization>
         </generalsInternal>
@@ -2179,7 +2611,7 @@ The point of extention: Account
             isAbstract="false">
             <useCaseMoniker
               Id="abb01e56-e880-41c6-8485-e58a44a34d44"
-              LastKnownName="Add a daily expense"
+              LastKnownName="Add a expense"
               LastKnownLocation="financialplanner.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -2199,6 +2631,201 @@ The point of extention: Account
                 <memberEnd
                   Id="6b171b5b-930a-4300-bc47-d1f7c0442fcd"
                   name="Add an expense1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="61efeb98-b122-4746-97a0-a4f4cf9c4ea0"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Edit a daily expense"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="941d2006-0232-4f8b-8dfa-d8ac100cb936"
+              LastKnownName="Edit an expense"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7bb9c4e2-2d77-4518-aeb7-745e2e3e287a"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="de78b065-79e5-429f-acc0-efd725459614"
+                  name="Edit a daily expense"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5570bc46-7a1d-4edc-ae00-99b7885c29be"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add a new category of expense"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="47b2639b-4c9e-4aff-a75e-092d2f8461a5"
+              LastKnownName="Add a new category of expense"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="45858645-7b31-48a1-8d1a-3ba09e73cfed"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e42e1211-27ad-41cd-ba23-ba7818b10d63"
+                  name="Add a new category of expense"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0b28baa2-3685-44d1-904d-01a2e2139762"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add a check report"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d39d0f26-96b3-4d64-bf9a-a60dbdbc0da6"
+              LastKnownName="Add a check report"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b38060e6-5f04-4647-b8bd-4c817c5ff32b"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c57f5c5d-b837-48b3-8789-e1a9e923e023"
+                  name="Add a check report"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9e56d7f1-9d53-4ee8-8ffc-6c76905743af"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Confirm a regular expense"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b46370c2-446b-4664-ac39-aec02ccfe394"
+              LastKnownName="Confirm a regular expense"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="26218f05-8a56-417d-bd6d-291b828616aa"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d69d31a-fe25-4f39-a247-0a1be31d981f"
+                  name="Confirm a regular expense"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5af67bcc-6251-4b93-b0a1-3956e9659377"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Confirm a regular saving"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="365ad8e1-46a6-4c0c-a8f3-11c33876b806"
+              LastKnownName="Confirm a regular transaction"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="af6e577f-e6c4-4441-a3a0-1af2127b3f13"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="429bf6bb-de90-406d-b4c6-a501aa2f07c9"
+                  name="Confirm a regular saving"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2253,42 +2880,21 @@ The point of extention: Account
         Id="df0a9b50-9535-4a18-b85c-029c795cb746"
         name="Add a note"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
-            LastKnownName="Adding an expense"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="b4fe1002-f8db-4d68-975b-5e3bb3f0e84b"
         name="Enter a date"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
-            LastKnownName="Adding an expense"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="9e24645e-89bd-47d5-beca-07869ea8afc5"
         name="Add a repeat"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
-            LastKnownName="Adding an expense"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -2312,12 +2918,6 @@ The point of extention: Account
               LastKnownLocation="financialplanner.uml" />
           </include>
         </additions>
-        <subjects>
-          <subsystemMoniker
-            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
-            LastKnownName="Adding an expense"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2325,47 +2925,26 @@ The point of extention: Account
         Id="16439045-7b4b-4804-9973-1f0a5cc148e7"
         name="Enter an amount"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
-            LastKnownName="Adding an expense"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="c7d1e24d-3649-42ff-a876-8f3a28bed586"
         name="Choose a currency"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
-            LastKnownName="Adding an expense"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="fb478c74-f78d-490a-8a8c-71b28e5f7adc"
         name="Add a category"
         isAbstract="false"
-        isLeaf="false">
-        <subjects>
-          <subsystemMoniker
-            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
-            LastKnownName="Adding an expense"
-            LastKnownLocation="financialplanner.uml" />
-        </subjects>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="47b2639b-4c9e-4aff-a75e-092d2f8461a5"
-        name="Add a new category"
+        name="Add a new category of expense"
         isAbstract="false"
         isLeaf="false">
         <extendedCases>
@@ -2598,6 +3177,1844 @@ The point of extention: Account
           <subsystemMoniker
             Id="de9e3c9b-eab3-479f-8b4e-d03785cce643"
             LastKnownName="Getting reports"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b0090922-bcd2-4b11-a58f-4554161c3211"
+        name="Expense"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9ec5a857-a347-4e21-bf7f-0d2081d3bfa0"
+        name="Add a regular income"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="cdf6b6ce-6868-4e7e-928b-b6395c860277">
+            <useCaseMoniker
+              Id="8519e162-ecd2-481e-ac8b-8538e17272bb"
+              LastKnownName="Add an income"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="2419d39d-9df2-465f-b590-55c4ccdedb5c">
+            <useCaseMoniker
+              Id="6abff385-683f-4152-87cc-36355e62c1a0"
+              LastKnownName="Add a repeat"
+              LastKnownLocation="financialplanner.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
+            LastKnownName="Adding income"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6abff385-683f-4152-87cc-36355e62c1a0"
+        name="Add a repeat"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="09c5cdd8-1a20-4f7b-8521-5676c31a32dd"
+        name="Income"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fe84c5ac-5b8c-4ab1-9718-dd7bc699fcf2"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="357c52ae-bcfd-4501-a2ad-1e26535c7e5d"
+        name="RegisteredUser"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="13eeb8e7-2e70-4689-b745-7dd8da8170f9"
+            isSubstitutable="false">
+            <classMoniker
+              Id="fe84c5ac-5b8c-4ab1-9718-dd7bc699fcf2"
+              LastKnownName="User"
+              LastKnownLocation="financialplanner.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f4bf32f1-700c-4b97-95da-3b659f11b382"
+        name="Saving"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8bdba243-e0d0-4617-bc05-939481dc4fb4"
+        name="IChange"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="3591730b-2c71-42be-9e7c-0415fd72d255"
+        name="Currency"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="941d2006-0232-4f8b-8dfa-d8ac100cb936"
+        name="Edit an expense"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
+            LastKnownName="Adding an expense"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9743df4a-0450-486a-8a70-ea0d558f5f03"
+        name="Delete an expense"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="986ac4f9-836a-49d2-b1a7-b2a2eec9b63e">
+            <useCaseMoniker
+              Id="941d2006-0232-4f8b-8dfa-d8ac100cb936"
+              LastKnownName="Edit an expense"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
+            LastKnownName="Adding an expense"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="81a7c385-07fa-42de-9872-03275d223510"
+        name="Edit an income"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
+            LastKnownName="Adding income"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d72d5b49-f5e7-483a-b769-db1473b96cd9"
+        name="Delete income"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="07b86cea-be33-4cb2-970f-52bd0687b580">
+            <useCaseMoniker
+              Id="81a7c385-07fa-42de-9872-03275d223510"
+              LastKnownName="Edit an income"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
+            LastKnownName="Adding income"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="a9684056-6b9f-40d9-83c8-9505393c9259"
+        name="Category"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d7874e25-d182-4898-a9ab-996eb4b82aeb"
+        name="Edit a saving"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="c953f436-41f4-4972-84af-1f6f63bced57"
+            LastKnownName="Money-box"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2b1b4712-b6cb-4264-b2c2-45c98c542ac3"
+        name="Delete a saving"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="a4191cf8-dd61-4b61-bf62-512a62eb11b8">
+            <useCaseMoniker
+              Id="d7874e25-d182-4898-a9ab-996eb4b82aeb"
+              LastKnownName="Edit a saving"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="c953f436-41f4-4972-84af-1f6f63bced57"
+            LastKnownName="Money-box"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d39d0f26-96b3-4d64-bf9a-a60dbdbc0da6"
+        name="Add a check report"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
+            LastKnownName="Adding an expense"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="47219fdc-c857-41b8-a86d-719c7464c41f"
+        name="Add a photo of a check"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ab15aadc-d24e-4d80-b61f-7fb3e3d86dd2"
+            isDerived="false"
+            sourceEndRoleName="Add a photo of a check"
+            targetEndRoleName="Check processing system"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="a693407e-c107-4a25-a64c-a0d8fc3b3e98"
+              LastKnownName="Check processing system"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2c8a0f70-2fcc-4992-a4e7-aefd155b1f69"
+                  name="Add a photo of a check"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4f40241-e561-48e5-a68a-e2bccfc0aae1"
+                  name="Check processing system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend
+            Id="79a06665-b030-4671-9e98-023fcb0cda81">
+            <useCaseMoniker
+              Id="d39d0f26-96b3-4d64-bf9a-a60dbdbc0da6"
+              LastKnownName="Add a check report"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
+            LastKnownName="Adding an expense"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="a693407e-c107-4a25-a64c-a0d8fc3b3e98"
+        name="Check processing system"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0090aaf7-e0ff-4c10-9dd4-327637f47ba3"
+            isDerived="false"
+            sourceEndRoleName="Check processing system"
+            targetEndRoleName="Add a check report"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d39d0f26-96b3-4d64-bf9a-a60dbdbc0da6"
+              LastKnownName="Add a check report"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="49c5c9d3-8b3a-4700-a5ff-fd63cebdfbf5"
+                  name="Check processing system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d0b7e554-6845-4079-addd-b63bc800009f"
+                  name="Add a check report"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7771388b-a297-4edf-a3e2-3ea7e18338b0"
+        name="Add a new income category"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
+            LastKnownName="Adding income"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c6228833-064b-4874-83be-288824a022d0"
+        name="Confirm a regular income"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="96436307-3e19-44d8-87a4-401a36f7aeea">
+            <useCaseMoniker
+              Id="9ec5a857-a347-4e21-bf7f-0d2081d3bfa0"
+              LastKnownName="Add a regular income"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
+            LastKnownName="Adding income"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c06fb157-6216-42dc-a885-a77c7a9f9ac2"
+        name="Enter the system"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c58bb68a-6a93-4ac2-87cb-5b699936d8d4"
+        name="Change password"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="e8c2fa43-fd01-45ee-99a4-ea63666e9406">
+            <useCaseMoniker
+              Id="2b3ba4f5-f601-4fd4-83a7-a46db8212270"
+              LastKnownName="Reset password"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="a9578886-3b3a-44cf-929f-1f0f7a4c6307"
+            LastKnownName="Entering system"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="97fc96fe-9dc5-442d-92d9-a5c075e52ac9"
+        name="Log in without registration"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="a9578886-3b3a-44cf-929f-1f0f7a4c6307"
+            LastKnownName="Entering system"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b46370c2-446b-4664-ac39-aec02ccfe394"
+        name="Confirm a regular expense"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="211eab6e-449f-4dc5-86e3-00b16293b908">
+            <useCaseMoniker
+              Id="98cdc23a-769c-4e82-86bb-a14aef12efce"
+              LastKnownName="Add a regular expense"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
+            LastKnownName="Adding an expense"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a5e7376b-6273-4b6f-87f7-5ac05f6de571"
+        name="Add a regular saving"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f6c593af-846f-4f00-8d7a-29a15247efb9">
+            <useCaseMoniker
+              Id="6102051c-d2ae-44ec-91ff-4fb0fdd81dcb"
+              LastKnownName="Add a saving"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="c953f436-41f4-4972-84af-1f6f63bced57"
+            LastKnownName="Money-box"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="781a77dd-66cf-4bee-b180-9353dd30515e"
+        name="Confirm a regular saving"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="92308208-cf59-479a-9eb8-dea5dd335a19">
+            <useCaseMoniker
+              Id="a5e7376b-6273-4b6f-87f7-5ac05f6de571"
+              LastKnownName="Add a regular saving"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="c953f436-41f4-4972-84af-1f6f63bced57"
+            LastKnownName="Money-box"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="365ad8e1-46a6-4c0c-a8f3-11c33876b806"
+        name="Confirm a regular transaction"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="08b1bae2-a84c-4e2d-8ad4-3bfa84f838df">
+            <useCaseMoniker
+              Id="6840b735-3c8f-4af8-84b1-078805cd6bd2"
+              LastKnownName="Add a regular transaction"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
+            LastKnownName="Adding an expense"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6840b735-3c8f-4af8-84b1-078805cd6bd2"
+        name="Add a regular transaction"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="245a8fc9-6546-4ab4-8783-e59817cafae6">
+            <useCaseMoniker
+              Id="99e70c0a-6c16-4969-8cc5-954ac20b58e3"
+              LastKnownName="Transaction to money-box"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
+            LastKnownName="Adding an expense"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="99e70c0a-6c16-4969-8cc5-954ac20b58e3"
+        name="Transaction to money-box"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="bd1e1145-3ad3-4fad-814b-2f4c9cc0ff33">
+            <useCaseMoniker
+              Id="abb01e56-e880-41c6-8485-e58a44a34d44"
+              LastKnownName="Add a expense"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="71168bf9-ff77-4405-b577-7f1f66541c32"
+            LastKnownName="Adding an expense"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="512d41ae-e21b-494e-bb56-1f2981493d46"
+        name="Add a new category of saving1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2ae86b58-d39f-458a-b6da-a8ad20d2625e"
+        name="Edit a saving1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bf2355db-773e-4f38-b716-3bba2f8d6801"
+        name="Delete a saving1"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c556629e-263a-4637-ad69-b5bca280ab87">
+            <useCaseMoniker
+              Id="2ae86b58-d39f-458a-b6da-a8ad20d2625e"
+              LastKnownName="Edit a saving1"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="00f3f9f5-300b-4d51-99d4-c5aec3817c7c"
+        name="Transaction from money-box"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="19feed5d-703a-4a23-b8f5-429e6701272b">
+            <useCaseMoniker
+              Id="8519e162-ecd2-481e-ac8b-8538e17272bb"
+              LastKnownName="Add an income"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
+            LastKnownName="Adding income"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="63e80a09-358e-4507-b5d8-16dfa9003db5"
+        name="Add a regular transaction"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="14c1d989-4412-4ab7-bb1d-9b7cd098dea6">
+            <useCaseMoniker
+              Id="00f3f9f5-300b-4d51-99d4-c5aec3817c7c"
+              LastKnownName="Transaction from money-box"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
+            LastKnownName="Adding income"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="51126c32-44a4-4cd9-863f-2c3b27cd4d6c"
+        name="Confirm a regular transaction from money-box"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="3772d6c9-0b36-426b-b951-5e071f933cca">
+            <useCaseMoniker
+              Id="63e80a09-358e-4507-b5d8-16dfa9003db5"
+              LastKnownName="Add a regular transaction"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="66dd9ecd-2b06-4a3f-b02e-f059602e09c6"
+            LastKnownName="Adding income"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e6e9f8f6-1adf-4972-b81a-e146c387904a"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="91bae27c-0b26-47df-924c-b1df764e5a86"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add a purse"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="671238b0-45bc-4f62-95a9-f9a6e07d75cb"
+              LastKnownName="Add a purse"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3cac167d-cfef-4378-99af-2eb655b97af8"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="00cb9eea-fd2c-49d8-8e1d-19bb60e084e1"
+                  name="Add a purse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4b035d18-f3e4-42a0-bd76-96ad8f85d6f4"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add an income"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a9262be2-ea85-4d77-890c-85b32173a6a7"
+              LastKnownName="Add an income"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ae216fb8-2ac8-4cf3-a883-04d291d98817"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7a01d0c-c5e0-4143-81ba-0392dcd0ab31"
+                  name="Add an income"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a15569d0-42e9-4535-8e42-2f86cdffcd22"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add an expense"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ba083329-c615-4118-b167-87beff0b22fb"
+              LastKnownName="Add an expense"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2c761b8d-bb24-4bc7-8e1b-b7b6ec2d6f38"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="34d45f4c-c974-4b8e-9c8e-2a61be532c9e"
+                  name="Add an expense"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7b4b5bc9-cd33-4100-a2ae-580b67e0b76d"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add a new income category"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1fb019b1-8102-462c-8e78-b7b5d7908830"
+              LastKnownName="Add a new income category"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ccc724b8-5297-4002-b889-73e300c77709"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5ffe637f-8ad7-4fce-9da1-2885fc46b994"
+                  name="Add a new income category"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cf3d4be0-896d-4670-a23d-07fee701099f"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Transact money"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d1f47d83-e5fc-4eb0-8a4c-ff52f6e70905"
+              LastKnownName="Transact money"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="318be23f-b2ec-41f8-a812-a59445140850"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ee8130da-3fa7-4f94-9858-1dd8dcf972ba"
+                  name="Transact money"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5ad0b873-3be2-4ec3-ab67-c50716253a5f"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Edit an income"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="33e5a5bb-eaaa-49bb-9fbb-3589d9fb3e57"
+              LastKnownName="Edit an income"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="550fdf77-c1ec-47fd-a807-f0ec68c16b63"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e3a53ae8-1341-4d87-aeb7-49c1bec0ce2c"
+                  name="Edit an income"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fa6d5491-fd23-43df-ab74-5fcff38450ac"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Confirm a regular income"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a67d25db-9d78-4ed9-8371-6a42ea34c118"
+              LastKnownName="Confirm a regular income"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3592a90-97c2-4a0f-b63c-186bfc5aca6f"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="15862bfb-7eb1-496c-a00c-c71d2135aa91"
+                  name="Confirm a regular income"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ce29eec4-7683-4d28-9623-94abefdec3dc"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Confirm a regular transaction"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="50730628-62bf-49d4-973a-fa43e27f62ef"
+              LastKnownName="Confirm a regular transaction"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="42270ec9-c2d4-442e-996b-a57836e92682"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a00cf10-f704-4239-90e6-c7b2d34d45a4"
+                  name="Confirm a regular transaction"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e246858c-4038-4cb6-b4c4-20be2f844a1b"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Confirm a regular expense"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d9be255c-a4d4-4a66-8a0e-0a2c458a80aa"
+              LastKnownName="Confirm a regular expense"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="89e05558-2e84-4098-af84-f314c07d2073"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="18784030-af3f-44ec-890a-dc6bdcf9fe50"
+                  name="Confirm a regular expense"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="33e99d0a-8a93-4eea-bebc-7ff946c7921d"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add a new expense category"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bcd43768-867b-445d-a72f-391ae7b08b8e"
+              LastKnownName="Add a new expense category"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90768e6d-c7f3-4c4e-9a3f-22e8a00b8c09"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9c8eb182-e113-4803-b1b3-f0c1894897c7"
+                  name="Add a new expense category"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2d57fad8-d59a-4639-9daa-144cf1a7b234"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Edit an exoense"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="33120ead-15b7-40ea-8c3b-01d6537bb0e6"
+              LastKnownName="Edit an exoense"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e222569-04ca-4769-9405-51d1b5a4c21d"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e84dc7e-79fe-4e11-af82-2c670baebe9e"
+                  name="Edit an exoense"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7471957b-7ed4-4ad0-9eb1-dad7a9a130e2"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Get a report of operations"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c4a3f59a-b41a-4d87-819c-9977a22a8711"
+              LastKnownName="Get a report of operations"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="78f885b0-5926-44c1-aed8-152d4bf97f64"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="15b94d00-6d1b-4957-8b5e-5841dba934fd"
+                  name="Get a report of operations"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="08409db6-3cdb-4ddb-aaf3-8db98c80eceb"
+        name="Incomes"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="9f2a4fe4-610c-4f3b-95f2-e66fa5a72946">
+            <subsystemMoniker
+              Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+              LastKnownName="Purses"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031"
+        name="Expenses"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="7b6d364e-0a14-4721-8d05-9c7aae98e50b">
+            <subsystemMoniker
+              Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+              LastKnownName="Purses"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+        name="Purses"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="671238b0-45bc-4f62-95a9-f9a6e07d75cb"
+        name="Add a purse"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a9262be2-ea85-4d77-890c-85b32173a6a7"
+        name="Add an income"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="08409db6-3cdb-4ddb-aaf3-8db98c80eceb"
+            LastKnownName="Incomes"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ba083329-c615-4118-b167-87beff0b22fb"
+        name="Add an expense"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031"
+            LastKnownName="Expenses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1fb019b1-8102-462c-8e78-b7b5d7908830"
+        name="Add a new income category"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="08409db6-3cdb-4ddb-aaf3-8db98c80eceb"
+            LastKnownName="Incomes"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="33e5a5bb-eaaa-49bb-9fbb-3589d9fb3e57"
+        name="Edit an income"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="08409db6-3cdb-4ddb-aaf3-8db98c80eceb"
+            LastKnownName="Incomes"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d1f47d83-e5fc-4eb0-8a4c-ff52f6e70905"
+        name="Transact money"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="14760151-462b-4b47-913e-369f6d8185f6">
+            <useCaseMoniker
+              Id="671238b0-45bc-4f62-95a9-f9a6e07d75cb"
+              LastKnownName="Add a purse"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bbada45b-8526-4ff0-bc77-282b152400a8"
+        name="Transact to another purse"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="a3ba36ea-3bf7-445d-8d7f-ed152551646a"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="d1f47d83-e5fc-4eb0-8a4c-ff52f6e70905"
+              LastKnownName="Transact money"
+              LastKnownLocation="financialplanner.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="55304d5f-0f52-4a63-9f41-56e40eb80502"
+        name="Transact to  purse"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e941c65f-78f5-4d70-9bd3-a4b73848e297"
+        name="Delete an income"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="2077c20f-757b-4e0f-8c03-8c60f4712a51">
+            <useCaseMoniker
+              Id="33e5a5bb-eaaa-49bb-9fbb-3589d9fb3e57"
+              LastKnownName="Edit an income"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="08409db6-3cdb-4ddb-aaf3-8db98c80eceb"
+            LastKnownName="Incomes"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7d75261a-beec-4266-b82b-14849cfe1e88"
+        name="Add a regular income"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="2eb86e34-83dd-466c-8f9c-aefeff18f0b3">
+            <useCaseMoniker
+              Id="a9262be2-ea85-4d77-890c-85b32173a6a7"
+              LastKnownName="Add an income"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="08409db6-3cdb-4ddb-aaf3-8db98c80eceb"
+            LastKnownName="Incomes"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a67d25db-9d78-4ed9-8371-6a42ea34c118"
+        name="Confirm a regular income"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="9591dbb1-c42f-436e-8a93-d313ba370ed6">
+            <useCaseMoniker
+              Id="7d75261a-beec-4266-b82b-14849cfe1e88"
+              LastKnownName="Add a regular income"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="08409db6-3cdb-4ddb-aaf3-8db98c80eceb"
+            LastKnownName="Incomes"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e4c7adca-9a40-46f5-90cd-4e95e8765d19"
+        name="Add a cash purse"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="f4b57c7f-fd72-4bb2-b860-e2b39a21ba57"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="671238b0-45bc-4f62-95a9-f9a6e07d75cb"
+              LastKnownName="Add a purse"
+              LastKnownLocation="financialplanner.uml" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f0fa612a-6aaf-434d-8d76-d568ac1489c2"
+        name="Add a card"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="485efbe3-c1a6-4470-8741-08a45091a7e2"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="671238b0-45bc-4f62-95a9-f9a6e07d75cb"
+              LastKnownName="Add a purse"
+              LastKnownLocation="financialplanner.uml" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="37781f77-ced7-4e4b-931a-f1962b6c7849"
+        name="Banking system"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="dc6c08a1-91a4-4e9f-a0d0-5a8a1be4266c"
+            isDerived="false"
+            sourceEndRoleName="Banking system"
+            targetEndRoleName="Add a card"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f0fa612a-6aaf-434d-8d76-d568ac1489c2"
+              LastKnownName="Add a card"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b0a5e53e-3b48-448c-a8cd-f26459253632"
+                  name="Banking system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f91f248-614c-4aca-9666-0956c5b3e07c"
+                  name="Add a card"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2976777d-eed0-4f6a-82e0-6fe4b136a2ba"
+            isDerived="false"
+            sourceEndRoleName="Banking system"
+            targetEndRoleName="Get a card report"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f9914a30-2d0b-4129-ad24-0fdd5ea86e43"
+              LastKnownName="Get a card report"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e8d2a00f-54ec-44fe-b13f-e88aa4a95f6e"
+                  name="Banking system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="56ed991b-2ba4-44ad-914f-2aee3da997ac"
+                  name="Get a card report"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="54729392-046f-4d68-8953-ea8d4ad9afec"
+            isDerived="false"
+            sourceEndRoleName="Banking system"
+            targetEndRoleName="Transact money"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d1f47d83-e5fc-4eb0-8a4c-ff52f6e70905"
+              LastKnownName="Transact money"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b5bbc95-6a26-4275-918a-ff1dd5724afd"
+                  name="Banking system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a068b99-cd35-4928-8531-435cca941c6b"
+                  name="Transact money"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="50730628-62bf-49d4-973a-fa43e27f62ef"
+        name="Confirm a regular transaction"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="912449c6-7dfd-4439-a558-de41d9bfa02c">
+            <useCaseMoniker
+              Id="d15747a2-b282-4a24-be76-a964bd791767"
+              LastKnownName="Add a regular  transaction"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d15747a2-b282-4a24-be76-a964bd791767"
+        name="Add a regular  transaction"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="63e39da6-b4ba-4f8e-9d33-a9f8b5045b62">
+            <useCaseMoniker
+              Id="d1f47d83-e5fc-4eb0-8a4c-ff52f6e70905"
+              LastKnownName="Transact money"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7c93e398-49a0-49ae-8129-529b8bf91550"
+        name="Add a regular expense"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c2f625d3-70da-4eb8-8933-4f3f03b6cda6">
+            <useCaseMoniker
+              Id="ba083329-c615-4118-b167-87beff0b22fb"
+              LastKnownName="Add an expense"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031"
+            LastKnownName="Expenses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d9be255c-a4d4-4a66-8a0e-0a2c458a80aa"
+        name="Confirm a regular expense"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="5a0afb6d-2ab5-4bca-8c42-0318217ef1f6">
+            <useCaseMoniker
+              Id="7c93e398-49a0-49ae-8129-529b8bf91550"
+              LastKnownName="Add a regular expense"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031"
+            LastKnownName="Expenses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="33120ead-15b7-40ea-8c3b-01d6537bb0e6"
+        name="Edit an exoense"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031"
+            LastKnownName="Expenses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bcd43768-867b-445d-a72f-391ae7b08b8e"
+        name="Add a new expense category"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031"
+            LastKnownName="Expenses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7fb40860-7178-4b4d-93da-93306f83a085"
+        name="Delete an expense"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="d1c30371-8912-41e0-a3ca-0b7208272d34">
+            <useCaseMoniker
+              Id="33120ead-15b7-40ea-8c3b-01d6537bb0e6"
+              LastKnownName="Edit an exoense"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031"
+            LastKnownName="Expenses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="981a1aa6-9c43-4e62-8c82-04a77d9a1c2e"
+        name="Add a check report"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="33431e37-98ce-437a-a66d-99a6cc83a242">
+            <useCaseMoniker
+              Id="ba083329-c615-4118-b167-87beff0b22fb"
+              LastKnownName="Add an expense"
+              LastKnownLocation="financialplanner.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="1eeab82b-b5dd-44d0-b2d0-9ec99de6d031"
+            LastKnownName="Expenses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="fbc5544f-11e2-4b54-b7aa-a25f142bcf41"
+        name="Check processing system"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="556a7f9d-4d07-45c3-b758-04bddb77782f"
+            isDerived="false"
+            sourceEndRoleName="Check processing system"
+            targetEndRoleName="Add a check report"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="981a1aa6-9c43-4e62-8c82-04a77d9a1c2e"
+              LastKnownName="Add a check report"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7ece350-b07e-4413-9158-3852a8be9302"
+                  name="Check processing system"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f55d859-2566-44e6-aa56-581e178fc997"
+                  name="Add a check report"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c4a3f59a-b41a-4d87-819c-9977a22a8711"
+        name="Get a report of operations"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="f14a6262-89f5-48b7-8830-1fcb403701f6">
+            <useCaseMoniker
+              Id="671238b0-45bc-4f62-95a9-f9a6e07d75cb"
+              LastKnownName="Add a purse"
+              LastKnownLocation="financialplanner.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f9914a30-2d0b-4129-ad24-0fdd5ea86e43"
+        name="Get a card report"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="77546059-3a81-4a36-b73e-2ca1f2324275"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="c4a3f59a-b41a-4d87-819c-9977a22a8711"
+              LastKnownName="Get a report of operations"
+              LastKnownLocation="financialplanner.uml" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
+            LastKnownLocation="financialplanner.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cd40674e-4810-4586-8541-aacdac5bacfd"
+        name="Get a cash report"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="72076b2b-90bc-4eac-afb1-73ee6ef57bee"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="c4a3f59a-b41a-4d87-819c-9977a22a8711"
+              LastKnownName="Get a report of operations"
+              LastKnownLocation="financialplanner.uml" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="87c91e42-cb55-4dd3-ac42-d97de7f0e487"
+            LastKnownName="Purses"
             LastKnownLocation="financialplanner.uml" />
         </subjects>
       </useCase>

@@ -22,33 +22,12 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="AddExpense.usecasediagram">
+    <Content Include="FinancialPlanner.usecasediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="AddExpense.usecasediagram.layout">
+    <Content Include="FinancialPlanner.usecasediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>AddExpense.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="AddingIncome.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="AddingIncome.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>AddingIncome.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="AddingMonthlyGoals.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="AddingMonthlyGoals.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>AddingMonthlyGoals.usecasediagram</DependentUpon>
-    </Content>
-    <Content Include="GettingReports.usecasediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="GettingReports.usecasediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>GettingReports.usecasediagram</DependentUpon>
+      <DependentUpon>FinancialPlanner.usecasediagram</DependentUpon>
     </Content>
     <Content Include="scenario.txt">
       <SubType>Content</SubType>
