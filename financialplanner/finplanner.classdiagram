@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="b250a04f-71fd-4446-b4fe-7d5e7e4b208a" name="finplanner" linkedPackageId="c4db0546-4c0b-430a-a989-fa45ca5df0c9" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0a086cb7-f8af-4190-b3be-2d74310ecddd" name="Income" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3cb51ae1-ca83-49fb-a8cf-95c55689206a" />
+        <generalsInternal>
+          <generalization Id="221bfd76-8a89-4135-ae58-6be67a8253f0" isSubstitutable="false">
+            <classMoniker Id="f3293013-72df-48d4-8aad-9b350c9ab010" LastKnownName="PurseOperation" />
+            <elementDefinition Id="02e5148f-ad6e-45fe-9e91-72691eb11438" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="2f454248-d65f-4ff4-bf14-0d83065e52ad" isDerived="false" sourceEndRoleName="Income" targetEndRoleName="IncomeCategory" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="60d0de09-b74d-4a8b-a12c-22aa82bfae28" LastKnownName="IncomeCategory" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8de99837-3854-4f1e-a056-ca091a1e7341" name="Income" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3d763b41-1606-4a99-968c-c2b708a2aafd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c87f41af-d591-4e83-bc27-98077a736877" name="IncomeCategory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3833b099-19e0-4edd-a532-60de4531dcc8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ca850b5a-5d40-4d0f-9d8f-a3ad293b0e97" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="978360d2-78f8-46a9-8e14-8d99368ce6b2" name="Expense" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a98ca64c-a5cd-49b8-90c6-669806432093" />
+        <generalsInternal>
+          <generalization Id="de01923e-8840-4dec-bdd3-5c50bd778ae0" isSubstitutable="false">
+            <classMoniker Id="f3293013-72df-48d4-8aad-9b350c9ab010" LastKnownName="PurseOperation" />
+            <elementDefinition Id="4f2e7800-cec7-4cdb-bf4e-212e71459ecb" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="4de1f864-e917-4cc8-b543-a30869d6cc2d" isDerived="false" sourceEndRoleName="Expense" targetEndRoleName="ExpenseCategory" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="5c04d76d-8b65-473e-a149-c695ef0ecbbb" LastKnownName="ExpenseCategory" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c5fa85ce-94c9-4828-8112-540b9398456e" name="Expense" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0014ddb1-5886-4f44-9372-8f3259fc5f5e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="968ec236-1adf-44d8-9299-6120939c6920" name="ExpenseCategory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f6ee705b-2586-478e-b642-4d186fb934dd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3e8b38b3-fcfa-4189-aca3-0b9a03ea3f77" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="115db0b5-be2d-48e2-93a8-45c83ab86f3b" name="BasePurse" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f6800c93-6709-4e5a-bcd4-703f3cd5ee18" />
+        <targetEnds>
+          <association Id="869a3491-5640-4ae9-8adf-e09265112f51" isDerived="false" sourceEndRoleName="BasePurse" targetEndRoleName="PurseOperation" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f3293013-72df-48d4-8aad-9b350c9ab010" LastKnownName="PurseOperation" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3ed6cc7e-8429-4bca-87f6-5f642d1f6442" name="BasePurse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6de0c25f-35a1-4ffb-80c0-b820aba227d5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c97eae9f-3021-436b-b265-fe7e25d4136f" name="PurseOperation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="43597bdb-f8ef-46b4-9827-b7618df223a4" name="Lower" value="*">
+                      <elementDefinition Id="de4e0426-12bb-486a-ac6e-f5e3843fce2f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8c1286dc-92b3-49f1-84e8-a10121a21991" name="Upper" value="*">
+                      <elementDefinition Id="98926718-7f0a-450c-9f82-fa429c0944f5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="402fcafd-a13d-4f19-beb4-db351c5a207f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4406300b-2b47-4400-9276-77a40787e45c" />
+          </association>
+          <association Id="f5fef1d8-89e3-45c7-854a-49b472fa029c" isDerived="false" sourceEndRoleName="BasePurse" targetEndRoleName="User" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8f6ad512-a600-49bf-a3be-8d79467ffdff" LastKnownName="User" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8471f604-aa36-4504-bb88-e3572e80e991" name="BasePurse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ad9ce107-9d31-4dfa-81b7-aa58c7746e57" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="97471d7c-2e53-48b4-8824-6e376210c85c" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="8b9b577b-d3fc-43f4-b7a1-0d93c8e5519c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="038cde80-cf92-43fb-9aca-adfe4e943392" />
+          </association>
+          <association Id="1df448be-fb11-4cbf-8a3b-f006e2aad827" isDerived="false" sourceEndRoleName="BasePurse" targetEndRoleName="Report" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0b71a3f6-7fc0-4a8c-a105-ea14a0c2fc51" LastKnownName="Report" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2febc00c-055c-4b51-bd23-0fd828293a97" name="BasePurse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="81128abc-a962-4ccb-a071-cefcaa27f7fc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49881af4-c795-4ff5-a039-3ee21ee4d235" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d5954369-ee64-42ee-adfd-573d720123e4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8bf14384-bdf8-4197-ab41-c486991d63fe" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="a0fed143-9625-42b8-a11d-bd9449dd5ca7" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="421f8770-7603-44f9-8a12-b7802ee868fe" />
+          </property>
+          <property Id="8c7cc458-a6d6-4706-ba0f-0ef02bfbe33b" name="CurrentSum" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="969794ee-5c47-43e4-857d-b9f4cc8cd4a8" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="6c20f758-9293-48ee-a4d4-a6d25e02e488" name="TransactMoney" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0b43e255-fdcc-4191-84f6-65d4496f628f" />
+          </operation>
+          <operation Id="60f15130-d422-4258-be2b-063ede326106" name="AddOperation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5928e956-3a21-4e6b-9d87-67c3a12c42fd" />
+          </operation>
+          <operation Id="c1d2eade-a0af-481c-93dc-7d451e539061" name="AddCurrency" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ca1ebf0b-d84f-4b4c-80cf-123adf000e1f" />
+          </operation>
+          <operation Id="fd49f0b8-9635-44b6-90e6-ba7fc23bb1f1" name="ShowReport" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6f2d77db-6b16-4314-94b1-34fcbba8b84d" />
+          </operation>
+          <operation Id="5e2b897c-b80b-47cd-8dd7-d1f91bd07d5c" name="EditPurse" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="359543ea-9f85-4972-8243-f113fbee0b30" />
+          </operation>
+          <operation Id="1b41343b-6ff6-4945-8cf7-723f4c7394bc" name="ChangeCurrentSum" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a1ce942b-1b90-4534-a651-faae886c8582" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d0338e82-4d1d-46cd-8eef-24ca24452ce3" name="Cash Purse" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="00ad1719-57d5-4989-bf88-b420346cd498" />
+        <generalsInternal>
+          <generalization Id="de2bc029-d090-4873-b36e-07c30d80a576" isSubstitutable="false">
+            <classMoniker Id="115db0b5-be2d-48e2-93a8-45c83ab86f3b" LastKnownName="BasePurse" />
+            <elementDefinition Id="28ba7a47-b7fc-4029-a408-6b8d397c4773" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="11ee7854-77d4-43b0-a0a8-4528a0d761c8" name="Card Purse" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="30c78404-8ded-4eeb-8252-11a9dce728ab" />
+        <generalsInternal>
+          <generalization Id="cd5a84fa-59a7-4340-b529-fe4e9b21ade3" isSubstitutable="false">
+            <classMoniker Id="115db0b5-be2d-48e2-93a8-45c83ab86f3b" LastKnownName="BasePurse" />
+            <elementDefinition Id="46d3c84b-a9eb-4155-8a0d-8fdc8c06db2e" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f3293013-72df-48d4-8aad-9b350c9ab010" name="PurseOperation" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b1972f8a-2d05-42a9-a1f4-3813355a1abb" />
+        <targetEnds>
+          <association Id="5469f539-11ce-4c53-aba8-79bea2222927" isDerived="false" sourceEndRoleName="PurseOperation" targetEndRoleName="Currency" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="a08638cb-8b06-40cf-a429-73184f0c9b0a" LastKnownName="Currency" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0112a420-00cc-43c9-a9af-2222ca60780f" name="PurseOperation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="772b1878-ff86-4170-a9cb-e90984c0e835" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0cdbaaa4-5b4f-4929-881d-c58475d69535" name="Currency" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="561cd83e-8479-48c1-8c73-526eb5cde3fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="136e593c-2e22-4c14-8d24-bc8f2e4aec0f" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="5de79f93-69aa-4827-ad0d-a1d43e6bb048" name="Sum" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3ad921f1-1787-4bc6-8d62-b943a4dc585d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7557ba17-9e44-4a79-81ce-77d27db7e6f2" LastKnownName="Double" />
+            </type_NamedElement>
+          </property>
+          <property Id="8a0e0f0b-5de8-449f-9b21-33ae7651e8b9" name="Note" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="be5479b9-fdc4-4469-8db1-2c225c3f5c67" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="25b05b2b-cae5-4b37-8889-0ab7a35cb615" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="9c76d6a1-d4dc-40fd-80b1-82ef767f3d8b" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d4fcbf6b-2910-44ad-9142-c394ddfa1b74" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="810a32ee-2f15-4387-8974-bc727455a862" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+          <property Id="7f2f8ce3-264a-4629-a180-29a12e1af20d" name="isRepeated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3eb7bb75-6dc0-4ceb-aef1-a3734a6128f2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b83b247c-ad15-4734-982d-5f1e96582941" LastKnownName="Boolean" />
+            </type_NamedElement>
+          </property>
+          <property Id="2e789795-cdbd-4363-9ba7-b3ba6a41b796" name="Repeating" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5fd97e5e-cb16-4995-9f62-6ea79a123a95" />
+          </property>
+          <property Id="8d6496df-38c6-4553-9dd1-d02440a2e199" name="Place" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b5b4abdb-4363-4e49-bc09-bc49fc8c7aae" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="25b05b2b-cae5-4b37-8889-0ab7a35cb615" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="9a4af544-9b83-4716-bc38-66ebfb3f9580" name="Reminder" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bfb380c0-b441-4385-8b22-8c1061e8e5ed" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="de5a129b-0ee0-443d-a872-bf0e32a751e0" name="AddRepeating" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="948d0442-bbbb-4a54-b1c5-71f416e6ce75" />
+          </operation>
+          <operation Id="4555be0b-59e8-48e0-a080-c764bdd7b133" name="Save" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="67d219be-0f5c-405e-a424-80a1fc2f2273" />
+          </operation>
+          <operation Id="127305ea-76f8-4d15-a9df-c11a2920c817" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c26218df-a43c-4ff0-a3e1-ae130ae7b4a0" />
+          </operation>
+          <operation Id="073e99a5-db49-4dd0-b244-a770d263ea4b" name="Delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="03d25794-87ba-4053-aa4e-227c096f8ab4" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8f6ad512-a600-49bf-a3be-8d79467ffdff" name="User" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8fbece64-9a7d-4a7a-8286-ec4dd142b33c" />
+        <ownedAttributesInternal>
+          <property Id="279ea9d1-bb00-44cc-935a-8c0b111a343b" name="Username" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f9c3ea87-de65-41b8-8591-ca1b4b383694" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="25b05b2b-cae5-4b37-8889-0ab7a35cb615" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="2be6fc55-2ef1-4504-b3df-6947350710a4" name="Password" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1a8b57a6-5086-40dc-a3cf-88c345f384ed" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="25b05b2b-cae5-4b37-8889-0ab7a35cb615" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="b2d0cf4e-2e8e-4c57-9cc8-9eb9e199958c" name="E-mail" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7a48976a-70c2-42b6-a2a0-85caab960313" />
+          </property>
+          <property Id="704e18f7-cf0c-4e32-b716-76243fa9657a" name="Picture" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="74a6b657-24b4-48a3-837e-6f17eea4eb64" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="093ffac9-b4e2-4581-838b-602b1a06d135" name="ChangePassword" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f8170a63-10f9-484a-b1e3-86686f5a2535" />
+          </operation>
+          <operation Id="14d28e25-e390-4ef5-a38c-60bc78587719" name="ChangeEmail" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="90cf2a0e-58e3-4348-ba6a-59b8169be431" />
+          </operation>
+          <operation Id="ba9cf0fc-72e1-47e2-a117-d0628b2eaa6d" name="AddPurse" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="51a5ddc0-d51c-4f2b-b2c5-cc87ea865f23" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0b71a3f6-7fc0-4a8c-a105-ea14a0c2fc51" name="Report" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="743df576-6491-4fac-97ba-a4bd6039e67d" />
+        <ownedOperationsInternal>
+          <operation Id="536b8251-a990-4ee0-a4d8-5819b9b534cc" name="GetCategorizedReport" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0faf8ad8-10eb-40b4-a129-e4658a313dab" />
+          </operation>
+          <operation Id="874be4b3-de00-4940-9d8d-0269f93c7c79" name="GetMonthReport" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b03b7f4c-df6a-4d2e-b71f-bd025be59ac8" />
+          </operation>
+          <operation Id="da3afce8-b6a0-458d-8d67-8c1f8f4e9bf8" name="GetTotalIncomes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="aa7ad248-ff8c-446e-9502-d2255d653d7a" />
+          </operation>
+          <operation Id="85a33c0c-e0c3-4e57-a5d0-012e562bf083" name="GetTotalExpenses" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ab5da5fa-a7d5-4f62-b729-07a39e4644f0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="7557ba17-9e44-4a79-81ce-77d27db7e6f2" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="5ecb2cc9-9e07-46a8-99e1-c95c695c8505" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="810a32ee-2f15-4387-8974-bc727455a862" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="7b7ec1f1-3b9d-4b3c-ae7e-230668c55283" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="60d0de09-b74d-4a8b-a12c-22aa82bfae28" name="IncomeCategory" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="996822ef-2c22-4d24-88de-528b76abe6f8" />
+        <ownedLiterals>
+          <enumerationLiteral Id="ce9b9527-2aeb-4014-918a-3bf9183f3e3d" name="Salary">
+            <elementDefinition Id="e2e2471d-d1d6-48d3-a734-1df81c4ebadd" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="1c12c826-ab70-4fb8-a262-684955cd6f61" name="Gifts">
+            <elementDefinition Id="edcc24c2-4d18-4fb5-bee1-d235e5b771e0" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="2945be85-4f59-41bb-8e01-6de36f4b03d9" name="Credit">
+            <elementDefinition Id="dfabcd66-a44a-47f6-a142-9ad0b071aeef" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="3c7448ac-2e48-424b-928e-80a743332db5" name="Extras">
+            <elementDefinition Id="900d0628-9ea4-41ba-ba19-f931825a393f" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b83b247c-ad15-4734-982d-5f1e96582941" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="25b05b2b-cae5-4b37-8889-0ab7a35cb615" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="5c04d76d-8b65-473e-a149-c695ef0ecbbb" name="ExpenseCategory" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c9823281-3ec1-4949-9783-b6cd1ae67bfd" />
+        <ownedLiterals>
+          <enumerationLiteral Id="dc69c666-6b77-4d18-a614-395ce3634866" name="Car">
+            <elementDefinition Id="f05ce780-2737-4f2f-9c3a-29c996df30e1" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="2a8217e7-b335-4ed8-9ab6-eea217947c5b" name="Householding">
+            <elementDefinition Id="9e31d2d0-d25b-41a7-ae62-e6cb98af6efb" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="4929f841-f2a6-4279-8578-2c5a3dd1ce87" name="Food and drinks">
+            <elementDefinition Id="c4dff01e-f6e3-4958-81dd-5c851a87165d" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="b221ef0b-bfc0-43e3-830f-3daded3a50e3" name="Products">
+            <elementDefinition Id="3a255988-833f-4d22-a03a-e8e20c316447" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="bf554c2b-0557-4746-a6b1-917e69144f80" name="Travelling">
+            <elementDefinition Id="5f86aa15-b1cb-4eaf-a0b4-3e20cbda4303" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="a87bd907-31b2-4df1-8ce0-24f6ee8fd1c3" name="Entertainment">
+            <elementDefinition Id="0ce449c3-033b-4728-963f-ad4845a3cfa1" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="7a9da924-c360-4330-9fac-fefc3313ca62" name="Gifts">
+            <elementDefinition Id="06d799b2-185d-4879-a214-58cf3638db2a" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="2d13b0ef-e6cc-4194-8ddb-21a56a4c4b79" name="Clothes">
+            <elementDefinition Id="95773a94-0be8-4fe5-adb0-26a0704a17a6" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="4efe9227-a029-40ab-9373-0aa321406b93" name="Health&amp;Beauty">
+            <elementDefinition Id="5e94637c-84ea-49fb-9041-c8799a53253a" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="e84bfd91-0996-4cbf-af41-5475fba26e8e" name="Transport">
+            <elementDefinition Id="7343bb22-6c0e-4fd7-924f-cd956f68c43d" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="5e0872bc-d393-4215-95da-1c4700691ff0" name="Rent">
+            <elementDefinition Id="2edb44b4-f3df-4be2-a368-1814c447d934" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="a08638cb-8b06-40cf-a429-73184f0c9b0a" name="Currency" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="12b09338-a5f5-4bac-b6e7-b360ad85b898" />
+        <ownedLiterals>
+          <enumerationLiteral Id="bff3779e-6383-47f8-9c25-f50ace55bf1c" name="Barbados Dolar (BBD)">
+            <elementDefinition Id="c9225d96-5300-42f3-9e0c-326a925fa9c4" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="1d17b1d6-c7a3-43a9-b8af-c4b0417d19f5" name="Chile Peso (CLP)">
+            <elementDefinition Id="5ae9bf3a-18c3-488a-9f40-a839856564ae" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="d4ce6dd2-75f8-4aa2-8564-77f26f9eab7a" name="Ukraine Hryvnia (UAH)">
+            <elementDefinition Id="847fa77c-6552-46fe-9ff7-76e57b069440" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="d0ece6b1-1e9e-4964-8e48-2436fa3b94a6" name="Russia Ruble (RUB)">
+            <elementDefinition Id="08552520-26f5-4d0f-a6a2-3dd640b1653f" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="d289e05d-214d-4c3b-90c3-c6ed1a86cced" name="United States Dollar (USD)">
+            <elementDefinition Id="2200ed83-0017-466b-b609-7136e360d6dd" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="10ce74f6-1b0e-410f-9453-5ed63b0d6400" name="Euro (EUR)">
+            <elementDefinition Id="9b53705d-adde-4745-927c-c9a4eb49da97" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="c4db0546-4c0b-430a-a989-fa45ca5df0c9" name="financialplanner">
+    <elementDefinition Id="aa3e8e3e-4616-4fc5-9d00-41a8e337cf81" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2629fba0-0ff0-4f5f-a651-c78706f85e03">
+        <profileInstance Id="8cff0ae2-5576-435f-9f37-b8ccded1ac1c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="18451a91-ece2-4add-83f6-28da2f7d57b1">
+        <profileInstance Id="607bc9a9-5085-473f-adf1-d1387a81b8f0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

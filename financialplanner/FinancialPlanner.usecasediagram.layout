@@ -115,7 +115,7 @@
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="28382243-cec0-49aa-9b5f-6d4907dd1297" absoluteBounds="6.375, 2.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="f8d0fc84-1c05-4276-a5c2-80771db95609" LastKnownName="Edit an exoense" />
+          <useCaseMoniker Id="f8d0fc84-1c05-4276-a5c2-80771db95609" LastKnownName="Edit an expense" />
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="cc1f2be4-e6ba-4a2d-a4ae-5548f4dd18d3" absoluteBounds="6.125, 1.125, 1, 0.625" customColor="238, 237, 131" heightOffset="0">

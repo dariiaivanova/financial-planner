@@ -180,7 +180,7 @@
             <elementDefinition Id="33e99d0a-8a93-4eea-bebc-7ff946c7921d" />
           </association>
           <association Id="4ae9d279-44de-4ae1-96d6-9ab21c643fc1" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Edit an exoense" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="f8d0fc84-1c05-4276-a5c2-80771db95609" LastKnownName="Edit an exoense" />
+            <useCaseMoniker Id="f8d0fc84-1c05-4276-a5c2-80771db95609" LastKnownName="Edit an expense" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="6bd6a578-d31f-4d04-928e-28e7bad919c9" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -477,7 +477,7 @@
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="f8d0fc84-1c05-4276-a5c2-80771db95609" name="Edit an exoense" isAbstract="false" isLeaf="false">
+      <useCase Id="f8d0fc84-1c05-4276-a5c2-80771db95609" name="Edit an expense" isAbstract="false" isLeaf="false">
         <elementDefinition Id="33120ead-15b7-40ea-8c3b-01d6537bb0e6" />
         <subjects>
           <subsystemMoniker Id="9b8ef2ee-e02e-4d41-b0b6-b40cb0fa3b6e" LastKnownName="Expenses" />
@@ -497,7 +497,7 @@
         <elementDefinition Id="7fb40860-7178-4b4d-93da-93306f83a085" />
         <extendedCases>
           <extend Id="f5ef7f4b-cb20-4752-b4cb-ef890e5f77cc">
-            <useCaseMoniker Id="f8d0fc84-1c05-4276-a5c2-80771db95609" LastKnownName="Edit an exoense" />
+            <useCaseMoniker Id="f8d0fc84-1c05-4276-a5c2-80771db95609" LastKnownName="Edit an expense" />
             <elementDefinition Id="d1c30371-8912-41e0-a3ca-0b7208272d34" />
           </extend>
         </extendedCases>

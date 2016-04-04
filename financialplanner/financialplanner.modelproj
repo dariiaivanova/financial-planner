@@ -29,6 +29,16 @@
       <SubType>Content</SubType>
       <DependentUpon>FinancialPlanner.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="finplanner.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="finplanner.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>finplanner.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package_1706.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="scenario.txt">
       <SubType>Content</SubType>
     </Content>
