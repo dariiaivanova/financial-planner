@@ -5077,6 +5077,26 @@ The point of extention: Category
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="a8fe3aa5-ff85-4bb5-bce6-8b487be27292"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="996822ef-2c22-4d24-88de-528b76abe6f8"
+                LastKnownName="IncomeCategory"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -5137,13 +5157,33 @@ The point of extention: Category
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="53a143bb-ad67-48e6-a881-01262c4c7a21"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="c9823281-3ec1-4949-9783-b6cd1ae67bfd"
+                LastKnownName="ExpenseCategory"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="f6800c93-6709-4e5a-bcd4-703f3cd5ee18"
-        name="BasePurse"
-        isAbstract="true"
+        name="CashPurse"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
@@ -5210,45 +5250,6 @@ The point of extention: Category
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="038cde80-cf92-43fb-9aca-adfe4e943392"
-            isDerived="false"
-            sourceEndRoleName="BasePurse"
-            targetEndRoleName="User"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="8fbece64-9a7d-4a7a-8286-ec4dd142b33c"
-              LastKnownName="User"
-              LastKnownLocation="financialplanner.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="ad9ce107-9d31-4dfa-81b7-aa58c7746e57"
-                  name="BasePurse"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8b9b577b-d3fc-43f4-b7a1-0d93c8e5519c"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="8bf14384-bdf8-4197-ab41-c486991d63fe"
             isDerived="false"
             sourceEndRoleName="BasePurse"
@@ -5288,6 +5289,84 @@ The point of extention: Category
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="ad25060f-5fc5-4873-a965-103175fcec57"
+            isDerived="false"
+            sourceEndRoleName="BasePurse"
+            targetEndRoleName="Currency"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="12b09338-a5f5-4bac-b6e7-b360ad85b898"
+              LastKnownName="Currency"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7434e109-bc41-44e7-9e62-fe805698946d"
+                  name="BasePurse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2f1c2d3c-9405-4440-ab8a-9c04f6fa1a5c"
+                  name="Currency"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a0b6507f-c4f4-4aff-a9e8-50285bbb1155"
+            isDerived="false"
+            sourceEndRoleName="CashPurse"
+            targetEndRoleName="СurrencyConverter"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0db80d5f-f16a-4083-be3a-04e4f2e4ee32"
+              LastKnownName="СurrencyConverter"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb8c2799-50ab-4597-95ab-3058b9cd21df"
+                  name="CashPurse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e9b1a6d7-3d5f-4603-8fcb-03df4db8cd25"
+                  name="СurrencyConverter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -5300,11 +5379,18 @@ The point of extention: Category
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="969794ee-5c47-43e4-857d-b9f4cc8cd4a8"
             name="CurrentSum"
-            visibility="Private"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5312,28 +5398,73 @@ The point of extention: Category
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5ecb2cc9-9e07-46a8-99e1-c95c695c8505"
+                LastKnownName="Double"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2f22b65c-92d1-4a57-93c6-7f5068802828"
+            name="PurseCurrency"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="3591730b-2c71-42be-9e7c-0415fd72d255"
+                LastKnownName="Currency"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f115cde3-33d4-401f-b065-257ba20d2abc"
+            name="Operations"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="11684283-b227-4d12-95ea-0ea0f219691a"
+                LastKnownName="List"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d5d4190d-2120-428a-bd1d-d66fc4279c99"
+            name="Converter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f99bc23b-1914-4273-9606-32121b706f24"
+                LastKnownName="CurrencyConverter"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="0b43e255-fdcc-4191-84f6-65d4496f628f"
-            name="TransactMoney"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="5928e956-3a21-4e6b-9d87-67c3a12c42fd"
             name="AddOperation"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="ca1ebf0b-d84f-4b4c-80cf-123adf000e1f"
-            name="AddCurrency"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -5348,16 +5479,8 @@ The point of extention: Category
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="359543ea-9f85-4972-8243-f113fbee0b30"
-            name="EditPurse"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="a1ce942b-1b90-4534-a651-faae886c8582"
-            name="ChangeCurrentSum"
+            Id="434d4836-e5f2-474c-8569-1a673428a652"
+            name="ChangeSum"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5376,11 +5499,11 @@ The point of extention: Category
         isActiveClass="false">
         <generalsInternal>
           <generalization
-            Id="28ba7a47-b7fc-4029-a408-6b8d397c4773"
+            Id="437d1b91-25e4-44d6-82b6-ee431f012257"
             isSubstitutable="false">
             <classMoniker
               Id="f6800c93-6709-4e5a-bcd4-703f3cd5ee18"
-              LastKnownName="BasePurse"
+              LastKnownName="CashPurse"
               LastKnownLocation="financialplanner.uml" />
           </generalization>
         </generalsInternal>
@@ -5399,7 +5522,7 @@ The point of extention: Category
             isSubstitutable="false">
             <classMoniker
               Id="f6800c93-6709-4e5a-bcd4-703f3cd5ee18"
-              LastKnownName="BasePurse"
+              LastKnownName="CashPurse"
               LastKnownLocation="financialplanner.uml" />
           </generalization>
         </generalsInternal>
@@ -5409,7 +5532,7 @@ The point of extention: Category
       <class
         Id="b1972f8a-2d05-42a9-a1f4-3813355a1abb"
         name="PurseOperation"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
@@ -5461,6 +5584,45 @@ The point of extention: Category
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="af31f0c1-36f9-4116-8b61-6fdce90d9db0"
+            isDerived="false"
+            sourceEndRoleName="PurseOperation"
+            targetEndRoleName="Category"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="95bfd758-f4ce-4da8-aacc-0b95fd2305e8"
+              LastKnownName="Category"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="910e1229-1ea1-429c-bcdb-185e9358e85a"
+                  name="PurseOperation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16e9243f-cb3c-4dee-96df-16480acc9275"
+                  name="Category"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -5484,6 +5646,7 @@ The point of extention: Category
           <property
             Id="be5479b9-fdc4-4469-8db1-2c225c3f5c67"
             name="Note"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5518,36 +5681,6 @@ The point of extention: Category
             </type_NamedElement>
           </property>
           <property
-            Id="3eb7bb75-6dc0-4ceb-aef1-a3734a6128f2"
-            name="isRepeated"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                LastKnownName="Boolean"
-                LastKnownLocation="financialplanner.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="5fd97e5e-cb16-4995-9f62-6ea79a123a95"
-            name="Repeating"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="b5b4abdb-4363-4e49-bc09-bc49fc8c7aae"
             name="Place"
             isLeaf="false"
@@ -5566,9 +5699,8 @@ The point of extention: Category
             </type_NamedElement>
           </property>
           <property
-            Id="bfb380c0-b441-4385-8b22-8c1061e8e5ed"
-            name="Reminder"
-            visibility="Private"
+            Id="281dfcd3-4d35-479c-b6f3-8bf5d4979610"
+            name="OperationCurrency"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5576,42 +5708,33 @@ The point of extention: Category
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="3591730b-2c71-42be-9e7c-0415fd72d255"
+                LastKnownName="Currency"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ba4c9c71-35f2-4662-b775-2bb93a24b5d1"
+            name="IsExpense"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="948d0442-bbbb-4a54-b1c5-71f416e6ce75"
-            name="AddRepeating"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="67d219be-0f5c-405e-a424-80a1fc2f2273"
-            name="Save"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="c26218df-a43c-4ff0-a3e1-ae130ae7b4a0"
-            name="Update"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="03d25794-87ba-4053-aa4e-227c096f8ab4"
-            name="Delete"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -5688,11 +5811,169 @@ The point of extention: Category
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="6b2919ff-e665-4ee5-b734-8421d1ee5e44"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="BasePurse"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f6800c93-6709-4e5a-bcd4-703f3cd5ee18"
+              LastKnownName="CashPurse"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f62e63ee-ffab-4740-ae36-1ceaf321d50c"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7411793c-67ae-4e5c-9131-ab0e6831ed1f"
+                  name="BasePurse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8f8460a7-66a7-4192-8855-502f9057e861"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0754663e-a1e8-4d1a-90c8-39fbea57cc3c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d9e4bb31-ff1e-4d42-af18-507cf6dfd9ac"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="TemplateOperation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4414653b-02ba-46bc-9b13-57318080bc94"
+              LastKnownName="TemplateOperation"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3038a9dc-2e24-489f-a36b-b2d6b63bfa3b"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="704ba90f-d387-4e77-81f3-e8be205f62a3"
+                  name="TemplateOperation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6f8b2de5-6543-4caa-a105-f0b4a20f70e3"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1b99b8a2-0f57-4333-a130-2d82ffaea5eb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="96d8a007-fba8-4f05-aaae-03b7d0984b9b"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Filter"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="dfee7be1-a948-41cc-a89b-ab71cbdadf6c"
+              LastKnownName="Filter"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2bfc5f98-1ee1-4a09-94ca-a72523e8142b"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e1026a2-f1d0-41fc-b160-2229817cc9cd"
+                  name="Filter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="080df6aa-2274-4704-8280-8f783043ccb6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2e39fb7e-9296-4c9e-b2af-d099fd3184a0"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="f9c3ea87-de65-41b8-8591-ca1b4b383694"
             name="Username"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5711,6 +5992,7 @@ The point of extention: Category
           <property
             Id="1a8b57a6-5086-40dc-a3cf-88c345f384ed"
             name="Password"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5729,6 +6011,7 @@ The point of extention: Category
           <property
             Id="7a48976a-70c2-42b6-a2a0-85caab960313"
             name="E-mail"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5736,10 +6019,18 @@ The point of extention: Category
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="74a6b657-24b4-48a3-837e-6f17eea4eb64"
             name="Picture"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5747,7 +6038,68 @@ The point of extention: Category
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e49f23f9-48c1-4034-99ca-e54df50109a7"
+            name="Templates"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="11684283-b227-4d12-95ea-0ea0f219691a"
+                LastKnownName="List"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d82c08fc-90d6-4ed0-8abc-d4d576414d3f"
+            name="Purses"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="11684283-b227-4d12-95ea-0ea0f219691a"
+                LastKnownName="List"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="efc25513-a29f-4b28-b89d-702154810ec4"
+            name="Filters"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b784fbcb-f1da-4020-b57d-ec57a4907529"
+                LastKnownName="List&lt;Filter&gt;"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -5769,6 +6121,14 @@ The point of extention: Category
           <operation
             Id="51a5ddc0-d51c-4f2b-b2c5-cc87ea865f23"
             name="AddPurse"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4d601c7e-3a78-4afa-8ec8-e12138ee544a"
+            name="InvokeTemplates"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -5841,6 +6201,26 @@ The point of extention: Category
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="643527b4-16cd-4202-9913-22d9fff03bdd"
+            name="Purse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="f6800c93-6709-4e5a-bcd4-703f3cd5ee18"
+                LastKnownName="CashPurse"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="0faf8ad8-10eb-40b4-a129-e4658a313dab"
@@ -5853,22 +6233,6 @@ The point of extention: Category
           <operation
             Id="b03b7f4c-df6a-4d2e-b71f-bd025be59ac8"
             name="GetMonthReport"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="aa7ad248-ff8c-446e-9502-d2255d653d7a"
-            name="GetTotalIncomes"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="ab5da5fa-a7d5-4f62-b729-07a39e4644f0"
-            name="GetTotalExpenses"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -5985,6 +6349,583 @@ The point of extention: Category
             name="Euro (EUR)" />
         </ownedLiterals>
       </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4414653b-02ba-46bc-9b13-57318080bc94"
+        name="TemplateOperation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b4a2bb30-efe6-4bad-a371-1214a6c0c705"
+            isDerived="false"
+            sourceEndRoleName="TemplateOperation"
+            targetEndRoleName="PurseOperation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b1972f8a-2d05-42a9-a1f4-3813355a1abb"
+              LastKnownName="PurseOperation"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1577555a-a6eb-4a20-8c98-8feec5d9cf9e"
+                  name="TemplateOperation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85315ad6-625f-431f-8ded-6d2fc7fb126e"
+                  name="PurseOperation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d09041e8-0abb-4880-ac27-538b650dc842"
+            isDerived="false"
+            sourceEndRoleName="TemplateOperation"
+            targetEndRoleName="TemplateTiming"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a1d16799-a3c2-467a-869f-9a5cd8c500a1"
+              LastKnownName="TemplateTiming"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9a152771-fd8d-4767-994f-2d171b2e0e34"
+                  name="TemplateOperation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b26bb676-c174-4079-8752-21a7e72609ca"
+                  name="TemplateTiming"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="aa9fd002-c454-4982-a1f8-0f5e5eb90d95"
+            name="Operation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="b1972f8a-2d05-42a9-a1f4-3813355a1abb"
+                LastKnownName="PurseOperation"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b5501d4c-3b80-466d-a812-84c21696e662"
+            name="Days"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8dcd818f-0000-4d28-b4e2-785747a2554f"
+                LastKnownName="List&lt;int&gt;"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3d0540c0-5fc8-46ec-9f48-20bb97d4282a"
+            name="WeekSet"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="bfebe12d-d4d3-4a0c-9611-98bca7391253"
+                LastKnownName="ISet&lt;DayOfWeek&gt;"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="40acc3f0-ef17-4cb8-bd40-f9118f43264b"
+            name="IsToday"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2dde22fb-cfa4-43a6-a0d7-71abf9b6662e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="financialplanner.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="11684283-b227-4d12-95ea-0ea0f219691a"
+        name="List" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="cee6a741-c739-496d-a17c-685cc7ab3b4a"
+        name="TimeSpan" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a1d16799-a3c2-467a-869f-9a5cd8c500a1"
+        name="TemplateTiming"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="212ea5e3-e7d1-459d-a517-5565e8d084d3"
+            name="WeekSet"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="bfebe12d-d4d3-4a0c-9611-98bca7391253"
+                LastKnownName="ISet&lt;DayOfWeek&gt;"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="25f01b93-7e9f-444b-a9b1-c7fbde5e562e"
+            name="Days"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8dcd818f-0000-4d28-b4e2-785747a2554f"
+                LastKnownName="List&lt;int&gt;"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0db80d5f-f16a-4083-be3a-04e4f2e4ee32"
+        name="СurrencyConverter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="a49b456a-ffe9-482a-b868-28972cffb96f"
+            name="Convert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f3d0e8b8-a8f1-4279-b1a0-e95c92acb298"
+                  name="OperationCur"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2c3c495b-2f33-4dba-9cd4-c6bd21c299b5"
+                  name="PurseCur"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f1c3cb46-9f86-48cb-83f0-2c3ab5be3c3b"
+                  name="Sum"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="767323b0-2a0c-4634-a312-9a733de8ed47"
+            name="GetExchangeRate"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6306537c-0c62-4b14-9328-48adcbb59fbd"
+                  name="OperationCur"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6be81966-467b-4722-8da8-2c26d2558876"
+                  name="PurseCur"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="288953f8-ae1b-4625-8d9d-ac151132d0c9"
+        name="ISet" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="bfebe12d-d4d3-4a0c-9611-98bca7391253"
+        name="ISet&lt;DayOfWeek&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8dcd818f-0000-4d28-b4e2-785747a2554f"
+        name="List&lt;int&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c9115ea4-13e7-44d7-81f7-bc923533987e"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="a1fe2575-6bfc-42f9-a925-b9d63a5e9565"
+        name="Enumeration1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="95bfd758-f4ce-4da8-aacc-0b95fd2305e8"
+        name="Category"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="10815c4a-43a2-4634-aa94-938d561173b7"
+            isDerived="false"
+            sourceEndRoleName="Category"
+            targetEndRoleName="Category"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="95bfd758-f4ce-4da8-aacc-0b95fd2305e8"
+              LastKnownName="Category"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e231dec-3d4a-4777-add8-e489ea061261"
+                  name="Category"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c83e1ea0-ac30-4763-97de-c322a68e1d10"
+                  name="Category"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="4f49e49b-8ff4-439a-a57d-24b9a8eca9ed"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e50b05c1-ca42-4497-b5b7-fc332c89531c"
+            name="Parent"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="a9684056-6b9f-40d9-83c8-9505393c9259"
+                LastKnownName="Category"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f99bc23b-1914-4273-9606-32121b706f24"
+        name="CurrencyConverter" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dfee7be1-a948-41cc-a89b-ab71cbdadf6c"
+        name="Filter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="0a378086-76cd-488a-b62b-54748ea6b09a"
+            isDerived="false"
+            sourceEndRoleName="Filter"
+            targetEndRoleName="Period: TimeSpan"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="4a079690-e1c6-4245-8374-82fe5d937251"
+              LastKnownName="Period: TimeSpan"
+              LastKnownLocation="financialplanner.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f22abe6-80bc-4ce0-a8a9-e94fe68b671b"
+                  name="Filter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e1aad822-22f5-4a1a-8d40-63a2b633a1de"
+                  name="Period: TimeSpan"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="5f083c6f-2f84-435b-bc68-f7b0cec42e9c"
+            name="Period"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="04915709-7d9f-41e0-9ca3-78a2ee63b2d9"
+            name="Categories"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d865d604-4db2-4795-840e-1c5464e6e3cc"
+                LastKnownName="List&lt;Category&gt;"
+                LastKnownLocation="financialplanner.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b3223db3-c314-49a8-a83b-c899a6962381"
+            name="Filter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="476ebe89-ba9b-4207-92be-c359da981ebd"
+                  name="Operations"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f86cf527-5675-4ea9-af07-d91b07acc3e4"
+                  name="DateFrom"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f2021d74-c103-446e-a262-2a9384ab75fd"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e93d6037-10d1-476d-9051-dd5a2d33ad3f"
+                      LastKnownName="List&lt;PurseOperation&gt;"
+                      LastKnownLocation="financialplanner.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="4a079690-e1c6-4245-8374-82fe5d937251"
+        name="Period: TimeSpan"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="a73b6d37-e31c-484b-8021-16ff9cb86e05"
+            name="Month" />
+          <enumerationLiteral
+            Id="351132a2-b99a-4941-a709-df2ccde4de44"
+            name="Year" />
+          <enumerationLiteral
+            Id="b3d9d920-34bd-44e7-befa-fbc9815829c5"
+            name="Week" />
+          <enumerationLiteral
+            Id="630561c1-9f0e-402b-9d3a-254b67b4738a"
+            name="Day" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d865d604-4db2-4795-840e-1c5464e6e3cc"
+        name="List&lt;Category&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b784fbcb-f1da-4020-b57d-ec57a4907529"
+        name="List&lt;Filter&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e93d6037-10d1-476d-9051-dd5a2d33ad3f"
+        name="List&lt;PurseOperation&gt;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
