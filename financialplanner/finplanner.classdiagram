@@ -383,24 +383,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="0be7277d-4ffe-4c77-8520-c847f9574119" name="TemplateOperation" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="4414653b-02ba-46bc-9b13-57318080bc94" />
-        <targetEnds>
-          <association Id="091d9a47-4b1e-4faf-8d7d-370d303f0502" isDerived="false" sourceEndRoleName="TemplateOperation" targetEndRoleName="PurseOperation" isLeaf="false" isAbstract="false">
-            <classMoniker Id="f3293013-72df-48d4-8aad-9b350c9ab010" LastKnownName="PurseOperation" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="7145c999-5799-4d45-97d2-a4c9a0c5eb59" name="TemplateOperation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="1577555a-a6eb-4a20-8c98-8feec5d9cf9e" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="bbeff0ce-46f4-495e-83d5-663ac6194cc3" name="PurseOperation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="85315ad6-625f-431f-8ded-6d2fc7fb126e" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="b4a2bb30-efe6-4bad-a371-1214a6c0c705" />
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property Id="d6266cf2-1da0-4e4f-8a72-782c0801ff4d" name="Operation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="aa9fd002-c454-4982-a1f8-0f5e5eb90d95" />
@@ -418,6 +400,42 @@
             <elementDefinition Id="3d0540c0-5fc8-46ec-9f48-20bb97d4282a" />
             <type_NamedElement>
               <referencedTypeMoniker Id="0d48c0d4-2f34-4107-94e0-a3b73f08e4dd" LastKnownName="ISet&lt;DayOfWeek&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="1de15f14-9ec5-483f-8940-cefd76ea48d4" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7cd4939a-f970-4363-887d-5e17cab8d976" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7acb9f95-479a-4c79-bd45-8182d89f96b2" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+          <property Id="f42446a5-95f0-41c2-b47f-6581b9ec93cc" name="IsExpense" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6d5cb85e-5d64-4253-b67c-5a68e586727d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="19d24dff-755f-43e9-bdbe-fdbba9f455f1" LastKnownName="Boolean" />
+            </type_NamedElement>
+          </property>
+          <property Id="08dbe760-5c7c-43b8-9ee3-3ae39ba14fa0" name="OperationCurrency" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ddf10ba5-0cfc-4ef8-9a06-a4d12bbf8a9b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="019fd6e8-f3bd-40e8-a732-56b4b1bd6c43" LastKnownName="Currency" />
+            </type_NamedElement>
+          </property>
+          <property Id="c654f1db-2c3f-48c2-bdf2-7f60db04ebd8" name="Place" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="847137a6-0e68-486c-a4ca-df8ba51e76af" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="948bc280-c9c2-4919-8608-3ba41adb472f" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="26c823f0-ed21-4362-bf54-f2efd17174b3" name="Sum" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6883ed7a-aca2-438e-8a61-f30a6bcba443" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="373b18d8-ca27-4458-929c-c0a51d5b16c7" LastKnownName="Double" />
+            </type_NamedElement>
+          </property>
+          <property Id="4bc3dd5d-78a3-45a1-a51e-dc45b91832b9" name="Note" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ff75c128-0898-41ca-8331-1118d85d9823" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="610d906a-bffa-44dd-9a4a-7cb2a7ceb876" LastKnownName="String" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -688,6 +706,36 @@
     <packageHasNamedElement>
       <referencedType Id="5064ec0b-70e7-4744-bd60-f6f7b111a57b" name="List&lt;PurseOperation&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;PurseOperation&gt;">
         <elementDefinition Id="e93d6037-10d1-476d-9051-dd5a2d33ad3f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7acb9f95-479a-4c79-bd45-8182d89f96b2" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="7b7ec1f1-3b9d-4b3c-ae7e-230668c55283" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="19d24dff-755f-43e9-bdbe-fdbba9f455f1" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="019fd6e8-f3bd-40e8-a732-56b4b1bd6c43" name="Currency" isAbstract="false" isLeaf="false" cachedFullName="financialplanner::Currency">
+        <elementDefinition Id="3591730b-2c71-42be-9e7c-0415fd72d255" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="948bc280-c9c2-4919-8608-3ba41adb472f" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="373b18d8-ca27-4458-929c-c0a51d5b16c7" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="5ecb2cc9-9e07-46a8-99e1-c95c695c8505" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="610d906a-bffa-44dd-9a4a-7cb2a7ceb876" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
