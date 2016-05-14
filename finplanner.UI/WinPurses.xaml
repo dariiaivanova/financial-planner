@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
         Title="WinPurses" Height="700" Width="900"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextOptions.TextFormattingMode="Ideal"
@@ -15,16 +16,85 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-      <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+        <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}" Foreground="White">
             <materialDesign:DrawerHost.LeftDrawerContent>
-                <DockPanel MinWidth="250">
-                    <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" 
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="300"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Grid.Row="0" Mode="PrimaryMid">
+                        <DockPanel >
+                            <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" 
                                   DockPanel.Dock="Top"
-                                  HorizontalAlignment="Right" Margin="16"
+                                  HorizontalAlignment="Right" Margin="16, 10,16,0"
                                   IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />
-                    
-                </DockPanel>
-                
+                            <DockPanel Margin="10,0,10,20">
+                                <Image DockPanel.Dock="Left" Source="AccountPic.png" Width="125" Height="125"  />
+                                <StackPanel Margin="10,25,0,0" DockPanel.Dock="Right">
+                                    <TextBlock HorizontalAlignment="Left"  FontSize="18" >Username</TextBlock>
+                                    <Button Content="Settings" Style="{DynamicResource MaterialDesignRaisedLightButton}" Margin="0,15,0,0" />
+                                </StackPanel>
+                            </DockPanel>
+                        </DockPanel>
+                    </materialDesign:ColorZone>
+                    <ScrollViewer Grid.Row="1"  Margin="5" Padding="5">
+                        <ListBox FontSize="16"  >
+                            <ListBoxItem>First purse</ListBoxItem>
+                            <ListBoxItem>Second purse</ListBoxItem>
+                            <ListBoxItem>Third purse</ListBoxItem>
+                            <ListBoxItem>Forth purse</ListBoxItem>
+                            <ListBoxItem>Forth purse</ListBoxItem>
+                            <ListBoxItem>Forth purse</ListBoxItem>
+                            <ListBoxItem>Forth purse</ListBoxItem>
+                        </ListBox>
+                    </ScrollViewer>
+                    <materialDesign:Card Grid.Row="2" 
+                                         Margin="5"  materialDesign:ShadowAssist.ShadowDepth="Depth5">
+                        <StackPanel  >
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="15"  FontSize="18" Foreground="#FF00B8D4">There are some operations to happen:</TextBlock>
+                            <ScrollViewer Height="200">
+                                    <TreeView >
+                                        <TreeViewItem Header="Fruit">
+                                            <TreeViewItem>
+                                                <TreeViewItem.Header>
+                                                    <TextBlock Margin="8 0 0 0">Apple</TextBlock>
+                                                </TreeViewItem.Header>
+                                            </TreeViewItem>
+                                            <TreeViewItem Header="Banana"/>
+                                            <TreeViewItem Header="Grape">
+                                                <TextBlock><Run Text="Grapes for us"/></TextBlock>
+                                            </TreeViewItem>
+                                            <TreeViewItem Header="Peach"/>
+                                            <TreeViewItem Header="Pear"/>
+                                            <TreeViewItem Header="Strawberry"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="OS" >
+                                            <TreeViewItem Header="Amiga"/>
+                                            <TreeViewItem>
+                                                <TreeViewItem.Header>
+                                                    <TextBlock Margin="8 0 0 0">Android</TextBlock>
+                                                </TreeViewItem.Header>
+                                            </TreeViewItem>
+                                            <TreeViewItem Header="iOS"/>
+                                            <TreeViewItem>
+                                                <TreeViewItem.Header>
+                                                    <TextBlock Margin="8 0 0 0">Linux</TextBlock>
+                                                </TreeViewItem.Header>
+                                            </TreeViewItem>
+                                            <TreeViewItem>
+                                                <TreeViewItem.Header>
+                                                    <TextBlock Margin="8 0 0 0">Windows</TextBlock>
+                                                </TreeViewItem.Header>
+                                            </TreeViewItem>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Empty" />
+                                    </TreeView>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </Grid>
             </materialDesign:DrawerHost.LeftDrawerContent>
             <DockPanel>
                 <materialDesign:ColorZone Padding="10" materialDesign:ShadowAssist.ShadowDepth="Depth2"
@@ -34,16 +104,15 @@
                                       x:Name="MenuToggleButton"/>
                         <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                             <StackPanel>
-                                <Button Content="Hello World" />
-                                <Button Content="Nice Popup"/>
-                                <Button Content="Goodbye" />
+                                <Button Content="Settings" />
+                                <Button Content="Sign out" />
                             </StackPanel>
                         </materialDesign:PopupBox>
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Purse name</TextBlock>
                     </DockPanel>
                 </materialDesign:ColorZone>
-                <ContentControl Margin="16" Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />
-           <materialDesign:PopupBox Margin="0 0 15 15" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" HorizontalAlignment="Right" VerticalAlignment="Bottom"></materialDesign:PopupBox> </DockPanel>
+                <materialDesign:PopupBox Margin="0 0 15 15" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" HorizontalAlignment="Right" VerticalAlignment="Bottom"></materialDesign:PopupBox>
+            </DockPanel>
         </materialDesign:DrawerHost>
     </Grid>
 
