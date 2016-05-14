@@ -23,8 +23,8 @@
             <materialDesign:PackIcon VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Kind="Key"/>
             <PasswordBox Grid.Row="1" Grid.Column="1" materialDesign:TextFieldAssist.Hint="Password"   HorizontalAlignment="Stretch"  Margin="5,5,5,0" FontSize="20"    />
         </Grid>
-        <Button Style="{DynamicResource MaterialDesignRaisedAccentButton}" Content="Log in" MinHeight="40" FontSize="20"></Button>
-        <Button Style="{DynamicResource MaterialDesignFlatButton}" Content="Forgot password" Margin="5,10,5,0"></Button>
+        <Button x:Name="ButtonLogin" Style="{DynamicResource MaterialDesignRaisedAccentButton}" Content="Log in" MinHeight="40" FontSize="20" Click="ButtonLogin_Click"></Button>
+        <Button x:Name="ButtonForgotPass" Style="{DynamicResource MaterialDesignFlatButton}" Content="Forgot password" Margin="5,10,5,0" Click="ButtonForgotPass_Click"></Button>
     </StackPanel>
 
 

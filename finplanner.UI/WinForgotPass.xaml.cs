@@ -23,5 +23,12 @@ namespace finplanner.UI
         {
             InitializeComponent();
         }
+
+        private void ButtonLogIn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+            new WinLogIn().ShowDialog();
+            
+        }
     }
 }

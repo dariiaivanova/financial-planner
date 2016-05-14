@@ -15,24 +15,18 @@ using System.Windows.Shapes;
 namespace finplanner.UI
 {
     /// <summary>
-    /// Interaction logic for LogIn.xaml
+    /// Interaction logic for WinPurses.xaml
     /// </summary>
-    public partial class WinLogIn : Window
+    public partial class WinPurses : Window
     {
-        public WinLogIn()
+        public WinPurses()
         {
             InitializeComponent();
         }
 
-        private void ButtonForgotPass_Click(object sender, RoutedEventArgs e)
+        private void Sample1_DialogHost_OnDialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
         {
-            Close();
-            new WinForgotPass().ShowDialog();
-        }
 
-        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
-        {
-            new WinPurses().Show();
         }
     }
 }

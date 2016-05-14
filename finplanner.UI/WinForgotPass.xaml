@@ -19,8 +19,8 @@
             <TextBox Grid.Column="1"  Grid.Row="0" materialDesign:TextFieldAssist.Hint="E-mail" HorizontalAlignment="Stretch" Margin="5,5,5,15" FontSize="20"/>
             
         </Grid>
-        <Button Style="{DynamicResource MaterialDesignRaisedAccentButton}" Content="Send me a new password" MinHeight="40" FontSize="20"></Button>
-        <Button Style="{DynamicResource MaterialDesignFlatButton}" Content="Log in" Margin="5,10,5,0"></Button>
+        <Button x:Name="ButtonResetPass" Style="{DynamicResource MaterialDesignRaisedAccentButton}" Content="Send me a new password" MinHeight="40" FontSize="20"></Button>
+        <Button x:Name="ButtonLogIn" Style="{DynamicResource MaterialDesignFlatButton}" Content="Log in" Margin="5,10,5,0" Click="ButtonLogIn_Click"></Button>
     </StackPanel>
 
 </Window>
