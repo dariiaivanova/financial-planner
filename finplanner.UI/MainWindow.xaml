@@ -14,14 +14,15 @@
             </ImageBrush.ImageSource>
         </ImageBrush>
     </Window.Background>
-    <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="290"  MinHeight="230">
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Plan Me" VerticalAlignment="Top" Foreground="White" FontSize="72"  TextAlignment="Center" Margin="0,0,0,15"  />
-        <TextBlock Text="Lorem ipsum dolor sit amet." Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,10" FontSize="16" />
-        <Button x:Name="ButtonLogIn" Style="{DynamicResource MaterialDesignRaisedAccentButton}" Content="Log in" FontSize="18" Margin="0,15,0,0" Click="ButtonLogIn_Click" />
-        <DockPanel Margin="0,10,0,0">
-            <Button x:Name="ButtonRegister" DockPanel.Dock="Left" Style="{DynamicResource MaterialDesignRaisedLightButton}" MinHeight="35" Content="Register" MinWidth="140" Click="ButtonRegister_Click" />
-            <Button x:Name="ButtonForgotPass" DockPanel.Dock="Right"
-                    Style="{DynamicResource MaterialDesignRaisedLightButton}" MinHeight="35" Content="Forgot password" MinWidth="140" Margin="5,0,0,0"   />
-        </DockPanel>
-    </StackPanel>
+        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="290"  MinHeight="230">
+            <TextBlock HorizontalAlignment="Center" Foreground="AliceBlue" TextWrapping="Wrap" Text="Plan Me" VerticalAlignment="Top"  FontSize="72"  TextAlignment="Center" Margin="0,0,0,15"  />
+        <TextBlock Text="Lorem ipsum dolor sit amet." Foreground="AliceBlue" HorizontalAlignment="Center" Margin="0,0,0,10" FontSize="16" />
+            <DockPanel Margin="0,10,0,0">
+            <Button DockPanel.Dock="Top" x:Name="ButtonLogIn" Style="{DynamicResource MaterialDesignRaisedAccentButton}" Content="Log in"  MinHeight="35" FontSize="18" Margin="5,10,5,0" Click="ButtonLogIn_Click" />
+                <Button x:Name="ButtonRegister" DockPanel.Dock="Left" Style="{DynamicResource MaterialDesignRaisedLightButton}" Margin="5,5,5,0" MinHeight="35" Content="Register" MinWidth="140" Click="ButtonRegister_Click" />
+                <Button x:Name="ButtonForgotPass" DockPanel.Dock="Right"
+                    Style="{DynamicResource MaterialDesignRaisedLightButton}" MinHeight="35" Content="Forgot password" MinWidth="140" Margin="5,5,5,0" Click="ButtonForgotPass_Click"   />
+            </DockPanel>
+        </StackPanel>
+    
 </Window>

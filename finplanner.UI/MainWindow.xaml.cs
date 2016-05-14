@@ -35,5 +35,10 @@ namespace finplanner.UI
         {
             new WinRegister().ShowDialog();
         }
+
+        private void ButtonForgotPass_Click(object sender, RoutedEventArgs e)
+        {
+            new WinForgotPass().ShowDialog();
+        }
     }
 }
