@@ -1,0 +1,26 @@
+﻿<Window x:Class="finplanner.UI.WinForgotPass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Forgot password - PlanMe" Height="500" Width="500"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextOptions.TextFormattingMode="Ideal"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock HorizontalAlignment="Center" Text="Forgot password?" Margin="15,5,15,10"  FontSize="36"/>
+        <TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " Margin="15,5,15,0"  FontSize="20" Width="380"/>
+        <Grid Margin="5,25,5,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+           
+            <materialDesign:PackIcon VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Kind="Email"/>
+            <TextBox Grid.Column="1"  Grid.Row="0" materialDesign:TextFieldAssist.Hint="E-mail" HorizontalAlignment="Stretch" Margin="5,5,5,15" FontSize="20"/>
+            
+        </Grid>
+        <Button Style="{DynamicResource MaterialDesignRaisedAccentButton}" Content="Send me a new password" MinHeight="40" FontSize="20"></Button>
+        <Button Style="{DynamicResource MaterialDesignFlatButton}" Content="Log in" Margin="5,10,5,0"></Button>
+    </StackPanel>
+
+</Window>
