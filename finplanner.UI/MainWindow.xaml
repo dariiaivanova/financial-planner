@@ -2,22 +2,26 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="PlanMe - Main" Height="525" Width="750" TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Title="PlanMe - Main" Height="525" Width="750" 
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextOptions.TextFormattingMode="Ideal"
+        
     FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <Window.Background>
-        <ImageBrush Opacity="0.45">
+        <ImageBrush Opacity="0.35">
             <ImageBrush.ImageSource>
                 <BitmapImage UriSource="FY58O0P400.jpg"/>
             </ImageBrush.ImageSource>
         </ImageBrush>
     </Window.Background>
-    <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="285" Margin="228,138,228,136" MinHeight="225">
+    <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="290"  MinHeight="230">
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Plan Me" VerticalAlignment="Top" Foreground="White" FontSize="72"  TextAlignment="Center" Margin="0,0,0,15"  />
         <TextBlock Text="Lorem ipsum dolor sit amet." Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,10" FontSize="16" />
         <Button x:Name="ButtonLogIn" Style="{DynamicResource MaterialDesignRaisedAccentButton}" Content="Log in" FontSize="18" Margin="0,15,0,0" Click="ButtonLogIn_Click" />
         <DockPanel Margin="0,10,0,0">
-            <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" MinHeight="35" Content="Register" Width="140" />
-            <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" MinHeight="35" Content="Forgot password" Width="140" Margin="5,0,0,0"   />
+            <Button x:Name="ButtonRegister" DockPanel.Dock="Left" Style="{DynamicResource MaterialDesignRaisedLightButton}" MinHeight="35" Content="Register" MinWidth="140" Click="ButtonRegister_Click" />
+            <Button x:Name="ButtonForgotPass" DockPanel.Dock="Right"
+                    Style="{DynamicResource MaterialDesignRaisedLightButton}" MinHeight="35" Content="Forgot password" MinWidth="140" Margin="5,0,0,0"   />
         </DockPanel>
     </StackPanel>
 </Window>

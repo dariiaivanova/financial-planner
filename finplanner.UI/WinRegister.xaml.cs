@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace finplanner.UI
 {
     /// <summary>
-    /// Interaction logic for LogIn.xaml
+    /// Interaction logic for WinRegister.xaml
     /// </summary>
-    public partial class LogIn : Window
+    public partial class WinRegister : Window
     {
-        public LogIn()
+        public WinRegister()
         {
             InitializeComponent();
         }
