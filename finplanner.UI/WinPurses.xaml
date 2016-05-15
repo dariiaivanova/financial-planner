@@ -4,6 +4,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
         Title="WinPurses" Height="700" Width="900"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextOptions.TextFormattingMode="Ideal"
@@ -16,6 +17,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
+
         <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}" Foreground="White">
             <materialDesign:DrawerHost.LeftDrawerContent>
                 <Grid >
@@ -55,65 +57,90 @@
                         <StackPanel  >
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="15"  FontSize="18" Foreground="#FF00B8D4">There are some operations to happen:</TextBlock>
                             <ScrollViewer Height="200">
-                                    <TreeView >
-                                        <TreeViewItem Header="Fruit">
-                                            <TreeViewItem>
-                                                <TreeViewItem.Header>
-                                                    <TextBlock Margin="8 0 0 0">Apple</TextBlock>
-                                                </TreeViewItem.Header>
-                                            </TreeViewItem>
-                                            <TreeViewItem Header="Banana"/>
-                                            <TreeViewItem Header="Grape">
-                                                <TextBlock><Run Text="Grapes for us"/></TextBlock>
-                                            </TreeViewItem>
-                                            <TreeViewItem Header="Peach"/>
-                                            <TreeViewItem Header="Pear"/>
-                                            <TreeViewItem Header="Strawberry"/>
+                                <TreeView >
+                                    <TreeViewItem Header="Fruit">
+                                        <TreeViewItem>
+                                            <TreeViewItem.Header>
+                                                <TextBlock Margin="8 0 0 0">Apple</TextBlock>
+                                            </TreeViewItem.Header>
                                         </TreeViewItem>
-                                        <TreeViewItem Header="OS" >
-                                            <TreeViewItem Header="Amiga"/>
-                                            <TreeViewItem>
-                                                <TreeViewItem.Header>
-                                                    <TextBlock Margin="8 0 0 0">Android</TextBlock>
-                                                </TreeViewItem.Header>
-                                            </TreeViewItem>
-                                            <TreeViewItem Header="iOS"/>
-                                            <TreeViewItem>
-                                                <TreeViewItem.Header>
-                                                    <TextBlock Margin="8 0 0 0">Linux</TextBlock>
-                                                </TreeViewItem.Header>
-                                            </TreeViewItem>
-                                            <TreeViewItem>
-                                                <TreeViewItem.Header>
-                                                    <TextBlock Margin="8 0 0 0">Windows</TextBlock>
-                                                </TreeViewItem.Header>
-                                            </TreeViewItem>
+                                        <TreeViewItem Header="Banana"/>
+                                        <TreeViewItem Header="Grape">
+                                            <TextBlock><Run Text="Grapes for us"/></TextBlock>
                                         </TreeViewItem>
-                                        <TreeViewItem Header="Empty" />
-                                    </TreeView>
+                                        <TreeViewItem Header="Peach"/>
+                                        <TreeViewItem Header="Pear"/>
+                                        <TreeViewItem Header="Strawberry"/>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="OS" >
+                                        <TreeViewItem Header="Amiga"/>
+                                        <TreeViewItem>
+                                            <TreeViewItem.Header>
+                                                <TextBlock Margin="8 0 0 0">Android</TextBlock>
+                                            </TreeViewItem.Header>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="iOS"/>
+                                        <TreeViewItem>
+                                            <TreeViewItem.Header>
+                                                <TextBlock Margin="8 0 0 0">Linux</TextBlock>
+                                            </TreeViewItem.Header>
+                                        </TreeViewItem>
+                                        <TreeViewItem>
+                                            <TreeViewItem.Header>
+                                                <TextBlock Margin="8 0 0 0">Windows</TextBlock>
+                                            </TreeViewItem.Header>
+                                        </TreeViewItem>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Empty" />
+                                </TreeView>
                             </ScrollViewer>
                         </StackPanel>
                     </materialDesign:Card>
                 </Grid>
             </materialDesign:DrawerHost.LeftDrawerContent>
-            <DockPanel>
-                <materialDesign:ColorZone Padding="10" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="57"></ColumnDefinition>
+                        <ColumnDefinition Width="500*"></ColumnDefinition>
+                        <ColumnDefinition Width="57"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <materialDesign:ColorZone Grid.ColumnSpan="3" Padding="10" materialDesign:ShadowAssist.ShadowDepth="Depth2"
                                           Mode="PrimaryMid" DockPanel.Dock="Top">
-                    <DockPanel>
-                        <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
-                                      x:Name="MenuToggleButton"/>
-                        <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
-                            <StackPanel>
-                                <Button Content="Settings" />
-                                <Button Content="Sign out" />
-                            </StackPanel>
-                        </materialDesign:PopupBox>
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Purse name</TextBlock>
-                    </DockPanel>
-                </materialDesign:ColorZone>
-                <materialDesign:PopupBox Margin="0 0 15 15" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" HorizontalAlignment="Right" VerticalAlignment="Bottom"></materialDesign:PopupBox>
-            </DockPanel>
+                        <DockPanel>
+                            <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
+                                      x:Name="MenuToggleButton" DockPanel.Dock="Left" HorizontalAlignment="Left"/>
+                            <materialDesign:PopupBox Grid.Column="2" DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" HorizontalAlignment="Right">
+                                <StackPanel>
+                                    <Button Content="Settings" />
+                                    <Button Content="Sign out" />
+                                </StackPanel>
+                            </materialDesign:PopupBox>
+                        </DockPanel>
+                    </materialDesign:ColorZone>
+
+                    <dragablz:TabablzControl Margin="0,17,0,10" Grid.Row="0" Grid.RowSpan="2"  Grid.Column="1" >
+                        <dragablz:TabablzControl.InterTabController >
+                            <dragablz:InterTabController />
+                        </dragablz:TabablzControl.InterTabController>
+                        <TabItem  Height="57" Header="INCOMES">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Hello World</TextBlock>
+                        </TabItem>
+                        <TabItem Header="EXPENSES">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Material Design</TextBlock>
+                        </TabItem>
+                        <TabItem Header="REPORT">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Looks Quite Nice</TextBlock>
+                        </TabItem>
+                    </dragablz:TabablzControl>
+                </Grid>
         </materialDesign:DrawerHost>
+
+        <materialDesign:PopupBox  Margin="0,0,20,20" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="60" Height="60"/>
     </Grid>
 
 </Window>
