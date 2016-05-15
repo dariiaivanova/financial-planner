@@ -15,10 +15,9 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-
         <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}" Foreground="White">
             <materialDesign:DrawerHost.LeftDrawerContent>
-                <Grid >
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
@@ -54,11 +53,10 @@
                     <Button Grid.Row="2" Margin="5" Style="{DynamicResource MaterialDesignRaisedAccentButton}">
                         <DockPanel HorizontalAlignment="Stretch" Width="310" >
                             <Image DockPanel.Dock="Left" Source="report.png" Width="30" Height="30" HorizontalAlignment="Center" Margin="5,0,0,0"/>
-                            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" DockPanel.Dock="Right " VerticalAlignment="Center" Margin="20,0,0,0" HorizontalAlignment="Center">Get the report</TextBlock>
+                            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" DockPanel.Dock="Right " VerticalAlignment="Center" Margin="20,0,0,0" HorizontalAlignment="Center" Panel.ZIndex="90">Get the report</TextBlock>
                         </DockPanel>
-                            
-                    </Button>
 
+                    </Button>
                     <materialDesign:Card Grid.Row="3" 
                                          Margin="5"  materialDesign:ShadowAssist.ShadowDepth="Depth5">
                         <StackPanel  >
@@ -115,7 +113,6 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
-
                 <materialDesign:ColorZone Grid.ColumnSpan="3" Padding="10" materialDesign:ShadowAssist.ShadowDepth="Depth2"
                                           Mode="PrimaryMid" DockPanel.Dock="Top">
                     <DockPanel>
@@ -135,7 +132,15 @@
                         <dragablz:InterTabController />
                     </dragablz:TabablzControl.InterTabController>
                     <TabItem  Height="57" Header="INCOMES" >
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Hello World</TextBlock>
+                            <DataGrid AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                <DataGridTextColumn Header="Icon" Width="60*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Type" Width="150*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Sum" Width="150*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Note" Width="250*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Date" Width="150*"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                            </DataGrid>
                     </TabItem>
                     <TabItem Header="EXPENSES">
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Material Design</TextBlock>
@@ -143,10 +148,11 @@
                     <TabItem Header="ALL OPERATIONS">
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Looks Quite Nice</TextBlock>
                     </TabItem>
+
                 </dragablz:TabablzControl>
             </Grid>
         </materialDesign:DrawerHost>
-
+        <TextBlock Text="2000$" Style="{DynamicResource MaterialDesignTitleTextBlock}" Foreground="#DDFFFFFF" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,18,60,0"></TextBlock>
         <materialDesign:PopupBox  Margin="0,0,20,20" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="60" Height="60"/>
     </Grid>
 
