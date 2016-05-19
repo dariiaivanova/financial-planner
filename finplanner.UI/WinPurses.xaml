@@ -40,15 +40,12 @@
                         </DockPanel>
                     </materialDesign:ColorZone>
                     <ScrollViewer Grid.Row="1"  Margin="5" Padding="5">
-                        <ListBox FontSize="16"  >
-                            <ListBoxItem>First purse</ListBoxItem>
-                            <ListBoxItem>Second purse</ListBoxItem>
-                            <ListBoxItem>Third purse</ListBoxItem>
-                            <ListBoxItem>Forth purse</ListBoxItem>
-                            <ListBoxItem>Forth purse</ListBoxItem>
-                            <ListBoxItem>Forth purse</ListBoxItem>
-                            <ListBoxItem>Forth purse</ListBoxItem>
-                        </ListBox>
+                        <DataGrid HeadersVisibility="None" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn  Width="150"></DataGridTextColumn>
+                                <DataGridTextColumn  Width="50"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </ScrollViewer>
                     <Button Grid.Row="2" Margin="5" Style="{DynamicResource MaterialDesignRaisedAccentButton}">
                         <DockPanel HorizontalAlignment="Stretch" Width="310" >
@@ -153,7 +150,22 @@
             </Grid>
         </materialDesign:DrawerHost>
         <TextBlock Text="2000$" Style="{DynamicResource MaterialDesignTitleTextBlock}" Foreground="#DDFFFFFF" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,18,60,0"></TextBlock>
-        <materialDesign:PopupBox  Margin="0,0,20,20" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="60" Height="60"/>
+        <materialDesign:PopupBox  Margin="0,0,20,20" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="60" Height="60">
+            <materialDesign:PopupBox.ToggleCheckedContent>
+                <materialDesign:PackIcon Kind="Pencil" Width="24" Height="24" />
+            </materialDesign:PopupBox.ToggleCheckedContent>
+            <StackPanel>
+                <Button ToolTip="Transfer">
+                    <materialDesign:PackIcon Kind="Transfer"/>
+                </Button>
+                <Button ToolTip="Expense">
+                    <materialDesign:PackIcon Kind="Minus"/>
+                </Button>
+                <Button ToolTip="Income">
+                    <materialDesign:PackIcon Kind="Plus"/>
+                </Button>
+            </StackPanel>
+        </materialDesign:PopupBox>
     </Grid>
 
 </Window>
