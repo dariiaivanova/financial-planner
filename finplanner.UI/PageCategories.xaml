@@ -5,10 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
       xmlns:data="clr-namespace:financialplanner.Data;assembly=financialplanner.Data"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      
-      d:DesignHeight="400" d:DesignWidth="600"
-	Title="PageCategories" d:DataContext="{d:DesignData }">
+      TextOptions.TextFormattingMode="Ideal"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+      Title="PageCategories" d:DataContext="{d:DesignData }">
     <Page.Resources>
         <Style TargetType="ListBox">
             <Setter Property="ItemsPanel">
@@ -21,30 +22,34 @@
         </Style>
 
         <DataTemplate x:Key="CategoriesTemplate" DataType="data:Category">
-            <Grid Height="100" >
+            <materialDesign:Card  Padding="10">
+                 <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-                <Image Grid.Row="0" Source="{Binding Path=Image}" />
-                <Label Grid.Row="1" Content="{Binding Path=Name}" />
+                <Image Height="130" Width="130" Margin="5" Grid.Row="0" Source="{Binding Path=Image}" />
+                <TextBlock HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Path=Name}" Style="{DynamicResource MaterialDesignTextBlockTitle}" />
             </Grid>
+            </materialDesign:Card>
+           
         </DataTemplate>
     </Page.Resources>
-
-    <dragablz:TabablzControl Height="Auto">
-            <dragablz:TabablzControl.InterTabController >
-                <dragablz:InterTabController />
-            </dragablz:TabablzControl.InterTabController>
-            <TabItem   Header="INCOME" MouseDoubleClick="TabItem_MouseDoubleClick"  >
-            <ListBox x:Name="ListBox"
+        <dragablz:TabablzControl>
+        <dragablz:TabablzControl.InterTabController >
+            <dragablz:InterTabController />
+        </dragablz:TabablzControl.InterTabController>
+        <TabItem   Header="INCOME" MouseDoubleClick="TabItem_MouseDoubleClick"  >
+         <ScrollViewer>
+                <ListBox HorizontalAlignment="Center" x:Name="ListBox"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
                      ItemsSource="{Binding Path=Categories}" ItemTemplate="{StaticResource CategoriesTemplate}" />
+            </ScrollViewer>
+            
         </TabItem>
-            <TabItem  Header="EXPENSE" >
-            </TabItem>
-            <TabItem  Header="TRANSACTION" >
-            </TabItem>
+        <TabItem  Header="EXPENSE" >
+        </TabItem>
+        <TabItem  Header="TRANSACTION" >
+        </TabItem>
 
-        </dragablz:TabablzControl>
-    
+    </dragablz:TabablzControl>
 </Page>

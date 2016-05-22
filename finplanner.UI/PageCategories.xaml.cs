@@ -29,6 +29,17 @@ namespace finplanner.UI
             {
                 new Category(GetImageFromResourceString("beach"), "beach"),
                 new Category(GetImageFromResourceString("car"), "car"),
+                new Category(GetImageFromResourceString("car"), "car"),
+                 new Category(GetImageFromResourceString("beach"), "beach"),
+                new Category(GetImageFromResourceString("car"), "car"),
+                new Category(GetImageFromResourceString("car"), "car"),
+                 new Category(GetImageFromResourceString("beach"), "beach"),
+                new Category(GetImageFromResourceString("car"), "car"),
+                new Category(GetImageFromResourceString("car"), "car"),
+                   new Category(GetImageFromResourceString("car"), "car"),
+                new Category(GetImageFromResourceString("car"), "car"),
+                 new Category(GetImageFromResourceString("beach"), "beach"),
+                new Category(GetImageFromResourceString("car"), "car"),
                 new Category(GetImageFromResourceString("car"), "car")
             };
             ListBox.ItemsSource = Categories;
