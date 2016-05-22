@@ -1,0 +1,50 @@
+﻿<Page x:Class="finplanner.UI.PageCategories"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+      xmlns:data="clr-namespace:financialplanner.Data;assembly=financialplanner.Data"
+      mc:Ignorable="d" 
+      
+      d:DesignHeight="400" d:DesignWidth="600"
+	Title="PageCategories" d:DataContext="{d:DesignData }">
+    <Page.Resources>
+        <Style TargetType="ListBox">
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <DataTemplate x:Key="CategoriesTemplate" DataType="data:Category">
+            <Grid Height="100" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="{Binding Path=Image}" />
+                <Label Grid.Row="1" Content="{Binding Path=Name}" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <dragablz:TabablzControl Height="Auto">
+            <dragablz:TabablzControl.InterTabController >
+                <dragablz:InterTabController />
+            </dragablz:TabablzControl.InterTabController>
+            <TabItem   Header="INCOME" MouseDoubleClick="TabItem_MouseDoubleClick"  >
+            <ListBox x:Name="ListBox"
+                     ItemsSource="{Binding Path=Categories}" ItemTemplate="{StaticResource CategoriesTemplate}" />
+        </TabItem>
+            <TabItem  Header="EXPENSE" >
+            </TabItem>
+            <TabItem  Header="TRANSACTION" >
+            </TabItem>
+
+        </dragablz:TabablzControl>
+    
+</Page>
