@@ -6,11 +6,13 @@
       xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
       xmlns:data="clr-namespace:financialplanner.Data;assembly=financialplanner.Data"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      mc:Ignorable="d" 
+      mc:Ignorable="d" Name="Page"
       TextOptions.TextFormattingMode="Ideal"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
       Title="PageCategories" d:DataContext="{d:DesignData }">
     <Page.Resources>
+
+        <!-- WrapPanel Style for ListBox -->
         <Style TargetType="ListBox">
             <Setter Property="ItemsPanel">
                 <Setter.Value>
@@ -20,31 +22,89 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <!-- Trigger Style for Selected List Box Item-->
+        <Style x:Key="StyleContainer" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="ContentTemplate" Value="{DynamicResource UnselectedCategoriesTemplate}"/>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="ContentTemplate" Value="{DynamicResource SelectedCategoriesTemplate}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
-        <DataTemplate x:Key="CategoriesTemplate" DataType="data:Category">
-            <materialDesign:Card  Padding="10">
-                 <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
-                <Image Height="130" Width="130" Margin="5" Grid.Row="0" Source="{Binding Path=Image}" />
-                <TextBlock HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Path=Name}" Style="{DynamicResource MaterialDesignTextBlockTitle}" />
-            </Grid>
+        <!--Data template for ListBox with images of categories -->
+        <DataTemplate x:Key="UnselectedCategoriesTemplate" DataType="data:Category">
+            <materialDesign:Card Width="160" Padding="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <Image Height="130" Width="130" Margin="5" Grid.Row="0" Source="{Binding Path=Image}" />
+                    <TextBlock HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Path=Name}"  />
+                </Grid>
             </materialDesign:Card>
-           
+
+        </DataTemplate>
+
+        <!-- Data template for selected image of categories, displays tree view of categories-->
+        <DataTemplate x:Key="SelectedCategoriesTemplate">
+            <materialDesign:Card Width="160" >
+                <ScrollViewer Height="160">
+                    <TreeView>
+                        <TreeViewItem Header="Fruit">
+                            <TreeViewItem>
+                                <TreeViewItem.Header>
+                                    <TextBlock Margin="8 0 0 0">Apple</TextBlock>
+                                </TreeViewItem.Header>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Banana"/>
+                            <TreeViewItem Header="Grape">
+                                <TextBlock><Run Text="Grapes for us"/></TextBlock>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Peach"/>
+                            <TreeViewItem Header="Pear"/>
+                            <TreeViewItem Header="Strawberry"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="OS" >
+                            <TreeViewItem Header="Amiga"/>
+                            <TreeViewItem>
+                                <TreeViewItem.Header>
+                                    <TextBlock Margin="8 0 0 0">Android</TextBlock>
+                                </TreeViewItem.Header>
+                            </TreeViewItem>
+                            <TreeViewItem Header="iOS"/>
+                            <TreeViewItem>
+                                <TreeViewItem.Header>
+                                    <TextBlock Margin="8 0 0 0">Linux</TextBlock>
+                                </TreeViewItem.Header>
+                            </TreeViewItem>
+                            <TreeViewItem>
+                                <TreeViewItem.Header>
+                                    <TextBlock Margin="8 0 0 0">Windows</TextBlock>
+                                </TreeViewItem.Header>
+                            </TreeViewItem>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Empty" />
+                    </TreeView>
+                </ScrollViewer>
+            </materialDesign:Card>
         </DataTemplate>
     </Page.Resources>
-        <dragablz:TabablzControl>
+
+
+    <dragablz:TabablzControl>
         <dragablz:TabablzControl.InterTabController >
             <dragablz:InterTabController />
         </dragablz:TabablzControl.InterTabController>
         <TabItem   Header="INCOME" MouseDoubleClick="TabItem_MouseDoubleClick"  >
-         <ScrollViewer>
-                <ListBox HorizontalAlignment="Center" x:Name="ListBox"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
-                     ItemsSource="{Binding Path=Categories}" ItemTemplate="{StaticResource CategoriesTemplate}" />
+            <ScrollViewer  >
+                <ListBox  HorizontalAlignment="Center" x:Name="ListBox"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                     ItemsSource="{Binding Path=Categories }"  ItemContainerStyle="{DynamicResource StyleContainer}">
+                </ListBox>
             </ScrollViewer>
-            
+
         </TabItem>
         <TabItem  Header="EXPENSE" >
         </TabItem>

@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using financialplanner.Data;
+using MaterialDesignThemes.Wpf;
 
 namespace finplanner.UI
 {
@@ -42,7 +43,7 @@ namespace finplanner.UI
                 new Category(GetImageFromResourceString("car"), "car"),
                 new Category(GetImageFromResourceString("car"), "car")
             };
-            ListBox.ItemsSource = Categories;
+            DataContext = this;
 
         }
 
@@ -61,5 +62,6 @@ namespace finplanner.UI
             return image;
         }
 
+    
     }
 }
