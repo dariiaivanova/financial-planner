@@ -31,7 +31,7 @@
                                   HorizontalAlignment="Right" Margin="16, 10,16,0"
                                   IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />
                             <DockPanel Margin="10,0,10,20">
-                                <Image DockPanel.Dock="Left" Source="AccountPic.png" Width="125" Height="125"  />
+                                <Image DockPanel.Dock="Left" Source="Resources/AccountPic.png" Width="125" Height="125"  />
                                 <StackPanel Margin="10,25,0,0" DockPanel.Dock="Right">
                                     <TextBlock HorizontalAlignment="Left" Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="18" >Username</TextBlock>
                                     <Button Content="Settings" Style="{DynamicResource MaterialDesignRaisedLightButton}" Margin="0,15,0,0" />
@@ -49,7 +49,7 @@
                     </ScrollViewer>
                     <Button Grid.Row="2" Margin="5" Style="{DynamicResource MaterialDesignRaisedAccentButton}">
                         <DockPanel HorizontalAlignment="Stretch" Width="310" >
-                            <Image DockPanel.Dock="Left" Source="report.png" Width="30" Height="30" HorizontalAlignment="Center" Margin="5,0,0,0"/>
+                            <Image DockPanel.Dock="Left" Source="Resources/report.png" Width="30" Height="30" HorizontalAlignment="Center" Margin="5,0,0,0"/>
                             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" DockPanel.Dock="Right " VerticalAlignment="Center" Margin="20,0,0,0" HorizontalAlignment="Center" Panel.ZIndex="90">Get the report</TextBlock>
                         </DockPanel>
 
@@ -155,13 +155,13 @@
                 <materialDesign:PackIcon Kind="Pencil" Width="24" Height="24" />
             </materialDesign:PopupBox.ToggleCheckedContent>
             <StackPanel>
-                <Button ToolTip="Transfer">
+                <Button x:Name="ButtonTransfer" ToolTip="Transfer" Click="ButtonTransfer_Click">
                     <materialDesign:PackIcon Kind="Transfer"/>
                 </Button>
-                <Button ToolTip="Expense">
+                <Button x:Name="ButtonExpense" ToolTip="Expense">
                     <materialDesign:PackIcon Kind="Minus"/>
                 </Button>
-                <Button ToolTip="Income">
+                <Button x:Name="ButtonIncome" ToolTip="Income">
                     <materialDesign:PackIcon Kind="Plus"/>
                 </Button>
             </StackPanel>

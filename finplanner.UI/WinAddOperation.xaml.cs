@@ -15,23 +15,19 @@ using System.Windows.Shapes;
 namespace finplanner.UI
 {
     /// <summary>
-    /// Interaction logic for WinPurses.xaml
+    /// Interaction logic for WinAddOperation.xaml
     /// </summary>
-    public partial class WinPurses : Window
+    public partial class WinAddOperation : Window
     {
-        public WinPurses()
+        public WinAddOperation()
         {
             InitializeComponent();
+            CategoriesFrame.NavigationService.Navigate(new Uri("PageCategories.xaml", UriKind.Relative));
         }
 
-        private void Sample1_DialogHost_OnDialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
+        private void TextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
-        }
-
-        private void ButtonTransfer_Click(object sender, RoutedEventArgs e)
-        {
-            new WinAddOperation().Show();
+            CategoriesFrame.NavigationService.Navigate(new Uri("PageAddingOperation.xaml", UriKind.Relative));
         }
     }
 }

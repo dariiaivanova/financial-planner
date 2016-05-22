@@ -10,7 +10,7 @@
     <Window.Background>
         <ImageBrush Opacity="0.35">
             <ImageBrush.ImageSource>
-                <BitmapImage UriSource="FY58O0P400.jpg"/>
+                <BitmapImage UriSource="Resources/FY58O0P400.jpg"/>
             </ImageBrush.ImageSource>
         </ImageBrush>
     </Window.Background>
