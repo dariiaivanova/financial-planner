@@ -13,7 +13,6 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
       Title="PageCategories" d:DataContext="{d:DesignData }">
     <Page.Resources>
-
         <!-- WrapPanel Style for ListBox -->
         <Style TargetType="ListBox">
             <Setter Property="ItemsPanel">
@@ -29,12 +28,12 @@
             <Setter Property="ContentTemplate" Value="{DynamicResource UnselectedCategoriesTemplate}"/>
             <Style.Triggers>
                 <Trigger Property="IsSelected" Value="True">
-                    <Setter Property="ContentTemplate" Value="{DynamicResource SelectedCategoriesTemplate}"/>
+                    <Setter Property="ContentTemplate" Value="{DynamicResource SelectedCategoriesTemplate }"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
 
-  
+
         <!--Style for Hyper Link-->
         <Style x:Key="StyleHyperlink" TargetType="{x:Type Hyperlink}">
             <Setter Property="NavigateUri" Value="{Binding Source=PageAddingOperation.xaml}" ></Setter>
@@ -49,56 +48,29 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
-
                     <Image Height="130" Width="130" Margin="5" Grid.Row="0" Source="{Binding Path=Image}" />
                     <TextBlock HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Path=Name}"  />
                 </Grid>
             </materialDesign:Card>
 
         </DataTemplate>
-
         <!-- Data template for selected image of categories, displays tree view of categories-->
-        <DataTemplate x:Key="SelectedCategoriesTemplate">
+        <DataTemplate x:Key="SelectedCategoriesTemplate" DataType="{x:Type data:Category}">
             <materialDesign:Card Width="160" >
                 <ScrollViewer Height="160">
-                    <TreeView>
-                        <TreeViewItem Header="Fruit">
-                            <TreeViewItem>
-                                <TreeViewItem.Header>
-                                    <TextBlock Margin="8 0 0 0" > 
-                                        <Hyperlink Style="{DynamicResource StyleHyperlink}" >Apple</Hyperlink>
-                                    </TextBlock>
-                                </TreeViewItem.Header>
-                            </TreeViewItem>
-                            <TreeViewItem Header="Banana"/>
-                            <TreeViewItem Header="Grape">
-                                <TextBlock><Run Text="Grapes for us"/></TextBlock>
-                            </TreeViewItem>
-                            <TreeViewItem Header="Peach"/>
-                            <TreeViewItem Header="Pear"/>
-                            <TreeViewItem Header="Strawberry"/>
-                        </TreeViewItem>
-                        <TreeViewItem Header="OS" >
-                            <TreeViewItem Header="Amiga"/>
-                            <TreeViewItem>
-                                <TreeViewItem.Header>
-                                    <TextBlock Margin="8 0 0 0">Android</TextBlock>
-                                </TreeViewItem.Header>
-                            </TreeViewItem>
-                            <TreeViewItem Header="iOS"/>
-                            <TreeViewItem>
-                                <TreeViewItem.Header>
-                                    <TextBlock Margin="8 0 0 0">Linux</TextBlock>
-                                </TreeViewItem.Header>
-                            </TreeViewItem>
-                            <TreeViewItem>
-                                <TreeViewItem.Header>
-                                    <TextBlock Margin="8 0 0 0">Windows</TextBlock>
-                                </TreeViewItem.Header>
-                            </TreeViewItem>
-                        </TreeViewItem>
-                        <TreeViewItem Header="Empty" />
+                    <TreeView Name="TVCategories" ItemsSource="{Binding Children}">
+                        <TreeView.Resources>
+                            <HierarchicalDataTemplate DataType="{x:Type data:Category}" ItemsSource="{Binding Children}">
+                                <TextBlock >
+                                    <Hyperlink Style="{DynamicResource StyleHyperlink}"  NavigateUri="PageAddingOperation.xaml">
+                                        <TextBlock Text="{Binding Path=Name}" ></TextBlock>
+                                    </Hyperlink>
+                                </TextBlock>
+                            </HierarchicalDataTemplate>
+                        </TreeView.Resources>
                     </TreeView>
+
+
                 </ScrollViewer>
             </materialDesign:Card>
         </DataTemplate>
