@@ -6,6 +6,8 @@
       xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
       xmlns:data="clr-namespace:financialplanner.Data;assembly=financialplanner.Data"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:system="clr-namespace:System;assembly=System"
+      xmlns:ui="clr-namespace:finplanner.UI"
       mc:Ignorable="d" Name="Page"
       TextOptions.TextFormattingMode="Ideal"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
@@ -32,6 +34,13 @@
             </Style.Triggers>
         </Style>
 
+  
+        <!--Style for Hyper Link-->
+        <Style x:Key="StyleHyperlink" TargetType="{x:Type Hyperlink}">
+            <Setter Property="NavigateUri" Value="{Binding Source=PageAddingOperation.xaml}" ></Setter>
+            <Setter Property="TextDecorations" Value="{x:Null}"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+        </Style>
         <!--Data template for ListBox with images of categories -->
         <DataTemplate x:Key="UnselectedCategoriesTemplate" DataType="data:Category">
             <materialDesign:Card Width="160" Padding="10">
@@ -56,7 +65,9 @@
                         <TreeViewItem Header="Fruit">
                             <TreeViewItem>
                                 <TreeViewItem.Header>
-                                    <TextBlock Margin="8 0 0 0">Apple</TextBlock>
+                                    <TextBlock Margin="8 0 0 0" > 
+                                        <Hyperlink Style="{DynamicResource StyleHyperlink}" >Apple</Hyperlink>
+                                    </TextBlock>
                                 </TreeViewItem.Header>
                             </TreeViewItem>
                             <TreeViewItem Header="Banana"/>
