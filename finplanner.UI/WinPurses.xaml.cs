@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using financialplanner.Data;
 
 namespace finplanner.UI
 {
@@ -22,13 +24,13 @@ namespace finplanner.UI
         public WinPurses()
         {
             InitializeComponent();
+            //PursesObservable = new ObservableCollection<Purse>
+            //{
+            //    new 
+            //}
         }
 
-        private void Sample1_DialogHost_OnDialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
-        {
-
-        }
-
+        public IObservable<Purse> PursesObservable;
         private void ButtonTransfer_Click(object sender, RoutedEventArgs e)
         {
             new WinAddOperation().Show();

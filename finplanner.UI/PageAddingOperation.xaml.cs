@@ -29,5 +29,22 @@ namespace finplanner.UI
         {
             NavigationService.GoBack();
         }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CbisFixed_Checked(object sender, RoutedEventArgs e)
+        {
+            TbPeriod.Visibility = Visibility.Visible;
+
+        }
+
+        private void CbisFixed_Unchecked(object sender, RoutedEventArgs e)
+        {
+            TbPeriod.Visibility = Visibility.Collapsed;
+
+        }
     }
 }

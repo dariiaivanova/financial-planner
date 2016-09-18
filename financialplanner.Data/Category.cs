@@ -15,12 +15,12 @@ namespace financialplanner.Data
 
         public IList<Category> Children { get; private set; }
 
-        public Category(ImageSource image, string name)
+      /*  public Category(ImageSource image, string name)
             : this(name)
         {
             Image = image;
-        }
-        
+        }*/
+
         public Category(Category parent, string name)
             : this(name)
         {
@@ -28,7 +28,12 @@ namespace financialplanner.Data
             Parent.Children.Add(this);
         }
 
-        private Category(string name)
+        /*private Category(string name)
+        {
+            Name = name;
+            Children = new List<Category>();
+        }*/
+        public Category(string name)
         {
             Name = name;
             Children = new List<Category>();

@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dragablz">
+      <HintPath>..\packages\Dragablz.0.0.3.160\lib\net45\Dragablz.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors">
       <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -42,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,9 +63,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PageAddingOperation.xaml.cs">
+      <DependentUpon>PageAddingOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageCategories.xaml.cs">
+      <DependentUpon>PageCategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinAddOperation.xaml.cs">
+      <DependentUpon>WinAddOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinForgotPass.xaml.cs">
+      <DependentUpon>WinForgotPass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinPurses.xaml.cs">
+      <DependentUpon>WinPurses.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinRegister.xaml.cs">
       <DependentUpon>WinRegister.xaml</DependentUpon>
     </Compile>
+    <Page Include="PageAddingOperation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageCategories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinAddOperation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinForgotPass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinLogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,6 +116,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WinPurses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinRegister.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,7 +154,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="FY58O0P400.jpg" />
+    <Resource Include="Resources\FY58O0P400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AccountPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\car.png" />
+    <Resource Include="Resources\beach.png" />
+    <Resource Include="Resources\present.png" />
+    <Resource Include="Resources\apartment.png" />
+    <Resource Include="Resources\1461283275_Wooden-Horse.png" />
+    <Resource Include="Resources\record-Player.png" />
+    <Resource Include="Resources\shirt.png" />
+    <Resource Include="Resources\medicine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\financialplanner.Data\financialplanner.Data.csproj">
+      <Project>{6a95b985-44b9-4d5e-85b4-5bf5768debb4}</Project>
+      <Name>financialplanner.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

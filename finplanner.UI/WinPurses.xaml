@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         Title="WinPurses" Height="700" Width="900"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextOptions.TextFormattingMode="Ideal"
@@ -42,7 +44,7 @@
                     <ScrollViewer Grid.Row="1"  Margin="5" Padding="5">
                         <DataGrid HeadersVisibility="None" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn  Width="150"></DataGridTextColumn>
+                                <DataGridTextColumn   Width="150"></DataGridTextColumn>
                                 <DataGridTextColumn  Width="50"></DataGridTextColumn>
                             </DataGrid.Columns>
                         </DataGrid>

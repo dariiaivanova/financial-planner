@@ -16,8 +16,8 @@
         <TextBlock Grid.Row="0"
                    FontSize="36" HorizontalAlignment="Center" > Add a new operation</TextBlock>
 
-        <DockPanel Grid.Row="1" >
-            <TextBox DockPanel.Dock="Left" Width="600" FontSize="20" materialDesign:TextFieldAssist.Hint="Sum" MouseDoubleClick="TextBox_MouseDoubleClick" ></TextBox>
+        <DockPanel Grid.Row="1">
+            <TextBox HorizontalContentAlignment="Right" DockPanel.Dock="Left" Width="600" FontSize="20" materialDesign:TextFieldAssist.Hint="Sum" MouseDoubleClick="TextBox_MouseDoubleClick" ></TextBox>
             <ComboBox DockPanel.Dock="Right"  FontSize="20" Margin="10,0,0,0"></ComboBox>
         </DockPanel>
         <Frame Grid.Row="2" x:Name="CategoriesFrame" Margin="0,25" NavigationUIVisibility="Hidden"/> 

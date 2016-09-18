@@ -58,10 +58,7 @@ namespace finplanner.UI
 
         }
 
-        private void TabItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        }
+       
 
         public ObservableCollection<Category> Categories { get; set; }
         private static BitmapImage GetImageFromResourceString(string imageName)

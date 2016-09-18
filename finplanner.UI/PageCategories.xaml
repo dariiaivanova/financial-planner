@@ -81,8 +81,8 @@
         <dragablz:TabablzControl.InterTabController >
             <dragablz:InterTabController />
         </dragablz:TabablzControl.InterTabController>
-        <TabItem   Header="INCOME" MouseDoubleClick="TabItem_MouseDoubleClick"  >
-            <ScrollViewer  >
+        <TabItem   Header="INCOME" >
+            <ScrollViewer>
                 <ListBox  HorizontalAlignment="Center" x:Name="ListBox"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
                      ItemsSource="{Binding Path=Categories }"  ItemContainerStyle="{DynamicResource StyleContainer}">
                 </ListBox>
