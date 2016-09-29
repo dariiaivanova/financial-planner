@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "financialplanner.Data", "fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab1demo", "lab1demo\lab1demo.csproj", "{665E6CAF-4CA9-41F3-B63C-9FF8D2E935EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab2", "lab2\lab2.csproj", "{5D61A2D4-D01B-43B1-9DDB-0100FE1AB97C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{665E6CAF-4CA9-41F3-B63C-9FF8D2E935EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{665E6CAF-4CA9-41F3-B63C-9FF8D2E935EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{665E6CAF-4CA9-41F3-B63C-9FF8D2E935EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D61A2D4-D01B-43B1-9DDB-0100FE1AB97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D61A2D4-D01B-43B1-9DDB-0100FE1AB97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D61A2D4-D01B-43B1-9DDB-0100FE1AB97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D61A2D4-D01B-43B1-9DDB-0100FE1AB97C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

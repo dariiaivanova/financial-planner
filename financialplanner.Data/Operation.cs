@@ -21,21 +21,29 @@ namespace financialplanner.Data
             IsExpense = isExpense;
         }
 
-
-
         public string Name { get; set; }
         public Currency Currency { get; set; }
         public Category Category { get; set; }
-        public double Sum { get; private set; }
+        public double Sum { get; }
         public string Note { get; set; }
         public DateTime Date { get; set; }
         public string Place { get; set; }
         public bool IsExpense { get; set; }
 
+        public Operation Clone()
+        {
+            var clone = MemberwiseClone() as Operation;
+            clone.Category = Category.Clone() as Category;
+            return clone;
+        }
 
 
 
-
-
+        public override string ToString()
+        {
+            string value = "Name: " + Name + ", sum: " + Sum + ", Place: " + Place + ", Category: " + Category + 
+                ", Date: " + Date;
+            return value;
+        }
     }
 }
