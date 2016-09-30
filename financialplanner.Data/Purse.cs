@@ -12,6 +12,8 @@ namespace financialplanner.Data
         public double CurrentBalance { get; set; }
         public IList<Operation> Operations { get; set; }
 
+
+        public double Report { get; set; }
         public Purse()
         {
             _purseState = new NewOperation(this);
@@ -43,5 +45,7 @@ namespace financialplanner.Data
             Console.WriteLine("Current Purse's state: {0}", _purseState.GetType().Name);
         }
 
+        public virtual void Do()
+        { }
     }
 }

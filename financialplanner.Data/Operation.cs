@@ -24,7 +24,7 @@ namespace financialplanner.Data
         public string Name { get; set; }
         public Currency Currency { get; set; }
         public Category Category { get; set; }
-        public double Sum { get; }
+        public double Sum { get; set; }
         public string Note { get; set; }
         public DateTime Date { get; set; }
         public string Place { get; set; }
