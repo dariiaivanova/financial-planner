@@ -10,11 +10,10 @@ namespace financialplanner.Data
     {
         protected Purse DecoratedPurse { get; set; }
 
-        public PurseDecorator(Purse purse)
+        public PurseDecorator(Purse purse) : base(purse.Id)
         {
             DecoratedPurse = purse;
         }
-
 
         public override void Do()
         {

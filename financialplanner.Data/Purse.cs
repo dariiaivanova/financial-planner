@@ -5,8 +5,10 @@ using System.Net;
 namespace financialplanner.Data
 {
     public class Purse
+
     {
         private PurseState _purseState;
+        public int Id { get; set; }
         public string Name { get; set; }
         public Currency PurseCurrency { get; set; }
         public double CurrentBalance { get; set; }
@@ -14,8 +16,9 @@ namespace financialplanner.Data
 
 
         public double Report { get; set; }
-        public Purse()
+        public Purse(int id)
         {
+            Id = id;
             _purseState = new NewOperation(this);
             Operations = new List<Operation>();
         }
@@ -44,8 +47,8 @@ namespace financialplanner.Data
         {
             Console.WriteLine("Current Purse's state: {0}", _purseState.GetType().Name);
         }
+        public virtual void Do() { }
 
-        public virtual void Do()
-        { }
+     
     }
 }
