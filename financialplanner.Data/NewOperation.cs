@@ -14,7 +14,7 @@ namespace financialplanner.Data
             string place, bool isExpense)
         {
             Console.WriteLine("Creating new operation\n");
-            Operation operation = new Operation(sum, name, currency, category, note, date, place, isExpense);
+            var operation = new Operation(sum, name, currency, category, note, date, place, isExpense);
             Purse.SetState(new ChangingBalance(Purse));
             return operation;
         }

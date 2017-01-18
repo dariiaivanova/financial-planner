@@ -1,18 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
  
 namespace financialplanner.Data
 {
+    [DataContract]
     public class User : IWritable
     {
+        [DataMember]
         public int Id { get; }
+        [DataMember]
         public string Name { get; set; }
+        [DataMember]
         public string Email { get; set; }
-        public string Password { get; }
-    
+        [DataMember]
+        public string Password { get; set; }
+
+        [DataMember]
         public List<Purse> Purses { get; set; }
 
         public User(int id)

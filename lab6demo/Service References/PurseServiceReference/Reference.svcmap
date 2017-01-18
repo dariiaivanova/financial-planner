@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="08a45707-0545-41ad-ad85-0d8e952f8555" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49537/PurseService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PurseService.disco" MetadataType="Disco" ID="ae0d993e-98e3-499b-b0cb-a5fcf9a5874d" SourceId="1" SourceUrl="http://localhost:49537/PurseService.svc?disco" />
+    <MetadataFile FileName="PurseService.xsd" MetadataType="Schema" ID="8db216a1-b834-4fb3-8891-762f5284e5e5" SourceId="1" SourceUrl="http://localhost:49537/PurseService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PurseService1.xsd" MetadataType="Schema" ID="61a84c66-efd7-426e-9758-273474c54798" SourceId="1" SourceUrl="http://localhost:49537/PurseService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PurseService.wsdl" MetadataType="Wsdl" ID="ff270d5e-ae57-4777-98d8-709a325226cd" SourceId="1" SourceUrl="http://localhost:49537/PurseService.svc?wsdl" />
+    <MetadataFile FileName="PurseService2.xsd" MetadataType="Schema" ID="20e644d7-a1a0-42b9-b396-017c93df8b98" SourceId="1" SourceUrl="http://localhost:49537/PurseService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

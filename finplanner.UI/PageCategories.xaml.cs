@@ -28,20 +28,20 @@ namespace finplanner.UI
             InitializeComponent();
             Categories = new ObservableCollection<Category>
             {
-                new Category(GetImageFromResourceString("beach"), "beach"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("beach"), "beach"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("beach"), "beach"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("beach"), "beach"),
-                new Category(GetImageFromResourceString("car"), "car"),
-                new Category(GetImageFromResourceString("car"), "car")
+                new Category("beach"),
+                new Category("car"),
+                new Category("car"),
+                new Category("beach"),
+                new Category("car"),
+                new Category("car"),
+                new Category("beach"),
+                new Category("car"),
+                new Category("car"),
+                new Category("car"),
+                new Category("car"),
+                new Category("beach"),
+                new Category("car"),
+                new Category("car")
             };
 
             // create child
@@ -51,25 +51,10 @@ namespace finplanner.UI
             new Category(parent, "1_2");
             var child2_0 = new Category(child1_1, "2_0");
             new Category(child2_0, "3_0");
-
-
             
             DataContext = this;
-
         }
-
-       
-
+        
         public ObservableCollection<Category> Categories { get; set; }
-        private static BitmapImage GetImageFromResourceString(string imageName)
-        {
-            var image = new BitmapImage();
-            image.BeginInit();
-            image.UriSource = new Uri("Resources\\" + imageName + ".png", UriKind.Relative);
-            image.EndInit();
-            return image;
-        }
-
-
     }
 }

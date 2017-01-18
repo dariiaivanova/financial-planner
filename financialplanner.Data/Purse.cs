@@ -1,21 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Runtime.Serialization;
 
 namespace financialplanner.Data
 {
+    [DataContract]
     public class Purse
 
     {
+        [DataMember]
         private PurseState _purseState;
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string Name { get; set; }
+        [DataMember]
         public Currency PurseCurrency { get; set; }
+        [DataMember]
         public double CurrentBalance { get; set; }
+        [DataMember]
         public IList<Operation> Operations { get; set; }
-
-
+        [DataMember]
         public double Report { get; set; }
+
         public Purse(int id)
         {
             Id = id;

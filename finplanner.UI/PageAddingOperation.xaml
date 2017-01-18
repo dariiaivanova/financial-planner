@@ -24,15 +24,15 @@
             <TextBlock Text="{Binding Path=Name}"></TextBlock>
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <DatePicker materialDesign:TextFieldAssist.Hint="Date of operation" Margin="10 0" FontSize="20"></DatePicker>
-            <TextBox Margin="10" FontSize="20" materialDesign:TextFieldAssist.Hint="Note"></TextBox>
-            <TextBox Margin="10" FontSize="20" materialDesign:TextFieldAssist.Hint="Place"></TextBox>
+            <DatePicker  Margin="10 0" FontSize="20"></DatePicker>
+            <TextBox Margin="10" FontSize="20" ></TextBox>
+            <TextBox Margin="10" FontSize="20" ></TextBox>
             <CheckBox x:Name="CbisFixed" Margin="10" Content="Is a fixed operation" Checked="CbisFixed_Checked" Unchecked="CbisFixed_Unchecked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <TextBox x:Name="TbPeriod" Visibility="Collapsed" Margin="10" FontSize="20" materialDesign:TextFieldAssist.Hint="Write the period"></TextBox>
+            <TextBox x:Name="TbPeriod" Visibility="Collapsed" Margin="10" FontSize="20" ></TextBox>
             <Grid Margin="0 15 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="250*"></ColumnDefinition>

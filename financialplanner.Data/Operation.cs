@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace financialplanner.Data
 {
+    [DataContract]
     public class Operation : IWritable
     {
 
@@ -21,14 +23,23 @@ namespace financialplanner.Data
             IsExpense = isExpense;
         }
 
+        [DataMember]
         public long Id { get; set; }
+        [DataMember]
         public string Name { get; set; }
+        [DataMember]
         public Currency Currency { get; set; }
+        [DataMember]
         public Category Category { get; set; }
+        [DataMember]
         public double Sum { get; set; }
+        [DataMember]
         public string Note { get; set; }
+        [DataMember]
         public DateTime Date { get; set; }
+        [DataMember]
         public string Place { get; set; }
+        [DataMember]
         public bool IsExpense { get; set; }
 
         public Operation Clone()

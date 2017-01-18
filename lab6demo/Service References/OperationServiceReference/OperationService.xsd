@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49537/OperationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/financialplanner.Data" />
+  <xs:element name="Create">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/financialplanner.Data" minOccurs="0" name="purse" nillable="true" type="q1:Purse" />
+        <xs:element minOccurs="0" name="sum" type="xs:double" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/financialplanner.Data" minOccurs="0" name="currency" type="q2:Currency" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/financialplanner.Data" minOccurs="0" name="category" nillable="true" type="q3:Category" />
+        <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="place" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isExpense" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Read">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/financialplanner.Data" minOccurs="0" name="obj" nillable="true" type="q4:Purse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/financialplanner.Data" minOccurs="0" name="ReadResult" nillable="true" type="q5:ArrayOfOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

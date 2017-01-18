@@ -1,5 +1,8 @@
-﻿namespace financialplanner.Data
+﻿using System.Runtime.Serialization;
+
+namespace financialplanner.Data
 {
+    [DataContract]
     public enum Currency: int
 
     {
